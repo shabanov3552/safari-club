@@ -1,4 +1,5 @@
 import svgSprite from "gulp-svg-sprite";
+import cheerio from 'gulp-cheerio';
 export const sprite = () => {
 	return app.gulp.src(`${app.path.src.svgicons}`, {})
 		.pipe(app.plugins.plumber(
@@ -7,6 +8,13 @@ export const sprite = () => {
 				message: "Error: <%= error.message %>"
 			}))
 		)
+		.pipe(cheerio({
+			run: function ($) {
+				$('[fill]').removeAttr('fill');
+				$('[style]').removeAttr('style');
+			},
+			parserOptions: { xmlMode: true }
+		}))
 		.pipe(svgSprite({
 			mode: {
 				symbol: {
