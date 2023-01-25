@@ -1,4 +1,102 @@
-<header class="header">
-	<div class="header__container">
+<header data-scroll="200" data-scroll-show="100" class="header @@class">
+	<div class="header__top">
+		<div class="header__container">
+			<div class="header__left-menu menu-left">
+				<div class="menu-left__top">
+					<div class="menu-phone" data-da=".mobile-menu__header, 1280">
+						<div class="menu-phone__descr">Служба бронирования</div>
+						<a href="tel:+73912053525" class="menu-phone__link">+7 (391) 205-35-25</a>
+					</div>
+					<div class="menu-phone" data-da=".mobile-menu__header, 1280">
+						<div class="menu-phone__descr">Ресторан</div>
+						<a href="tel:+73912053540" class="menu-phone__link">+7 (391) 205-35-40</a>
+					</div>
+				</div>
+				<div class="menu-left__bottom" data-da=".mobile-menu__center, 1280">
+					<a href="" class="menu-link">Номера</a>
+					<a href="" class="menu-link">Ресторан</a>
+					<a href="" class="menu-link">Сауна</a>
+					<a href="" class="menu-link">Конференц-зал</a>
+				</div>
+			</div>
+			<a href="" class="header__logo main-logo">
+				<span class="main-logo__text main-logo__text_left">Сибирский</span>
+				<span class="main-logo__img">
+					<img src="@img/svg/logo-black.svg" alt="">
+					<img src="@img/svg/logo-white.svg" alt="">
+				</span>
+				<span class="main-logo__text main-logo__text_right">Сафари Клуб</span>
+				<span class="main-logo__bottom-text">гостиничный комплекс</span>
+			</a>
+			<div class="header__right-menu menu-right">
+				<div class="menu-right__top">
+					<a href="" data-popup="#callback" class="callback-btn" data-da=".mobile-menu__header, 1280">
+						<img src="@img/svg/call-back.svg" alt="">
+						<span class="callback-btn__text">Заказать звонок</span>
+					</a>
+					<a href="" class="lang-switch">En</a>
+					<a href="" data-popup="#reserv" class="reserv-btn btn-gold">Забронировать</a>
+				</div>
+				<div class="menu-right__bottom" data-da=".mobile-menu__center, 1280">
+					<a href="" class="menu-link">Беседки</a>
+					<a href="" class="menu-link">Подарочные сертификаты</a>
+					<div class="dropdown-menu">
+						<span class="dropdown-menu__span">Клуб</span>
+						<svg class="dropdown-menu__arrow">
+							<use xlink:href="img/icons/icons.svg#svg-arrow-dropdown"></use>
+						</svg>
+						<ul class="dropdown-menu__list">
+							<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">О нас</a></li>
+							<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Команда</a></li>
+							<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">События</a></li>
+							<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Фотогалерея</a></li>
+							<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Видеогалерея</a></li>
+							<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Вакансии</a></li>
+							<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Документы</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header__mobile-menu mobile-menu">
+				<div class="mobile-menu__header"></div>
+				<div class="mobile-menu__center"></div>
+			</div>
+			<button type="button" class="menu__icon icon-menu"><span></span></button>
+		</div>
+	</div>
+	<div class="header__bottom">
+		<div class="header__container">
+			<form action="" class="form-reserv">
+				<div class="form-reserv__dates">
+					<div class="form-reserv__caption">Даты проживания:</div>
+					<input autocomplete="off" type="date" name="form[]" class="form-reserv__input input">
+					<span>-</span>
+					<input autocomplete="off" type="date" name="form[]" class="form-reserv__input input">
+				</div>
+				<div class="form-reserv__quantity">
+					<div class="form-reserv__caption">Количество гостей:</div>
+					<div data-quantity class="quantity">
+						<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+						<div class="quantity__input">
+							<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+						</div>
+						<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+					</div>
+				</div>
+				<div class="form-reserv__promotion">
+					<div class="promotion">
+						<div class="promotion__dd-link">Есть промокод</div>
+						<div class="promotion__dd" hidden>
+							<div class="promotion__dd-inner">
+								<label for="" class="promotion__label">Промокод</label>
+								<input autocomplete="off" type="text" name="form[]" class="promotion__input input">
+								<button type="button" class="promotion__button btn-gold">Подтвердить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="form-reserv__btn btn-gold">Забронировать</button>
+			</form>
+		</div>
 	</div>
 </header>

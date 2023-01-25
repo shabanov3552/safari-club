@@ -1,1 +1,21 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.btn-gold {
+   overflow: hidden;
+   height: 48px;
+   border-radius: 3px;
+   position: relative;
+   padding: 0 rem(20);
+   &::before {
+      border: 2px solid;
+      border-image-source: linear-gradient(314.8deg, #cf9852 0.95%, #f2cb99 43.62%, #d19c59 94.98%);
+      border-image-slice: 1;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+   }
+}

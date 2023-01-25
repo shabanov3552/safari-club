@@ -12,12 +12,18 @@ textarea {
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	height: 48px;
+	padding-left: rem(16);
+	padding-right: rem(14);
+	background: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.230742);
 	&._form-focus {
 	}
 	&._form-error {
 	}
+}
+input[type="date" i]::-webkit-calendar-picker-indicator {
+	background-image: url(@img/svg/calendar.svg);
 }
 textarea.input {
 	resize: none;
