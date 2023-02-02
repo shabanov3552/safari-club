@@ -6,7 +6,7 @@
 			padding-top: rem(78.55);
 		}
 		.header__top .reserv-btn {
-			display: block;
+			display: flex;
 		}
 
 		.lang-switch {
@@ -31,7 +31,7 @@
 			top: -200px;
 			left: 0;
 			right: 0;
-			z-index: 5;
+			z-index: 8;
 		}
 		._header-show & {
 			top: 0;
@@ -62,16 +62,6 @@
 	&__right-menu {
 	}
 
-	// .header__bottom
-
-	&__bottom {
-		background: #e8e0da;
-		padding: rem(12) 0;
-		@media (max-width: $mobileSmall) {
-			position: relative;
-		}
-	}
-
 	// .header__mobile-menu
 
 	&__mobile-menu {
@@ -87,6 +77,7 @@
 			transform: rotate(-180deg);
 		}
 		.dropdown-menu__list {
+			pointer-events: all;
 			visibility: visible;
 			opacity: 1;
 		}
@@ -133,6 +124,7 @@
 
 	&__list {
 		@media (min-width: em(1280)) {
+			pointer-events: none;
 			overflow: hidden;
 			opacity: 0;
 			visibility: hidden;
@@ -384,7 +376,6 @@
 }
 
 .reserv-btn {
-	padding: rem(16) rem(35);
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 18px;
@@ -398,195 +389,6 @@
 
 	.menu-right__top & {
 		display: none;
-	}
-}
-
-//========================================================================================================================================================
-
-.form-reserv {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 40px;
-	@media (max-width: em(1280)) {
-		gap: 20px;
-		flex-wrap: wrap;
-	}
-	@media (max-width: em(1100)) {
-		justify-content: flex-start;
-	}
-	@media (max-width: $mobile) {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-	// .form-reserv__dates
-
-	&__dates {
-		align-items: center;
-		display: flex;
-		flex: 1 1 auto;
-		span {
-			padding: 0 rem(6);
-		}
-		@media (max-width: $mobile) {
-			width: 100%;
-		}
-		@media (max-width: em(680)) {
-			flex-direction: column;
-			align-items: flex-start;
-		}
-	}
-
-	// .form-reserv__caption
-
-	&__caption {
-		margin-right: rem(13);
-		font-family: "Jost";
-		font-style: normal;
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 22px;
-		color: #818181;
-		flex-shrink: 0;
-		@media (max-width: em(680)) {
-			margin-bottom: rem(15);
-		}
-	}
-
-	// .form-reserv__input
-
-	&__input {
-		flex: 1 1 auto;
-		color: #000;
-		@media (max-width: em(680)) {
-			min-width: calc(100% - 15px);
-		}
-	}
-
-	// .form-reserv__quantity
-
-	&__quantity {
-		align-items: center;
-		display: flex;
-		@media (max-width: $mobile) {
-			width: 100%;
-			.quantity {
-				width: 100%;
-			}
-		}
-		@media (max-width: em(680)) {
-			flex-direction: column;
-			align-items: flex-start;
-		}
-	}
-
-	// .form-reserv__promotion
-
-	&__promotion {
-		@media ((max-width: em(1100))) {
-			flex: 0 1 33.333%;
-		}
-	}
-
-	// .form-reserv__btn
-
-	&__btn {
-		@media ((max-width: em(1100)) and (min-width:$mobile)) {
-			flex: 1 1 auto;
-			max-width: 300px;
-		}
-		@media (max-width: $mobile) {
-			width: 100%;
-		}
-	}
-}
-
-.promotion {
-	@media (min-width: $mobileSmall) {
-		position: relative;
-	}
-	// .promotion__dd-link
-
-	&__dd-link {
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 22px;
-		color: #818181;
-		font-family: "Jost";
-		border-bottom: 2.5px dotted #818181;
-		cursor: pointer;
-		&:hover {
-			border-bottom: 2.5px dotted transparent;
-		}
-		@media (max-width: em(1100)) {
-			max-width: 122px;
-		}
-	}
-
-	// .promotion__dd
-
-	&__dd {
-		position: absolute;
-		background: #1d1d1b;
-		box-shadow: 0px 32px 82px rgba(0, 0, 0, 0.216684);
-		border-radius: 5px;
-		color: #fff;
-		top: calc(100% + 20px);
-		right: 0;
-		padding: rem(8) rem(23) rem(21) rem(17);
-		width: 420px;
-		z-index: 10;
-		@media (max-width: em(1100)) {
-			right: auto;
-			left: 0;
-		}
-		@media (max-width: em(885)) {
-			@include adaptiveValue("left", 0, -40, 1, 885, 700);
-		}
-		@media (max-width: $mobile) {
-			left: 0;
-		}
-		@media (max-width: $mobileSmall) {
-			width: 100%;
-			top: auto;
-			bottom: -108px;
-			padding: rem(20) rem(10);
-		}
-	}
-
-	// .promotion__dd-inner
-
-	&__dd-inner {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	// .promotion__label
-
-	&__label {
-		font-size: 12px;
-		line-height: 22px;
-		flex: 1 1 100%;
-	}
-
-	// .promotion__input
-
-	&__input {
-		width: 210px;
-		margin-right: rem(15);
-		@media (max-width: $mobileSmall) {
-			flex: 1 1 100%;
-			margin: 0;
-			margin-bottom: rem(10);
-		}
-	}
-
-	// .promotion__button
-
-	&__button {
-		@media (max-width: $mobileSmall) {
-			flex: 1 1 100%;
-		}
 	}
 }
 

@@ -67,12 +67,28 @@ body {
 	}
 	// Сайт загружен
 	.loaded & {
+		.preloader {
+			opacity: 0;
+			visibility: hidden;
+		}
 	}
+}
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	background-color: #fff;
+	transition: all 0.3s ease 0s;
 }
 
 // Оболочка wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
-	height: 2000px;
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -83,7 +99,6 @@ body {
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
-		background: #000;
 	}
 	// Фикс для слайдеров
 	> * {
@@ -147,6 +162,9 @@ body {
 // Подключение стилей отдельных блоков
 @import "header";
 @import "footer";
+@import "blocks/reserv";
+@import "blocks/rooms";
+@import "blocks/special-offers";
 
 // Подключение стилей отдельных страниц
 @import "home";

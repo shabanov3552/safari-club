@@ -1,0 +1,35 @@
+<div class="reserv">
+   <div class="reserv__container">
+      <form action="" class="reserv__form">
+         <div class="reserv__dates">
+            <div class="reserv__caption">Даты проживания:</div>
+            <input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+            <span>-</span>
+            <input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+         </div>
+         <div class="reserv__quantity">
+            <div class="reserv__caption">Количество гостей:</div>
+            <div data-quantity class="quantity">
+               <button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+               <div class="quantity__input">
+                  <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+               </div>
+               <button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+            </div>
+         </div>
+         <div class="reserv__promotion">
+            <div class="promotion">
+               <div class="promotion__dd-link">Есть промокод</div>
+               <div class="promotion__dd" hidden>
+                  <div class="promotion__dd-inner">
+                     <label for="" class="promotion__label">Промокод</label>
+                     <input autocomplete="off" type="text" name="form[]" class="promotion__input input">
+                     <button type="button" class="promotion__button btn-gold">Подтвердить</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <button type="submit" class="reserv__btn btn-gold">Забронировать</button>
+      </form>
+   </div>
+</div>

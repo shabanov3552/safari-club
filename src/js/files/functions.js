@@ -1,5 +1,7 @@
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
+import { playMainVideo } from "./script.js";
+
 
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
 export function isWebp() {
@@ -29,6 +31,9 @@ export function addLoadedClass() {
 	window.addEventListener("load", function () {
 		setTimeout(function () {
 			document.documentElement.classList.add('loaded');
+			if (window.location.pathname == '/' || window.location.pathname == '/home.html') {
+				playMainVideo();
+			}
 		}, 0);
 	});
 }

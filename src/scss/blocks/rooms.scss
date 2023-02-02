@@ -1,0 +1,541 @@
+// .rooms {
+//    // .rooms__title
+
+//    &__title {
+//       font-family: "Cormorant Garamond";
+//       font-style: normal;
+//       font-weight: 400;
+//       font-size: 90px;
+//       line-height: 109px;
+//       text-transform: uppercase;
+//       color: #3a230b;
+//       margin-bottom: rem(27);
+
+//       @include adaptiveValue("padding-left", 100, 50, 1, 1440, 1000);
+//    }
+
+//    // .rooms__tabs
+
+//    &__tabs {
+//    }
+
+//    // .rooms__content
+
+//    &__content {
+//       background: #f0edeb;
+//       @media (min-width: em(1200)) {
+//          padding: rem(85) 0;
+//          padding-right: rem(90);
+//          display: grid;
+//          grid-template-columns: 59% auto;
+//          @media (max-width: em(1600)) {
+//             grid-template-columns: repeat(2, 1fr);
+//             padding: rem(85) 0;
+//          }
+//       }
+//       @media (max-width: em(1200)) {
+//          display: grid;
+//          grid-template-rows: auto 1fr;
+//       }
+//    }
+
+//    // .rooms__body
+
+//    &__body {
+//       position: relative;
+//       height: 100%;
+//    }
+
+//    // .rooms__image-ibg
+
+//    &__image-ibg {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       z-index: 1;
+//    }
+
+//    // .rooms__info
+
+//    &__info {
+//       position: relative;
+//       z-index: 2;
+//       padding: rem(60) rem(70) rem(67) rem(167);
+//       align-items: flex-start;
+//       justify-content: flex-end;
+//       height: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       @media (max-width: em(1600)) {
+//          padding: rem(60) rem(70) rem(40) rem(100);
+//       }
+//       @include adaptiveValue("min-height", 650, 480, 3, 1200, 375);
+//       @media (max-width: $tablet) {
+//          padding: rem(50) rem(80);
+//       }
+//       @media (max-width: $mobile) {
+//          padding: rem(40);
+//       }
+//       @media (max-width: $mobileSmall) {
+//          padding: rem(20);
+//       }
+//       &::before {
+//          content: "";
+//          position: absolute;
+//          bottom: 0;
+//          left: 0;
+//          width: 100%;
+//          height: 50%;
+//          z-index: -1;
+//          background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+//          @media (max-width: $mobile) {
+//             background: #3a230b;
+//          }
+//       }
+//    }
+
+//    // .rooms__icons
+
+//    &__icons {
+//       display: flex;
+//       flex-wrap: wrap;
+//       gap: 15px;
+//       align-items: center;
+//       margin-bottom: rem(20);
+//    }
+
+//    // .rooms__icon
+
+//    &__icon {
+//    }
+
+//    // .rooms__descr
+
+//    &__descr {
+//       font-weight: 400;
+//       font-size: 24px;
+//       line-height: 36px;
+//       color: #ffffff;
+//       margin-bottom: rem(30);
+//       @media (max-width: $mobile) {
+//          font-size: 16px;
+//          line-height: 23px;
+//          margin-bottom: rem(17);
+//       }
+//    }
+
+//    // .rooms__row
+
+//    &__row {
+//       display: flex;
+//       gap: 30px;
+//       width: 100%;
+//       @media (max-width: em(1600)) {
+//          flex-wrap: wrap;
+//       }
+//       @media (max-width: $tablet) {
+//          justify-content: space-between;
+//       }
+//       @media (max-width: $mobile) {
+//          gap: 15px;
+//       }
+//    }
+
+//    // .rooms__price
+
+//    &__price {
+//       font-family: "Jost";
+//       font-style: normal;
+//       font-weight: 600;
+//       font-size: 36px;
+//       line-height: 40px;
+//       letter-spacing: 0.765957px;
+//       color: #ffffff;
+//       @media ((max-width: em(1600)) and (min-width: $tablet)) {
+//          flex: 1 1 100%;
+//       }
+//       @media (max-width: $mobile) {
+//          font-size: 23px;
+//          line-height: 40px;
+//       }
+//    }
+
+//    // .rooms__resrv-btn
+
+//    &__resrv-btn {
+//       color: #fff;
+//       @media (max-width: $tablet) {
+//          flex: 1 1 100%;
+//          order: 3;
+//       }
+//    }
+
+//    // .rooms__more-btn
+
+//    &__more-btn {
+//       flex: 1 1 auto;
+//       display: flex;
+//       justify-content: flex-end;
+//       @media (max-width: $mobile) {
+//          font-size: 0;
+//       }
+//    }
+
+//    // .rooms__navigation
+
+//    &__navigation {
+//       display: flex;
+//       flex-direction: column;
+//    }
+
+//    // .rooms__name
+
+//    &__name {
+//       box-shadow: 0px 1px 0px #d8d8d8;
+//       display: block;
+//       font-family: "Cormorant Garamond";
+//       font-style: normal;
+//       font-weight: 500;
+//       font-size: 23px;
+//       line-height: 28px;
+//       color: #000000;
+//       padding: rem(36) rem(20) rem(36) rem(80);
+//       text-align: left;
+//       border: 8px solid transparent;
+//       outline: none;
+//       cursor: pointer;
+//       @media (max-width: em(1600)) {
+//          padding: rem(36) rem(20) rem(36) rem(50);
+//       }
+//       &:last-child {
+//          box-shadow: none;
+//       }
+//       &_active,
+//       &:hover {
+//          background: linear-gradient(90deg, #f2cb99 0%, #f0edeb 100%), #ffffff;
+//          box-sizing: content-box;
+//          border: 8px solid;
+//          border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+//          border-image-slice: 1;
+//          border-right: none;
+//          position: relative;
+//          @media (max-width: em(1200)) {
+//             border: 8px solid #fff;
+//             border-right: none;
+//          }
+//          @media (min-width: em(1200)) {
+//             &::before {
+//                content: "";
+//                position: absolute;
+//                top: 50%;
+//                left: 0;
+//                width: 46px;
+//                height: 46px;
+//                transform: translate(-60%, -50%);
+//                z-index: 5;
+//                background: url(../img/svg/rooms-name-rhomb.svg);
+//             }
+//          }
+//       }
+//    }
+// }
+
+.rooms {
+   // .rooms__title
+
+   &__title {
+      margin-bottom: rem(27);
+   }
+
+   // .rooms__content
+
+   &__content {
+      display: grid;
+      grid-template-columns: 59% 1fr;
+      background: #f0edeb url(../img/ornament-bg-left.png) left no-repeat;
+      background-blend-mode: multiply;
+      padding: rem(85) 0;
+      @media (max-width: $pc) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: em(1200)) {
+         grid-template-columns: 1fr;
+         grid-template-rows: auto 1fr;
+         background: #f0edeb;
+         padding: 0;
+      }
+   }
+
+   // .rooms__slider
+
+   &__slider {
+   }
+
+   // .rooms__wrapper
+
+   &__wrapper {
+   }
+
+   // .rooms__slide
+
+   &__slide {
+      @media (min-width: $mobile) {
+         height: 100%;
+      }
+   }
+
+   // .rooms__body
+
+   &__body {
+      position: relative;
+      height: 100%;
+      padding: rem(65) rem(70) rem(65) rem(170);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      // height: 100%;
+      &::after {
+         content: "";
+         position: absolute;
+         right: 0;
+         bottom: 0;
+         width: 32px;
+         height: 32px;
+         transform: rotate(45deg) translate(23px, 0px);
+         background: #f0edeb;
+      }
+      @media (max-width: $pc) {
+         padding: rem(50) rem(70) rem(50) rem(100);
+      }
+      @media (max-width: em(1200)) {
+         height: 650px;
+      }
+      @media (max-width: $tablet) {
+         padding: rem(50) rem(80);
+      }
+      @media (max-width: $mobile) {
+         background: none;
+         height: auto;
+         padding: rem(0);
+         display: grid;
+         grid-template-rows: 440px 1fr;
+      }
+      @media (max-width: $mobileSmall) {
+         grid-template-rows: 240px 1fr;
+      }
+   }
+
+   // .rooms__body-top
+
+   &__body-top {
+      @media (max-width: $mobile) {
+         position: relative;
+      }
+   }
+
+   // .rooms__image-ibg
+
+   &__image-ibg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      @media (max-width: $mobile) {
+         position: relative;
+         &::after {
+            content: "";
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 40%;
+            width: 100%;
+         }
+      }
+   }
+
+   // .rooms__icons
+
+   &__icons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: rem(15);
+      @media (max-width: $mobile) {
+         position: absolute;
+         bottom: 0;
+         left: 40px;
+         right: 40px;
+      }
+      @media (max-width: $mobileSmall) {
+         left: 20px;
+         right: 20px;
+      }
+   }
+
+   // .rooms__icon
+
+   &__icon {
+   }
+
+   // .rooms__info
+
+   &__info {
+      @media (max-width: $mobile) {
+         background: #3a230b;
+         padding: rem(40);
+         padding-top: rem(14);
+      }
+      @media (max-width: $mobileSmall) {
+         padding: rem(20);
+      }
+   }
+
+   // .rooms__descr
+
+   &__descr {
+      font-size: 24px;
+      line-height: 36px;
+      color: #ffffff;
+      margin-bottom: rem(35);
+      @media (max-width: $mobile) {
+         font-size: 16px;
+         line-height: 23px;
+         margin-bottom: rem(17);
+      }
+   }
+
+   // .rooms__row
+
+   &__row {
+      display: flex;
+      gap: 35px;
+      flex-wrap: wrap;
+      @media (max-width: $mobile) {
+         gap: 15px;
+      }
+   }
+
+   // .rooms__price
+
+   &__price {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: 0.765957px;
+      color: #ffffff;
+      @media (max-width: em(1740)) {
+         flex: 1 1 100%;
+      }
+      @media (max-width: $mobile) {
+         font-size: 23px;
+         line-height: 40px;
+         flex: 1 1 auto;
+      }
+   }
+
+   // .rooms__reserv-btn
+
+   &__reserv-btn {
+      color: #fff;
+      @media (max-width: $mobile) {
+         order: 3;
+         flex: 1 1 100%;
+      }
+   }
+
+   // .rooms__more-btn
+
+   &__more-btn {
+      flex: 1 1 auto;
+      justify-content: flex-end;
+      @media (max-width: $mobile) {
+         font-size: 0;
+      }
+   }
+
+   // .rooms__navigation
+
+   &__navigation {
+      display: flex;
+      flex-direction: column;
+   }
+
+   // .rooms__name
+
+   &__name {
+      cursor: pointer;
+      background: #f0edeb;
+      border-bottom: 1px solid #d8d8d8;
+      padding: rem(36) rem(40) rem(36) rem(80);
+      font-family: "Cormorant Garamond";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 23px;
+      line-height: 28px;
+      color: #000000;
+      &:last-child {
+         border-bottom: none;
+      }
+      &_active {
+         position: relative;
+         padding: rem(28) rem(40) rem(28) rem(72);
+         border: 8px solid #fff;
+         border-image-source: linear-gradient(to right, #fff 55%, transparent 100%);
+         border-image-slice: 1;
+         border-right: 0px;
+         background: linear-gradient(90deg, #f2cb99 0%, #f0edeb 100%), #ffffff;
+         &:last-child {
+            border: 8px solid #fff;
+         }
+         @media (min-width: em(1200)) {
+            &::before {
+               content: "";
+               position: absolute;
+               top: 50%;
+               left: 0;
+               width: 35px;
+               height: 35px;
+               background: #ce8d3b;
+               transform: rotate(45deg) translate(-27px, 4px);
+               border: 8px solid #fff;
+            }
+         }
+      }
+      @media (max-width: $tablet) {
+         padding: rem(28) rem(40) rem(28) rem(42);
+         &_active {
+            padding: rem(28) rem(40) rem(28) rem(34);
+         }
+      }
+      @media (max-width: $mobile) {
+         padding: rem(20) rem(20) rem(20) rem(20);
+         &_active {
+            padding: rem(12) rem(20) rem(12) rem(12);
+         }
+      }
+   }
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.btn-gold {
+}
+.more-btn {
+   // .more-btn__arrow
+
+   &__arrow {
+   }
+}

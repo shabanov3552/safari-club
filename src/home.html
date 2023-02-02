@@ -1,20 +1,87 @@
-<!DOCTYPE html>
-<html lang="ru">
-@@include('html/_head.htm',{
-"title":"Главная"
+@@include('html/_header.htm',{
+"title": "Главная",
+"modifierClass": ""
 })
-
-<body>
-	<div class="wrapper">
-		@@include('html/_header.htm',{
-		"class": " "
-		})
-		<main class="page">
-		</main>
-		@@include('html/_footer.htm',{})
+<main class="page">
+	@@include('html/_reserv.htm',{})
+	<div class="video-block">
+		<h1 class="video-block__title">Ваш уголок <br> тишины и комфорта на берегу Енисея</h1>
+		<video pip="false" muted="" preload="auto" class="video-block__start-video js-start-video">
+			<source src="files/video/video-start.mp4" type="video/mp4">
+		</video>
+		<video pip="false" loop="" muted="" preload="auto" class="video-block__main-video js-main-video">
+			<source src="files/video/video-main.mp4" type="video/mp4">
+		</video>
 	</div>
-	@@include('html/_popup.htm',{})
-	@@include('html/_js.htm',{})
-</body>
+	<div class="main-description">
+		<div class="main-description__container">
+			<div class="main-description__row">
+				<div class="main-description__text">
+					<p>Сибирский Сафари Клуб — место силы для тех, кто умеет создавать правильный фон для работы и отдыха.</p>
+					<p>Здесь вас приятно удивят уютные номера — от одноместных до семейных, ресторан, конференц-зал, сауны и бассейн.</p>
+				</div>
+				<div class="main-description__image"><img src="@img/pictures/main-descr.jpg" alt=""></div>
+			</div>
+		</div>
+	</div>
+	@@include('html/_rooms.htm',{})
+	<div class="services">
+		<div class="services__wrapper">
+			<div class="services__row">
+				<a href="" class="services__card">
+					<div class="services__image-ibg"><img src="@img/pictures/services/services_1.jpg" alt=""></div>
+					<div class="services__info">
+						<div class="services__icon"><img src="@img/svg/services-icon_1.svg" alt=""></div>
+						<div class="services__title">Ресторан</div>
+						<div class="services__descr">Европейская кухня, живописный вид и первоклассный сервис. Идеальное место для вашего события.</div>
+					</div>
+				</a>
+				<a href="" class="services__card">
+					<div class="services__image-ibg"><img src="@img/pictures/services/services_2.jpg" alt=""></div>
+					<div class="services__info">
+						<div class="services__icon"><img src="@img/svg/services-icon_2.svg" alt=""></div>
+						<div class="services__title">Сауна</div>
+						<div class="services__descr">Место, в котором найдется возможность расслабиться для каждого.</div>
+					</div>
+				</a>
+				<a href="" class="services__card">
+					<div class="services__image-ibg"><img src="@img/pictures/services/services_3.jpg" alt=""></div>
+					<div class="services__info">
+						<div class="services__icon"><img src="@img/svg/services-icon_3.svg" alt=""></div>
+						<div class="services__title">Беседки</div>
+						<div class="services__descr">Комфортный отдых в теплые дни в наших уютных беседках на берегу Енисея.</div>
+					</div>
+				</a>
+				<a href="" class="services__card">
+					<div class="services__image-ibg"><img src="@img/pictures/services/services_4.jpg" alt=""></div>
+					<div class="services__info">
+						<div class="services__icon"><img src="@img/svg/services-icon_4.svg" alt=""></div>
+						<div class="services__title">Конференц-зал</div>
+						<div class="services__descr">Все необходимое для вашего образовательного, творческого или бизнес-мероприятия.</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	@@include('html/_special-offers.htm',{})
+	<div class="ornament-bg-right">
+		<div class="review">
+			<div class="review__top">
+				<div class="review__title title-cormorant">Отзывы о нас</div>
+				<a href="" class="review__tripadvisor"><img src="@img/svg/tripadvisor.svg" alt=""></a>
+			</div>
+			<review-lab data-widgetid="63c9078f0a1a97c7f5f4b60d"></review-lab>
+			<script src="https://app.reviewlab.ru/widget/index-es2015.js" defer></script>
+		</div>
+		<div class="partners">
+			<div class="partners__title title-cormorant">Партнеры</div>
+			<div class="partners__row">
+				<a href="" class="partners__link"><img src="@img/pictures/partners/logo_1.png" alt=""></a>
+				<a href="" class="partners__link"><img src="@img/pictures/partners/logo_2.png" alt=""></a>
+				<a href="" class="partners__link"><img src="@img/pictures/partners/logo_2.png" alt=""></a>
+			</div>
+		</div>
+	</div>
 
-</html>
+</main>
+@@include('html/_footer.htm',{})

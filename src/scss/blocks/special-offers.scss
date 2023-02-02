@@ -1,0 +1,261 @@
+.special-offers {
+   // .special-offers__header
+
+   &__header {
+      display: flex;
+      gap: 50px;
+      justify-content: space-between;
+      margin-bottom: rem(30);
+      @include adaptiveValue("padding-left", 280, 100, 0, 1920, 1280);
+      @include adaptiveValue("padding-right", 180, 100, 0, 1920, 1280);
+      @media (max-width: $tablet) {
+         padding: 0 rem(40);
+      }
+      @media (max-width: em(374)) {
+         padding: 0 rem(20);
+      }
+   }
+
+   // .special-offers__title
+
+   &__title {
+      font-family: "Cormorant Garamond";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 70px;
+      line-height: 85px;
+      text-transform: uppercase;
+      color: #3a230b;
+      @media (max-width: $tablet) {
+         font-size: 39px;
+         line-height: 47px;
+         text-align: center;
+      }
+      @media (max-width: em(375  )) {
+         font-size: 35px;
+         line-height: 40px;
+      }
+   }
+
+   // .special-offers__top-image
+
+   &__top-image {
+      margin-bottom: rem(-60);
+      @media (max-width: em(1280)) {
+         display: none;
+      }
+   }
+
+   // .special-offers__slider
+
+   &__slider {
+      background: #f0edeb;
+      padding: rem(90) rem(180) rem(60) rem(170);
+      @media (max-width: $pc) {
+         padding: rem(90) rem(100) rem(60) rem(30);
+      }
+      @media (max-width: em(1280)) {
+         padding: 0 rem(50);
+         background: transparent;
+         margin-bottom: rem(50);
+      }
+      @media (max-width: $tablet) {
+         padding: 0 rem(40);
+      }
+      @media (max-width: $mobile) {
+         padding: 0 rem(30);
+      }
+      @media (max-width: $mobileSmall) {
+         padding: 0;
+      }
+   }
+
+   // .special-offers__wrapper
+
+   &__wrapper {
+      @media (max-width: em(1280)) {
+         margin-bottom: rem(50);
+      }
+   }
+
+   // .special-offers__slide
+
+   &__slide {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      align-items: flex-start;
+      padding: rem(70) 0;
+      @media (max-width: em(1280)) {
+         display: grid;
+         grid-template-rows: auto 1fr;
+         padding: 0;
+         gap: 60px;
+      }
+      @media (max-width: $mobile) {
+         gap: 30px;
+      }
+   }
+
+   // .special-offers__image-ibg
+
+   &__image-ibg {
+      height: 100%;
+      @media (min-width: em(1280)) {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         z-index: 1;
+         @include adaptiveValue("max-width", 1130, 733, 2, 1920, 1470);
+         @include adaptiveValue("max-width", 850, 750, 3, 1470, 1280);
+      }
+      @include adaptiveValue("height", 570, 250, 1, 1280);
+   }
+
+   // .special-offers__left-photo
+
+   &__left-photo {
+      display: none;
+      @media (min-width: em(1280)) {
+         display: block;
+         position: relative;
+         z-index: 2;
+         transform: translate(-85px, 0px);
+         border: 11px solid #ffffff;
+         &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(57%, -50%);
+            width: 63px;
+            height: 63px;
+            background: url(../img/svg/rhomb.svg) center/contain no-repeat;
+         }
+         @media (max-width: $pc) {
+            transform: translate(-15px, 0px);
+         }
+      }
+   }
+
+   // .special-offers__info
+
+   &__info {
+      position: relative;
+      z-index: 2;
+      background-color: #fff;
+      padding: rem(50) rem(40) rem(50) rem(80);
+      max-width: 614px;
+      @media (max-width: em(1280)) {
+         max-width: 100%;
+         padding: 0;
+      }
+      @media (max-width: $mobileSmall) {
+         padding: 0 rem(15);
+      }
+   }
+
+   // .special-offers__info-title
+
+   &__info-title {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 37px;
+      line-height: 42px;
+      margin-bottom: rem(50);
+      color: #000000;
+      @media (max-width: $mobile) {
+         font-size: 27px;
+         line-height: 32px;
+         margin-bottom: rem(12);
+      }
+   }
+
+   // .special-offers__subtitle
+
+   &__subtitle {
+      font-weight: 400;
+      font-size: 21px;
+      margin-bottom: rem(50);
+      line-height: 28px;
+      @media (max-width: $mobile) {
+         font-size: 18px;
+         line-height: 28px;
+         margin-bottom: rem(20);
+      }
+   }
+
+   // .special-offers__desc
+
+   &__desc {
+      font-size: 16px;
+      line-height: 20px;
+      & > * {
+         &:not(:last-child) {
+            margin-bottom: rem(30);
+            @media (max-width: $mobile) {
+               margin-bottom: rem(18);
+            }
+         }
+      }
+      ul {
+         padding-left: rem(25);
+         li {
+            margin-bottom: rem(10);
+            list-style-image: url(../img/svg/list-style-rhomb.svg);
+         }
+      }
+   }
+
+   // .special-offers__buttons
+
+   &__buttons {
+      display: flex;
+      position: relative;
+      z-index: 5;
+      @media (min-width: em(1280)) {
+         justify-content: flex-end;
+         margin-top: rem(-64);
+         @include adaptiveValue("padding-right", 235, 200, 2, 1920, 1470);
+         @include adaptiveValue("padding-right", 301, 210, 3, 1470, 1280);
+      }
+      @media (max-width: $mobileSmall) {
+         padding: 0 rem(20);
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+      }
+      .swiper-button-next {
+      }
+      .swiper-button-next {
+      }
+   }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev,
+.swiper-button-next {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: rem(24) rem(34);
+   border: 1px solid #cacaca;
+   transition: background 0.3s ease 0s;
+   &:hover {
+      background: rgba(0, 0, 0, 0.1);
+   }
+   @media (max-width: em(1280)) {
+      width: 168px;
+   }
+}
+.swiper-button-next {
+}
+.swiper-button-next {
+}
