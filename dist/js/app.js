@@ -40,7 +40,7 @@
         window.addEventListener("load", (function() {
             setTimeout((function() {
                 document.documentElement.classList.add("loaded");
-                if ("/" == window.location.pathname || "/home.html" == window.location.pathname) playMainVideo();
+                if ("/" == window.location.pathname || "/home.html" == window.location.pathname || "/safari-club/dist/home.html" == window.location.pathname) playMainVideo();
             }), 0);
         }));
     }
