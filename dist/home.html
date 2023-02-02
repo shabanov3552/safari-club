@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230202225521">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="preloader"><img src="img/loader.gif" alt=""></div>
+	<div class="wrapper ">
+		<!-- data-scroll="200" data-scroll-show="100" -->
+		<header class="header">
+			<div class="header__top">
+				<div class="header__container">
+					<div class="header__left-menu menu-left">
+						<div class="menu-left__top">
+							<div class="menu-phone" data-da=".mobile-menu__header, 1280">
+								<div class="menu-phone__descr">Служба бронирования</div>
+								<a href="tel:+73912053525" class="menu-phone__link">+7 (391) 205-35-25</a>
+							</div>
+							<div class="menu-phone" data-da=".mobile-menu__header, 1280">
+								<div class="menu-phone__descr">Ресторан</div>
+								<a href="tel:+73912053540" class="menu-phone__link">+7 (391) 205-35-40</a>
+							</div>
+						</div>
+						<div class="menu-left__bottom" data-da=".mobile-menu__center, 1280">
+							<a href="" class="menu-link">Номера</a>
+							<a href="" class="menu-link">Ресторан</a>
+							<a href="" class="menu-link">Сауна</a>
+							<a href="" class="menu-link">Конференц-зал</a>
+						</div>
+					</div>
+					<a href="" class="header__logo main-logo">
+						<span class="main-logo__text main-logo__text_left">Сибирский</span>
+						<span class="main-logo__img">
+							<img src="img/svg/logo-black.svg" alt="">
+							<img src="img/svg/logo-white.svg" alt="">
+						</span>
+						<span class="main-logo__text main-logo__text_right">Сафари Клуб</span>
+						<span class="main-logo__bottom-text">гостиничный комплекс</span>
+					</a>
+					<div class="header__right-menu menu-right">
+						<div class="menu-right__top">
+							<a href="" data-popup="#callback" class="callback-btn" data-da=".mobile-menu__header, 1280">
+								<img src="img/svg/call-back.svg" alt="">
+								<span class="callback-btn__text">Заказать звонок</span>
+							</a>
+							<a href="" class="lang-switch">En</a>
+							<a href="" data-popup="#reserv" class="reserv-btn btn-gold">Забронировать</a>
+						</div>
+						<div class="menu-right__bottom" data-da=".mobile-menu__center, 1280">
+							<a href="" class="menu-link">Беседки</a>
+							<a href="" class="menu-link">Подарочные сертификаты</a>
+							<div class="dropdown-menu">
+								<span class="dropdown-menu__span">Клуб</span>
+								<svg class="dropdown-menu__arrow">
+									<use xlink:href="img/icons/icons.svg#svg-arrow-dropdown"></use>
+								</svg>
+								<ul class="dropdown-menu__list">
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">О нас</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Команда</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">События</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Фотогалерея</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Видеогалерея</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Вакансии</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Документы</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="header__mobile-menu mobile-menu">
+						<div class="mobile-menu__header"></div>
+						<div class="mobile-menu__center"></div>
+					</div>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="reserv">
+				<div class="reserv__container">
+					<form action="" class="reserv__form">
+						<div class="reserv__dates">
+							<div class="reserv__caption">Даты проживания:</div>
+							<input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+							<span>-</span>
+							<input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+						</div>
+						<div class="reserv__quantity">
+							<div class="reserv__caption">Количество гостей:</div>
+							<div data-quantity class="quantity">
+								<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+								<div class="quantity__input">
+									<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+								</div>
+								<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+							</div>
+						</div>
+						<div class="reserv__promotion">
+							<div class="promotion">
+								<div class="promotion__dd-link">Есть промокод</div>
+								<div class="promotion__dd" hidden>
+									<div class="promotion__dd-inner">
+										<label for="" class="promotion__label">Промокод</label>
+										<input autocomplete="off" type="text" name="form[]" class="promotion__input input">
+										<button type="button" class="promotion__button btn-gold">Подтвердить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="reserv__btn btn-gold">Забронировать</button>
+					</form>
+				</div>
+			</div>
+			<div class="video-block">
+				<h1 class="video-block__title">Ваш уголок <br> тишины и комфорта на берегу Енисея</h1>
+				<video pip="false" muted="" preload="auto" class="video-block__start-video js-start-video">
+					<source src="files/video/video-start.mp4" type="video/mp4">
+				</video>
+				<video pip="false" loop="" muted="" preload="auto" class="video-block__main-video js-main-video">
+					<source src="files/video/video-main.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="main-description">
+				<div class="main-description__container">
+					<div class="main-description__row">
+						<div class="main-description__text">
+							<p>Сибирский Сафари Клуб — место силы для тех, кто умеет создавать правильный фон для работы и отдыха.</p>
+							<p>Здесь вас приятно удивят уютные номера — от одноместных до семейных, ресторан, конференц-зал, сауны и бассейн.</p>
+						</div>
+						<div class="main-description__image"><picture><source srcset="img/pictures/main-descr.webp" type="image/webp"><img src="img/pictures/main-descr.jpg" alt=""></picture></div>
+					</div>
+				</div>
+			</div>
+			<div class="rooms">
+				<div class="rooms__title __container title-cormorant">Номера</div>
+				<div class="rooms__content">
+					<div class="rooms__slider swiper">
+						<div class="rooms__wrapper swiper-wrapper">
+							<div class="rooms__slide swiper-slide">
+								<div class="rooms__body">
+									<div class="rooms__body-top">
+										<div class="rooms__image-ibg"><picture><source srcset="img/pictures/rooms/room_1.webp" type="image/webp"><img src="img/pictures/rooms/room_1.jpg" alt=""></picture></div>
+										<div class="rooms__icons">
+											<div class="rooms__icon"><img src="img/svg/room-icon_1.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_2.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_3.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_4.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_5.svg" alt=""></div>
+										</div>
+									</div>
+									<div class="rooms__info">
+										<div class="rooms__descr">
+											Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quibusdam iste repellendus veritatis reiciendis velit officia modi sint, voluptatum voluptas et nostrum dicta officiis dolorem aut fugit. Ullam autem corporis nihil ex sequi, veritatis quis magnam excepturi enim, debitis vero earum iure nisi nobis amet molestias expedita incidunt alias? Reprehenderit a nostrum obcaecati necessitatibus voluptate officiis, voluptatibus dolorem ut illo, fuga nihil praesentium dolorum beatae dolores suscipit accusamus optio quod. Possimus laboriosam vero tempora praesentium distinctio voluptatem voluptatum reiciendis facere expedita quaerat error dolore perspiciatis delectus repellat, sint placeat voluptate minus est ipsam. Repellat atque tenetur saepe veritatis accusantium amet! Воплощенное сочетание домашнего уюта, практичного дизайна и первоклассного сервиса
+										</div>
+										<div class="rooms__row">
+											<div class="rooms__price">От 3000 ₽/сутки</div>
+											<a href="" class="rooms__reserv-btn btn-gold">Забронировать</a>
+											<a href="" class="rooms__more-btn more-btn">
+												<span>Подробнее</span>
+												<svg class="more-btn__arrow">
+													<use xlink:href="img/icons/icons.svg#svg-arrow-more"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="rooms__slide swiper-slide">
+								<div class="rooms__body">
+									<div class="rooms__body-top">
+										<div class="rooms__image-ibg"><picture><source srcset="img/pictures/rooms/room_2.webp" type="image/webp"><img src="img/pictures/rooms/room_2.jpg" alt=""></picture></div>
+										<div class="rooms__icons">
+											<div class="rooms__icon"><img src="img/svg/room-icon_1.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_2.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_3.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_4.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_5.svg" alt=""></div>
+											<div class="rooms__icon"><picture><source srcset="img/svg/room-icon_6.webp" type="image/webp"><img src="img/svg/room-icon_6.png" alt=""></picture></div>
+											<div class="rooms__icon"><picture><source srcset="img/svg/room-icon_7.webp" type="image/webp"><img src="img/svg/room-icon_7.png" alt=""></picture></div>
+											<div class="rooms__icon"><picture><source srcset="img/svg/room-icon_8.webp" type="image/webp"><img src="img/svg/room-icon_8.png" alt=""></picture></div>
+											<div class="rooms__icon"><picture><source srcset="img/svg/room-icon_9.webp" type="image/webp"><img src="img/svg/room-icon_9.png" alt=""></picture></div>
+										</div>
+									</div>
+									<div class="rooms__info">
+										<div class="rooms__descr">
+											Воплощенное сочетание домашнего уюта, практичного дизайна и первоклассного сервиса
+										</div>
+										<div class="rooms__row">
+											<div class="rooms__price">От 3000 ₽/сутки</div>
+											<a href="" class="rooms__reserv-btn btn-gold">Забронировать</a>
+											<a href="" class="rooms__more-btn more-btn">
+												<span>Подробнее</span>
+												<svg class="more-btn__arrow">
+													<use xlink:href="img/icons/icons.svg#svg-arrow-more"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="rooms__slide swiper-slide">
+								<div class="rooms__body">
+									<div class="rooms__body-top">
+										<div class="rooms__image-ibg"><picture><source srcset="img/pictures/rooms/room_3.webp" type="image/webp"><img src="img/pictures/rooms/room_3.jpg" alt=""></picture></div>
+										<div class="rooms__icons">
+											<div class="rooms__icon"><img src="img/svg/room-icon_1.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_2.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_3.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_4.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_5.svg" alt=""></div>
+										</div>
+									</div>
+									<div class="rooms__info">
+										<div class="rooms__descr">
+											Воплощенное сочетание домашнего уюта, практичного дизайна и первоклассного сервиса
+										</div>
+										<div class="rooms__row">
+											<div class="rooms__price">От 3000 ₽/сутки</div>
+											<a href="" class="rooms__reserv-btn btn-gold">Забронировать</a>
+											<a href="" class="rooms__more-btn more-btn">
+												<span>Подробнее</span>
+												<svg class="more-btn__arrow">
+													<use xlink:href="img/icons/icons.svg#svg-arrow-more"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="rooms__slide swiper-slide">
+								<div class="rooms__body">
+									<div class="rooms__body-top">
+										<div class="rooms__image-ibg"><picture><source srcset="img/pictures/rooms/room_1.webp" type="image/webp"><img src="img/pictures/rooms/room_1.jpg" alt=""></picture></div>
+										<div class="rooms__icons">
+											<div class="rooms__icon"><img src="img/svg/room-icon_1.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_2.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_3.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_4.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_5.svg" alt=""></div>
+										</div>
+									</div>
+									<div class="rooms__info">
+										<div class="rooms__descr">
+											Воплощенное сочетание домашнего уюта, практичного дизайна и первоклассного сервиса
+										</div>
+										<div class="rooms__row">
+											<div class="rooms__price">От 3000 ₽/сутки</div>
+											<a href="" class="rooms__reserv-btn btn-gold">Забронировать</a>
+											<a href="" class="rooms__more-btn more-btn">
+												<span>Подробнее</span>
+												<svg class="more-btn__arrow">
+													<use xlink:href="img/icons/icons.svg#svg-arrow-more"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="rooms__slide swiper-slide">
+								<div class="rooms__body">
+									<div class="rooms__body-top">
+										<div class="rooms__image-ibg"><picture><source srcset="img/pictures/rooms/room_2.webp" type="image/webp"><img src="img/pictures/rooms/room_2.jpg" alt=""></picture></div>
+										<div class="rooms__icons">
+											<div class="rooms__icon"><img src="img/svg/room-icon_1.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_2.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_3.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_4.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_5.svg" alt=""></div>
+										</div>
+									</div>
+									<div class="rooms__info">
+										<div class="rooms__descr">
+											Воплощенное сочетание домашнего уюта, практичного дизайна и первоклассного сервиса
+										</div>
+										<div class="rooms__row">
+											<div class="rooms__price">От 3000 ₽/сутки</div>
+											<a href="" class="rooms__reserv-btn btn-gold">Забронировать</a>
+											<a href="" class="rooms__more-btn more-btn">
+												<span>Подробнее</span>
+												<svg class="more-btn__arrow">
+													<use xlink:href="img/icons/icons.svg#svg-arrow-more"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="rooms__slide swiper-slide">
+								<div class="rooms__body">
+									<div class="rooms__body-top">
+										<div class="rooms__image-ibg"><picture><source srcset="img/pictures/rooms/room_3.webp" type="image/webp"><img src="img/pictures/rooms/room_3.jpg" alt=""></picture></div>
+										<div class="rooms__icons">
+											<div class="rooms__icon"><img src="img/svg/room-icon_1.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_2.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_3.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_4.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_5.svg" alt=""></div>
+										</div>
+									</div>
+									<div class="rooms__info">
+										<div class="rooms__descr">
+											Воплощенное сочетание домашнего уюта, практичного дизайна и первоклассного сервиса
+										</div>
+										<div class="rooms__row">
+											<div class="rooms__price">От 3000 ₽/сутки</div>
+											<a href="" class="rooms__reserv-btn btn-gold">Забронировать</a>
+											<a href="" class="rooms__more-btn more-btn">
+												<span>Подробнее</span>
+												<svg class="more-btn__arrow">
+													<use xlink:href="img/icons/icons.svg#svg-arrow-more"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="rooms__slide swiper-slide">
+								<div class="rooms__body">
+									<div class="rooms__body-top">
+										<div class="rooms__image-ibg"><picture><source srcset="img/pictures/rooms/room_2.webp" type="image/webp"><img src="img/pictures/rooms/room_2.jpg" alt=""></picture></div>
+										<div class="rooms__icons">
+											<div class="rooms__icon"><img src="img/svg/room-icon_1.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_2.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_3.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_4.svg" alt=""></div>
+											<div class="rooms__icon"><img src="img/svg/room-icon_5.svg" alt=""></div>
+										</div>
+									</div>
+									<div class="rooms__info">
+										<div class="rooms__descr">
+											Воплощенное сочетание домашнего уюта, практичного дизайна и первоклассного сервиса
+										</div>
+										<div class="rooms__row">
+											<div class="rooms__price">От 3000 ₽/сутки</div>
+											<a href="" class="rooms__reserv-btn btn-gold">Забронировать</a>
+											<a href="" class="rooms__more-btn more-btn">
+												<span>Подробнее</span>
+												<svg class="more-btn__arrow">
+													<use xlink:href="img/icons/icons.svg#svg-arrow-more"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="rooms__navigation">
+						<span class="rooms__name">Стандартный номер с 1 кроватью</span>
+						<span class="rooms__name">Стандартный номер с 2 раздельными кроватями</span>
+						<span class="rooms__name">Стандартный номер улучшенный</span>
+						<span class="rooms__name">Комфортный двухместный номер (Джуниор cюит)</span>
+						<span class="rooms__name">Комфортный трехместный номер (Джуниор сюит)</span>
+						<span class="rooms__name">Двухуровневый номер (Люкс)</span>
+						<span class="rooms__name">Люкс улучшенный</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Оболочка слайдера -->
+
+			<!-- Если нужна навигация (влево/вправо) -->
+			<!-- <button type="button" class="swiper-button-prev"></button>
+<button type="button" class="swiper-button-next"></button> -->
+			<div class="services">
+				<div class="services__wrapper">
+					<div class="services__row">
+						<a href="" class="services__card">
+							<div class="services__image-ibg"><picture><source srcset="img/pictures/services/services_1.webp" type="image/webp"><img src="img/pictures/services/services_1.jpg" alt=""></picture></div>
+							<div class="services__info">
+								<div class="services__icon"><img src="img/svg/services-icon_1.svg" alt=""></div>
+								<div class="services__title">Ресторан</div>
+								<div class="services__descr">Европейская кухня, живописный вид и первоклассный сервис. Идеальное место для вашего события.</div>
+							</div>
+						</a>
+						<a href="" class="services__card">
+							<div class="services__image-ibg"><picture><source srcset="img/pictures/services/services_2.webp" type="image/webp"><img src="img/pictures/services/services_2.jpg" alt=""></picture></div>
+							<div class="services__info">
+								<div class="services__icon"><img src="img/svg/services-icon_2.svg" alt=""></div>
+								<div class="services__title">Сауна</div>
+								<div class="services__descr">Место, в котором найдется возможность расслабиться для каждого.</div>
+							</div>
+						</a>
+						<a href="" class="services__card">
+							<div class="services__image-ibg"><picture><source srcset="img/pictures/services/services_3.webp" type="image/webp"><img src="img/pictures/services/services_3.jpg" alt=""></picture></div>
+							<div class="services__info">
+								<div class="services__icon"><img src="img/svg/services-icon_3.svg" alt=""></div>
+								<div class="services__title">Беседки</div>
+								<div class="services__descr">Комфортный отдых в теплые дни в наших уютных беседках на берегу Енисея.</div>
+							</div>
+						</a>
+						<a href="" class="services__card">
+							<div class="services__image-ibg"><picture><source srcset="img/pictures/services/services_4.webp" type="image/webp"><img src="img/pictures/services/services_4.jpg" alt=""></picture></div>
+							<div class="services__info">
+								<div class="services__icon"><img src="img/svg/services-icon_4.svg" alt=""></div>
+								<div class="services__title">Конференц-зал</div>
+								<div class="services__descr">Все необходимое для вашего образовательного, творческого или бизнес-мероприятия.</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="special-offers">
+				<!-- На главной выводятся вообще все спецпредложения, а на внутренних страницах выводятся только спецпредложения, релевантные странице. Коммент от Глеба -->
+				<div class="special-offers__header">
+					<div class="special-offers__title">Специальные предложения</div>
+					<div class="special-offers__top-image"><picture><source srcset="img/pictures/special-offers/header-image_1.webp" type="image/webp"><img src="img/pictures/special-offers/header-image_1.jpg" alt=""></picture></div>
+				</div>
+				<!-- Оболочка слайдера -->
+				<div class="special-offers__slider swiper">
+					<!-- Двигающееся часть слайдера -->
+					<div class="special-offers__wrapper swiper-wrapper">
+						<!-- Слайд -->
+						<div class="special-offers__slide swiper-slide">
+							<div class="special-offers__image-ibg"><picture><source srcset="img/pictures/special-offers/special-offers-bg_1.webp" type="image/webp"><img src="img/pictures/special-offers/special-offers-bg_1.jpg" alt=""></picture></div>
+							<div class="special-offers__left-photo"><picture><source srcset="img/pictures/special-offers/special-offers-content_1.webp" type="image/webp"><img src="img/pictures/special-offers/special-offers-content_1.jpg" alt=""></picture></div>
+							<div class="special-offers__info">
+								<div class="special-offers__info-title">Предложение для молодоженов</div>
+								<div class="special-offers__subtitle">Свадебный номер Люкс или номер на ваш выбор по специальной цене для молодоженов со скидкой 20%</div>
+								<div class="special-offers__desc">
+									<ul>
+										<li>Проживание в номере выбранной категории</li>
+										<li>Поздний выезд до 15:00 или ранний зезд с 7:00 без дополнительной оплаты</li>
+										<li>Бесплатный завтрак с доставкой в номер</li>
+										<li>Шампанское, конфеты</li>
+										<li>Охраняемая парковка при гостинице</li>
+									</ul>
+									<p>Забронировать номер и узнать подробную информацию вы можете по телефону +7 (391) 205-35-35</p>
+								</div>
+							</div>
+						</div>
+						<div class="special-offers__slide swiper-slide">
+							<div class="special-offers__image-ibg"><picture><source srcset="img/pictures/special-offers/special-offers-bg_2.webp" type="image/webp"><img src="img/pictures/special-offers/special-offers-bg_2.jpg" alt=""></picture></div>
+							<div class="special-offers__left-photo"><picture><source srcset="img/pictures/special-offers/special-offers-content_2.webp" type="image/webp"><img src="img/pictures/special-offers/special-offers-content_2.jpg" alt=""></picture></div>
+							<div class="special-offers__info">
+								<div class="special-offers__info-title">Аренда всех беседок на целый день</div>
+								<div class="special-offers__subtitle">У вас большой праздник? Соберутся все друзья и родственники? Всех накормим и развеселим.</div>
+								<div class="special-offers__desc">
+									<ul>
+										<li>Аренда посуды</li>
+										<li>Никто не останется голодным, у нас есть ресторан</li>
+										<li>Круглосуточная работа комплекса, оставайтесь до утра</li>
+									</ul>
+									<p>Забронировать номер и узнать подробную информацию вы можете по телефону +7 (391) 205-35-35</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="special-offers__buttons">
+						<button type="button" class="swiper-button-prev"><img src="img/svg/arrow-slide-left.svg" alt=""></button>
+						<button type="button" class="swiper-button-next"><img src="img/svg/arrow-slide-right.svg" alt=""></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="ornament-bg-right">
+				<div class="review">
+					<div class="review__top">
+						<div class="review__title title-cormorant">Отзывы о нас</div>
+						<a href="" class="review__tripadvisor"><img src="img/svg/tripadvisor.svg" alt=""></a>
+					</div>
+					<review-lab data-widgetid="63c9078f0a1a97c7f5f4b60d"></review-lab>
+					<script src="https://app.reviewlab.ru/widget/index-es2015.js?_v=20230202225521" defer></script>
+				</div>
+				<div class="partners">
+					<div class="partners__title title-cormorant">Партнеры</div>
+					<div class="partners__row">
+						<a href="" class="partners__link"><picture><source srcset="img/pictures/partners/logo_1.webp" type="image/webp"><img src="img/pictures/partners/logo_1.png" alt=""></picture></a>
+						<a href="" class="partners__link"><picture><source srcset="img/pictures/partners/logo_2.webp" type="image/webp"><img src="img/pictures/partners/logo_2.png" alt=""></picture></a>
+						<a href="" class="partners__link"><picture><source srcset="img/pictures/partners/logo_2.webp" type="image/webp"><img src="img/pictures/partners/logo_2.png" alt=""></picture></a>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__wrapper">
+				<div class="footer__top">
+					<div class="footer__col">
+						<div class="footer__col-descr">Служба бронирования</div>
+						<a href="tel:+73912053525" class="footer__link">
+							<img src="img/svg/phone.svg" alt="">
+							<span>+7 (391)205-35-25</span>
+						</a>
+						<a href="mailto:hotel@sibsafariclub.ru" class="footer__link">
+							<img src="img/svg/mail.svg" alt="">
+							<span>hotel@sibsafariclub.ru</span>
+						</a>
+					</div>
+					<div class="footer__col">
+						<div class="footer__col-descr">Ресторан:</div>
+						<a href="tel:+73912053540" class="footer__link">
+							<img src="img/svg/phone.svg" alt="">
+							<span>+7 (391) 205-35-40</span>
+						</a>
+						<a href="mailto:rest@sibsafariclub.ru" class="footer__link">
+							<img src="img/svg/mail.svg" alt="">
+							<span>rest@sibsafariclub.ru</span>
+						</a>
+					</div>
+					<div class="footer__col">
+						<a href="" class="footer__link">
+							<img src="img/svg/map.svg" alt="">
+							<span>г.Красноярск, ул.Судостроительная, 117«А»</span>
+						</a>
+						<a href="" class="footer__link">
+							<span>inst: @sibsafariclub</span>
+						</a>
+						<a href="" class="footer__link">
+							<img src="img/svg/vk.svg" alt="">
+							<span>sibsafariclub</span>
+							<img src="img/svg/link-icon.svg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="footer__center">
+					<div class="pay">
+						<div class="pay__top">Принимаем к оплате:</div>
+						<div class="pay__row">
+							<img src="img/svg/pay_mir.svg" alt="">
+							<img src="img/svg/pay_visa.svg" alt="">
+							<img src="img/svg/pay_master.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom copyright">
+					<div class="copyright__wrapper">
+						<div class="copyright__body">
+							<div class="copyright__item">2023 @ ЗАО «Сибирский Сафари Клуб»</div>
+							<a href="/policy" class="copyright__item">Политика конфиденциальности</a>
+							<a href="/consent" class="copyright__item">Согласие на обработку персональных данных</a>
+							<a href="https://websalt.ru" target="_blank" class="copyright__item">Создание сайта
+								<svg class="copyright__svg">
+									<use xlink:href="img/icons/icons.svg#svg-logo_salt"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="js/app.min.js?_v=20230202225521"></script>
+</body>
+
+</html>
