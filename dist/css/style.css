@@ -2810,16 +2810,16 @@ textarea.input {
   }
 }
 
-@media (max-width: 55.3125em) and (min-width: 43.75em) and (max-width: 55.3125em) {
-@supports (left: clamp( -2.5rem , -11.9594596959rem  +  21.6216221622vw , 0.0000000625rem )) {
+@media (max-width: 55.3125em) and (min-width: 47.9375em) and (max-width: 55.3125em) {
+@supports (left: clamp( -2.5rem , -18.7500004063rem  +  33.8983059322vw , 0.0000000625rem )) {
     .promotion__dd {
-      left: clamp( -2.5rem , -11.9594596959rem  +  21.6216221622vw , 0.0000000625rem );
+      left: clamp( -2.5rem , -18.7500004063rem  +  33.8983059322vw , 0.0000000625rem );
     }
 }
 
-@supports not (left: clamp( -2.5rem , -11.9594596959rem  +  21.6216221622vw , 0.0000000625rem )) {
+@supports not (left: clamp( -2.5rem , -18.7500004063rem  +  33.8983059322vw , 0.0000000625rem )) {
     .promotion__dd {
-      left: calc(-2.5rem + 2.5000000625 * (100vw - 43.75rem) / 11.5625);
+      left: calc(-2.5rem + 2.5000000625 * (100vw - 47.9375rem) / 7.375);
     }
 }
 }
