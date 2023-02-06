@@ -3,6 +3,10 @@
     document.addEventListener("click", (function(e) {
         let target = e.target;
         if (document.querySelector(".promotion")) promotionOpen(target);
+        if (target.closest(".reserv-btn")) {
+            document.querySelector(".wrapper").classList.add("show-reserv");
+            e.preventDefault();
+        }
     }));
     function promotionOpen(target) {
         let dropDown = document.querySelector(".promotion__dd");
@@ -3738,8 +3742,8 @@
                 }
             },
             navigation: {
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next"
+                prevEl: ".special-offers__buttons .swiper-button-prev",
+                nextEl: ".special-offers__buttons .swiper-button-next"
             },
             on: {}
         });
@@ -3754,6 +3758,7 @@
         const headerShow = header.hasAttribute("data-scroll-show");
         const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
         const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
+        const wrapper = document.querySelector(".wrapper");
         let scrollDirection = 0;
         let timer;
         document.addEventListener("windowScroll", (function(e) {
@@ -3762,14 +3767,21 @@
             if (scrollTop >= startPoint) {
                 !header.classList.contains("_header-scroll") ? header.classList.add("_header-scroll") : null;
                 if (headerShow) {
-                    if (scrollTop > scrollDirection) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null; else !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                    if (scrollTop > scrollDirection) {
+                        header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
+                        wrapper.classList.contains("show-reserv") ? wrapper.classList.remove("show-reserv") : null;
+                    } else !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
                     timer = setTimeout((() => {
                         !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
                     }), headerShowTimer);
                 }
             } else {
                 header.classList.contains("_header-scroll") ? header.classList.remove("_header-scroll") : null;
-                if (headerShow) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
+                wrapper.classList.contains("show-reserv") ? wrapper.classList.remove("show-reserv") : null;
+                if (headerShow) {
+                    wrapper.classList.contains("show-reserv") ? wrapper.classList.remove("show-reserv") : null;
+                    header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
+                }
             }
             scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
         }));

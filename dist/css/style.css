@@ -210,6 +210,10 @@ h6 {
   min-width: 0;
 }
 
+.wrapper.show-reserv {
+  padding-top: 4.5rem;
+}
+
 /*
 (i) Стили будут применяться ко 
 всем классам содержащим *__container
@@ -415,10 +419,6 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.header._header-scroll .lang-switch {
-  display: none;
 }
 
 .header__top {
@@ -678,10 +678,6 @@ textarea.input {
   margin-left: 0.625rem;
 }
 
-.lang-switch {
-  margin-left: 5.625rem;
-}
-
 .reserv-btn {
   font-weight: 400;
   font-size: 16px;
@@ -768,32 +764,6 @@ textarea.input {
   padding-bottom: 3.125rem;
   padding-top: 5.625rem;
   position: relative;
-}
-
-.footer::after {
-  content: "";
-  border-top: 1px solid rgba(0, 0, 0, 0.39);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  max-width: 1360px;
-  margin: 0 auto;
-  z-index: 1;
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, -48%);
-      -ms-transform: translate(-50%, -48%);
-          transform: translate(-50%, -48%);
-  width: 23px;
-  height: 23px;
-  background: url(../img/svg/footer-rhomb.svg) left/contain no-repeat;
-  z-index: 2;
 }
 
 .footer__wrapper {
@@ -986,6 +956,10 @@ textarea.input {
 .reserv {
   background: #e8e0da;
   padding: 0.75rem 0;
+  -webkit-transition: top 0.3s ease 0s;
+  -o-transition: top 0.3s ease 0s;
+  transition: top 0.3s ease 0s;
+  top: 0;
 }
 
 .black .reserv {
@@ -1326,10 +1300,7 @@ textarea.input {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 4.375rem 0;
+  padding: 4rem 0;
 }
 
 .special-offers__image-ibg {
@@ -1631,6 +1602,9 @@ textarea.input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
   padding-left: 15.625rem;
   margin-bottom: 2.8125rem;
@@ -1886,6 +1860,10 @@ textarea.input {
 }
 
 @media (min-width: 80em) {
+  .header._header-scroll .lang-switch {
+    display: none;
+  }
+
   .black .dropdown-menu:hover {
     color: #fff;
   }
@@ -1934,12 +1912,23 @@ textarea.input {
     top: 32px;
   }
 
+  .lang-switch {
+    margin-left: 5.625rem;
+  }
+
   .black .lang-switch {
     color: #fff;
   }
 
   .mobile-menu {
     display: none;
+  }
+
+  .show-reserv .reserv {
+    position: fixed;
+    top: 118px;
+    width: 100%;
+    z-index: 7;
   }
 
   .special-offers__image-ibg {
@@ -1958,6 +1947,8 @@ textarea.input {
         -ms-transform: translate(-85px, 0px);
             transform: translate(-85px, 0px);
     border: 11px solid #ffffff;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 
   .special-offers__left-photo::after {
@@ -1998,12 +1989,6 @@ textarea.input {
 
   .special-offers__header {
     padding-right: 11.25rem;
-  }
-}
-
-@media (max-width: 90em) {
-  .footer::after {
-    max-width: 1100px;
   }
 }
 
@@ -2055,6 +2040,7 @@ textarea.input {
   }
 
   .dropdown-menu__link:hover {
+    background: #fff;
     color: #ce8d3b;
   }
 
@@ -2264,10 +2250,10 @@ textarea.input {
             justify-content: center;
     text-align: center;
     margin-bottom: 1.25rem;
-  }
-
-  .review__tripadvisor {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .partners {
@@ -2335,12 +2321,6 @@ textarea.input {
   }
 }
 
-@media (max-width: 72.5em) {
-  .footer::after {
-    max-width: 800px;
-  }
-}
-
 @media (max-width: 68.75em) {
   .reserv__form {
     -webkit-box-pack: start;
@@ -2370,10 +2350,6 @@ textarea.input {
   .title-cormorant {
     font-size: 39px;
     line-height: 47px;
-  }
-
-  .footer::after {
-    max-width: 600px;
   }
 
   .footer__wrapper {
@@ -2491,10 +2467,6 @@ textarea.input {
 }
 
 @media (max-width: 47.99875em) {
-  .footer::after {
-    max-width: 29.99875em;
-  }
-
   .footer {
     padding: 2.5rem 0;
   }
@@ -2741,10 +2713,6 @@ textarea.input {
 }
 
 @media (max-width: 29.99875em) {
-  .footer::after {
-    max-width: 320px;
-  }
-
   .footer__col:last-child .footer__link:first-child {
     -webkit-box-align: start;
         -ms-flex-align: start;
