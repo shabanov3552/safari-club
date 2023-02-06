@@ -4,7 +4,12 @@
         let target = e.target;
         if (document.querySelector(".promotion")) promotionOpen(target);
         if (target.closest(".reserv-btn")) {
-            document.querySelector(".wrapper").classList.add("show-reserv");
+            if (document.querySelector(".header").classList.contains("_header-scroll")) {
+                const wrapper = document.querySelector(".wrapper");
+                const reservFormHeight = document.querySelector(".reserv").clientHeight;
+                wrapper.classList.add("show-reserv");
+                wrapper.style.paddingTop = `${reservFormHeight}px`;
+            }
             e.preventDefault();
         }
     }));
@@ -3742,8 +3747,8 @@
                 }
             },
             navigation: {
-                prevEl: ".special-offers__buttons .swiper-button-prev",
-                nextEl: ".special-offers__buttons .swiper-button-next"
+                prevEl: ".rooms__buttons .swiper-button-prev",
+                nextEl: ".rooms__buttons .swiper-button-next"
             },
             on: {}
         });
@@ -3770,6 +3775,7 @@
                     if (scrollTop > scrollDirection) {
                         header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
                         wrapper.classList.contains("show-reserv") ? wrapper.classList.remove("show-reserv") : null;
+                        wrapper.style.paddingTop = `0px`;
                     } else !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
                     timer = setTimeout((() => {
                         !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
@@ -3778,9 +3784,11 @@
             } else {
                 header.classList.contains("_header-scroll") ? header.classList.remove("_header-scroll") : null;
                 wrapper.classList.contains("show-reserv") ? wrapper.classList.remove("show-reserv") : null;
+                wrapper.style.paddingTop = `0px`;
                 if (headerShow) {
                     wrapper.classList.contains("show-reserv") ? wrapper.classList.remove("show-reserv") : null;
                     header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
+                    wrapper.style.paddingTop = `0px`;
                 }
             }
             scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
