@@ -378,6 +378,35 @@ textarea.input {
   fill: #fff;
 }
 
+.title-cormorant {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 85px;
+  text-transform: uppercase;
+  color: #3a230b;
+}
+
+.black ._header-scroll .header__top {
+  background: #fff;
+}
+
+.black ._header-scroll .dropdown-menu__span,
+.black ._header-scroll .menu-link,
+.black ._header-scroll .menu-phone__descr,
+.black ._header-scroll .main-logo__text {
+  color: #000;
+}
+
+.black ._header-scroll .main-logo__img :first-child {
+  display: block;
+}
+
+.black ._header-scroll .main-logo__img :last-child {
+  display: none;
+}
+
 .header._header-scroll {
   padding-top: 7.4375rem;
 }
@@ -420,6 +449,12 @@ textarea.input {
           justify-content: space-between;
 }
 
+.black .header__top {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.0001)), to(#000000));
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+}
+
 .dropdown-menu {
   position: relative;
   padding: 1rem 0;
@@ -436,6 +471,10 @@ textarea.input {
   pointer-events: all;
   visibility: visible;
   opacity: 1;
+}
+
+.dropdown-menu:hover .dropdown-menu__span {
+  color: #ce8d3b;
 }
 
 .dropdown-menu__span {
@@ -455,6 +494,10 @@ textarea.input {
   margin-left: 0.5625rem;
 }
 
+.black .dropdown-menu__arrow use {
+  fill: #8a8a8a;
+}
+
 .dropdown-menu__link {
   font-weight: 400;
   font-size: 16px;
@@ -468,8 +511,8 @@ textarea.input {
 }
 
 .dropdown-menu__link:hover {
-  background: #fff;
-  color: #000;
+  background: #1d1d1b;
+  color: #fff;
 }
 
 .menu-left {
@@ -586,8 +629,20 @@ textarea.input {
   right: -70px;
 }
 
+.black .main-logo__text {
+  color: #fff;
+}
+
 .main-logo__img :last-child {
   display: none;
+}
+
+.black .main-logo__img :first-child {
+  display: none;
+}
+
+.black .main-logo__img :last-child {
+  display: block;
 }
 
 .main-logo__bottom-text {
@@ -601,6 +656,10 @@ textarea.input {
   line-height: 25px;
   text-align: center;
   color: #3a230b;
+}
+
+.black .main-logo__bottom-text {
+  color: #fff;
 }
 
 .callback-btn {
@@ -929,6 +988,10 @@ textarea.input {
   padding: 0.75rem 0;
 }
 
+.black .reserv {
+  background: rgba(0, 0, 0, 0.4392156863);
+}
+
 .reserv__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -970,11 +1033,21 @@ textarea.input {
       flex-shrink: 0;
 }
 
+.black .reserv__caption {
+  color: #fff;
+}
+
 .reserv__input {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   color: #000;
+}
+
+.black .reserv__input {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.203035);
+  border: 1px solid rgba(0, 0, 0, 0.230742);
 }
 
 .reserv__quantity {
@@ -984,6 +1057,25 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.black .reserv__quantity .quantity {
+  background: rgba(255, 255, 255, 0.203035);
+  border: 1px solid rgba(0, 0, 0, 0.230742);
+}
+
+.black .reserv__quantity .quantity__button::before,
+.black .reserv__quantity .quantity__button::after {
+  background-color: #fff;
+}
+
+.black .reserv__quantity input {
+  background: rgba(255, 255, 255, 0.203035);
+  color: #fff;
+}
+
+.black .reserv__btn {
+  color: #fff;
 }
 
 .promotion__dd-link {
@@ -1000,6 +1092,15 @@ textarea.input {
   border-bottom: 2.5px dotted transparent;
 }
 
+.black .promotion__dd-link {
+  color: #fff;
+  border-bottom: 2.5px dotted #fff;
+}
+
+.black .promotion__dd-link:hover {
+  border-bottom: 2.5px dotted transparent;
+}
+
 .promotion__dd {
   position: absolute;
   background: #1d1d1b;
@@ -1010,7 +1111,7 @@ textarea.input {
   top: calc(100% + 20px);
   right: 0;
   padding: 0.5rem 1.4375rem 1.3125rem 1.0625rem;
-  width: 420px;
+  width: 450px;
   z-index: 10;
 }
 
@@ -1517,16 +1618,6 @@ textarea.input {
 .no-webp .ornament-bg-right{
   background: url(../img/ornament-bg-right.png) right no-repeat; }
 
-.title-cormorant {
-  font-family: "Cormorant Garamond";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 70px;
-  line-height: 85px;
-  text-transform: uppercase;
-  color: #3a230b;
-}
-
 .review {
   padding: 7.5rem 2.8125rem 2.5rem;
   max-width: 1590px;
@@ -1795,6 +1886,18 @@ textarea.input {
 }
 
 @media (min-width: 80em) {
+  .black .dropdown-menu:hover {
+    color: #fff;
+  }
+
+  .black .dropdown-menu:hover .dropdown-menu__span {
+    color: #ce8d3b;
+  }
+
+  .black .dropdown-menu__span {
+    color: #fff;
+  }
+
   .dropdown-menu__list {
     pointer-events: none;
     overflow: hidden;
@@ -1807,16 +1910,32 @@ textarea.input {
     z-index: 10;
     top: 90%;
     right: 0;
-    background: #1d1d1b;
+    background: #fff;
     -webkit-box-shadow: 0px 32px 82px rgba(0, 0, 0, 0.216684);
             box-shadow: 0px 32px 82px rgba(0, 0, 0, 0.216684);
-    color: #fff;
+    color: #1d1d1b;
     border-radius: 5px;
+  }
+
+  .black .menu-phone__descr {
+    color: #fff;
+  }
+
+  .black .menu-link {
+    color: #fff;
+  }
+
+  .black .menu-link:hover {
+    color: #ce8d3b;
   }
 
   .main-logo__text {
     position: absolute;
     top: 32px;
+  }
+
+  .black .lang-switch {
+    color: #fff;
   }
 
   .mobile-menu {
@@ -1899,6 +2018,10 @@ textarea.input {
             align-items: center;
     padding-top: 0.4375rem;
     padding-bottom: 0.4375rem;
+  }
+
+  .black .header__top {
+    background: #3a230b;
   }
 
   .dropdown-menu {
@@ -2078,6 +2201,10 @@ textarea.input {
     margin: 15px 0px 0px 32%;
   }
 
+  .black .reserv {
+    background: #3a230b;
+  }
+
   .reserv__form {
     gap: 20px;
     -ms-flex-wrap: wrap;
@@ -2154,21 +2281,6 @@ textarea.input {
   }
 }
 
-@media (max-width: 75em) {
-  .rooms__content {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    -ms-grid-rows: auto 1fr;
-    grid-template-rows: auto 1fr;
-    background: #f0edeb;
-    padding: 0;
-  }
-
-  .rooms__body {
-    height: 650px;
-  }
-}
-
 @media (max-width: 108.75em) {
   .rooms__price {
     -webkit-box-flex: 1;
@@ -2212,6 +2324,17 @@ textarea.input {
   }
 }
 
+@media (max-width: 75.0625em) {
+  .rooms__content {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: auto 1fr;
+    grid-template-rows: auto 1fr;
+    background: #f0edeb;
+    padding: 0;
+  }
+}
+
 @media (max-width: 72.5em) {
   .footer::after {
     max-width: 800px;
@@ -2244,6 +2367,11 @@ textarea.input {
 }
 
 @media (max-width: 61.99875em) {
+  .title-cormorant {
+    font-size: 39px;
+    line-height: 47px;
+  }
+
   .footer::after {
     max-width: 600px;
   }
@@ -2354,11 +2482,6 @@ textarea.input {
   .services__descr {
     font-size: 18px;
     line-height: 28px;
-  }
-
-  .title-cormorant {
-    font-size: 39px;
-    line-height: 47px;
   }
 
   .partners__row {
@@ -2701,6 +2824,12 @@ textarea.input {
   .special-offers__title {
     font-size: 35px;
     line-height: 40px;
+  }
+}
+
+@media (max-width: 7.5em) {
+  .rooms__body {
+    min-height: 650px;
   }
 }
 
