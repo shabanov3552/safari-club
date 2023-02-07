@@ -1,13 +1,35 @@
 .reserv {
    background: #e8e0da;
    padding: rem(12) 0;
+   transition: top 0.3s ease 0s;
+   top: 0;
+
    @media (max-width: $mobileSmall) {
       position: relative;
    }
+
+   .show-reserv & {
+      position: fixed;
+      top: 118px;
+      width: 100%;
+      z-index: 7;
+
+      @media (max-width: $laptop) {
+         top: 78px;
+      }
+   }
+
+   .black & {
+      background: rgba(0, 0, 0, 0.7);
+
+      @media (max-width: $tablet) {
+         background: #3a230b;
+      }
+   }
+
    // .reserv__container
 
-   &__container {
-   }
+   &__container {}
 
    // .reserv__form
 
@@ -16,13 +38,16 @@
       justify-content: space-between;
       align-items: center;
       gap: 40px;
-      @media (max-width: em(1280)) {
+
+      @media (max-width: $laptop) {
          gap: 20px;
          flex-wrap: wrap;
       }
+
       @media (max-width: em(1100)) {
          justify-content: flex-start;
       }
+
       @media (max-width: $mobile) {
          flex-direction: column;
          align-items: flex-start;
@@ -35,12 +60,15 @@
       align-items: center;
       display: flex;
       flex: 1 1 auto;
+
       span {
          padding: 0 rem(6);
       }
+
       @media (max-width: $mobile) {
          width: 100%;
       }
+
       @media (max-width: em(680)) {
          flex-direction: column;
          align-items: flex-start;
@@ -58,8 +86,13 @@
       line-height: 22px;
       color: #818181;
       flex-shrink: 0;
+
       @media (max-width: em(680)) {
          margin-bottom: rem(15);
+      }
+
+      .black & {
+         color: #fff;
       }
    }
 
@@ -68,8 +101,15 @@
    &__input {
       flex: 1 1 auto;
       color: #000;
+
       @media (max-width: em(680)) {
          min-width: calc(100% - 15px);
+      }
+
+      .black & {
+         color: #fff;
+         background: rgba(255, 255, 255, 0.203035);
+         border: 1px solid rgba(0, 0, 0, 0.230742);
       }
    }
 
@@ -78,15 +118,35 @@
    &__quantity {
       align-items: center;
       display: flex;
+
       @media (max-width: $mobile) {
          width: 100%;
+
          .quantity {
             width: 100%;
          }
       }
+
       @media (max-width: em(680)) {
          flex-direction: column;
          align-items: flex-start;
+      }
+
+      .black & {
+         .quantity {
+            background: rgba(255, 255, 255, 0.203035);
+            border: 1px solid rgba(0, 0, 0, 0.230742);
+         }
+
+         .quantity__button::before,
+         .quantity__button::after {
+            background-color: #fff;
+         }
+
+         input {
+            background: rgba(255, 255, 255, 0.203035);
+            color: #fff;
+         }
       }
    }
 
@@ -105,37 +165,40 @@
          flex: 1 1 auto;
          max-width: 300px;
       }
+
       @media (max-width: $mobile) {
          width: 100%;
       }
+
+      .black & {
+         color: #fff;
+      }
    }
 }
-.input {
-}
+
 .quantity {
    // .quantity__button
 
    &__button {
       // .quantity__button_minus
 
-      &_minus {
-      }
+      &_minus {}
 
       // .quantity__button_plus
 
-      &_plus {
-      }
+      &_plus {}
    }
 
    // .quantity__input
 
-   &__input {
-   }
+   &__input {}
 }
+
 .promotion {
    @media (min-width: $mobileSmall) {
       position: relative;
    }
+
    // .promotion__dd-link
 
    &__dd-link {
@@ -146,9 +209,20 @@
       font-family: "Jost";
       border-bottom: 2.5px dotted #818181;
       cursor: pointer;
+
       &:hover {
          border-bottom: 2.5px dotted transparent;
       }
+
+      .black & {
+         color: #fff;
+         border-bottom: 2.5px dotted #fff;
+
+         &:hover {
+            border-bottom: 2.5px dotted transparent;
+         }
+      }
+
       @media (max-width: em(1100)) {
          max-width: 122px;
       }
@@ -158,25 +232,29 @@
 
    &__dd {
       position: absolute;
-      background: #1d1d1b;
+      background: #fff;
       box-shadow: 0px 32px 82px rgba(0, 0, 0, 0.216684);
       border-radius: 5px;
-      color: #fff;
+      color: #1d1d1b;
       top: calc(100% + 20px);
       right: 0;
       padding: rem(8) rem(23) rem(21) rem(17);
-      width: 420px;
+      width: 450px;
       z-index: 10;
+
       @media (max-width: em(1100)) {
          right: auto;
          left: 0;
       }
+
       @media (max-width: em(885)) {
-         @include adaptiveValue("left", 0, -40, 1, 885, 700);
+         @include adaptiveValue("left", 0, -40, 1, 885, 767);
       }
+
       @media (max-width: $mobile) {
          left: 0;
       }
+
       @media (max-width: $mobileSmall) {
          width: 100%;
          top: auto;
@@ -205,6 +283,7 @@
    &__input {
       width: 210px;
       margin-right: rem(15);
+
       @media (max-width: $mobileSmall) {
          flex: 1 1 100%;
          margin: 0;
@@ -219,6 +298,4 @@
          flex: 1 1 100%;
       }
    }
-}
-.btn-gold {
 }

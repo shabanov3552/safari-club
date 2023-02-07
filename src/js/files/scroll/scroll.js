@@ -77,6 +77,7 @@ export function headerScroll() {
 	const headerShow = header.hasAttribute('data-scroll-show');
 	const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
 	const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
+	const wrapper = document.querySelector('.wrapper');
 	let scrollDirection = 0;
 	let timer;
 	document.addEventListener("windowScroll", function (e) {
@@ -88,6 +89,8 @@ export function headerScroll() {
 				if (scrollTop > scrollDirection) {
 					// downscroll code
 					header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
+					wrapper.classList.contains('show-reserv') ? wrapper.classList.remove('show-reserv') : null;
+					wrapper.style.paddingTop = `0px`;
 				} else {
 					// upscroll code
 					!header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
@@ -98,8 +101,12 @@ export function headerScroll() {
 			}
 		} else {
 			header.classList.contains('_header-scroll') ? header.classList.remove('_header-scroll') : null;
+			wrapper.classList.contains('show-reserv') ? wrapper.classList.remove('show-reserv') : null;
+			wrapper.style.paddingTop = `0px`;
 			if (headerShow) {
+				wrapper.classList.contains('show-reserv') ? wrapper.classList.remove('show-reserv') : null;
 				header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
+				wrapper.style.paddingTop = `0px`;
 			}
 		}
 		scrollDirection = scrollTop <= 0 ? 0 : scrollTop;

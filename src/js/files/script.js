@@ -9,6 +9,16 @@ document.addEventListener("click", function (e) {
    let target = e.target;
 
    if (document.querySelector('.promotion')) { promotionOpen(target); }
+   if (target.closest('.reserv-btn')) {
+      if (document.querySelector('.header').classList.contains('_header-scroll')) {
+         const wrapper = document.querySelector('.wrapper');
+         const reservFormHeight = document.querySelector('.reserv').clientHeight;
+         wrapper.classList.add('show-reserv');
+         wrapper.style.paddingTop = `${reservFormHeight}px`;
+
+      }
+      e.preventDefault();
+   }
 });
 //#endregion
 
@@ -30,6 +40,7 @@ function promotionOpen(target) {
 //#endregion
 
 //#region main video
+
 export function playMainVideo() {
    let startVideo = document.querySelector(".js-start-video");
    let mainVideo = document.querySelector(".js-main-video");
@@ -45,5 +56,11 @@ export function playMainVideo() {
       });
    }, 150);
 }
+
+//#endregion
+
+
+//#region
+
 
 //#endregion
