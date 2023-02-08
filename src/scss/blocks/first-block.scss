@@ -1,0 +1,86 @@
+   // .room-detail__first-block
+
+   .first-block {
+      position: relative;
+      background: rgba(0, 0, 0, 0.384);
+
+
+
+      // .room-detail__image-ibg
+
+      &__image-ibg {
+         position: absolute;
+         top: 0;
+         left: 0t;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+
+         @media (min-width:$tablet) {
+            height: calc(100% + 200px);
+            transform: translate(0px, -200px);
+
+         }
+      }
+
+      // .room-detail__fb-inner
+
+      &__fb-inner {
+         padding-top: rem(220);
+         padding-left: rem(170);
+         padding-bottom: rem(100);
+
+         @media (max-width: em(1300)) {
+            padding: rem(220) rem(100) rem(100);
+         }
+
+         @media (max-width:$mobile) {
+            padding: rem(20) rem(20) rem(60);
+         }
+      }
+
+      // .room-detail__title
+
+      &__title {
+         font-family: "Cormorant Garamond";
+         font-style: normal;
+         font-weight: 500;
+         font-size: 66px;
+         line-height: 80px;
+         letter-spacing: 1.40426px;
+         text-transform: uppercase;
+         color: #ffffff;
+         margin-bottom: rem(30);
+         max-width: 1050px;
+
+         @media (max-width:$tablet) {
+            font-size: 46px;
+            line-height: 56px;
+         }
+
+         @media (max-width:$mobile) {
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: rem(20);
+         }
+      }
+
+      // .room-detail__subtitle
+
+      &__subtitle {
+         font-size: 24px;
+         line-height: 36px;
+         color: #fff;
+         max-width: 650px;
+
+         @media (max-width:$tablet) {
+            font-size: 24px;
+            line-height: 36px;
+         }
+
+         @media (max-width:$mobile) {
+            font-size: 18px;
+            line-height: 26px;
+         }
+      }
+   }

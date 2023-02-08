@@ -3,6 +3,10 @@
 
    &__title {
       margin-bottom: rem(27);
+
+      .rooms-main & {
+         display: none;
+      }
    }
 
    // .rooms__content
@@ -13,6 +17,11 @@
       background: #f0edeb url(../img/ornament-bg-left.png) left no-repeat;
       background-blend-mode: multiply;
       padding: rem(85) 0;
+
+      .rooms-main & {
+         padding: rem(45) 0;
+
+      }
 
       @media (max-width: $pc) {
          grid-template-columns: repeat(2, 1fr);

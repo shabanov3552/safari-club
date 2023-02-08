@@ -4,15 +4,13 @@
 })
 <main class="page room-detail">
    @@include('html/_reserv.htm',{})
-   @@include('html/_breadcrumbs.htm',{})
 
-   <div class="room-detail__first-block">
-      <div class="room-detail__image-ibg"><img src="@img/pictures/rooms/room_1.jpeg" alt=""></div>
-      <div class="room-detail__fb-inner">
-         <h1 class="room-detail__title">Комфортный двухместный номер (Джуниор cюит)</h1>
-         <p class="room-detail__subtitle">Сдержанная элегантность и атмосфера уюта в сочетании с безупречным, тактичным сервисом</p>
-      </div>
-   </div>
+   @@include('html/_first-block.htm',{
+   "src": "img/pictures/rooms/room_1.jpeg",
+   "title": "Комфортный двухместный номер (Джуниор cюит)",
+   "subtitle": "Сдержанная элегантность и атмосфера уюта в сочетании с безупречным, тактичным сервисом",
+   "hidden": "hidden"
+   })
 
    <div class="room-detail__price-block">
       <div class="room-detail__price-row">

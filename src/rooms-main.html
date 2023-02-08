@@ -1,0 +1,71 @@
+@@include('html/_header.htm',{
+"title": "Номера",
+"modifierClass": "black"
+})
+<main class="page rooms-main">
+   @@include('html/_reserv.htm',{})
+
+   @@include('html/_first-block.htm',{
+   "src": "img/pictures/rooms/room_8.jpg",
+   "title": "Номера",
+   "subtitle": "Сдержанная элегантность и атмосфера уюта в сочетании с безупречным, тактичным сервисом",
+   "hidden": "hidden"
+   })
+
+   @@include('html/_rooms.htm',{
+   "title": ""
+   })
+
+   <div class="services">
+      <div class="services__title title-cormorant">Услуги</div>
+      <div class="services__row">
+         <div class="services__col">
+            <div class="services__icon"><img src="@img/svg/services_1.svg" alt=""></div>
+            <div class="services__subtitle">Стирка, глажка, ремонт одежды</div>
+            <a href="" class="services__link"><img src="@img/svg/how-to-get_6.svg" alt=""></a>
+         </div>
+         <div class="services__col">
+            <div class="services__icon"><img src="@img/svg/services_2.svg" alt=""></div>
+            <div class="services__subtitle">Бассейн</div>
+            <a href="" class="services__link"><img src="@img/svg/how-to-get_6.svg" alt=""></a>
+         </div>
+         <div class="services__col">
+            <div class="services__icon"><img src="@img/svg/services_3.svg" alt=""></div>
+            <div class="services__subtitle">Камера хранения багажа</div>
+            <a href="" class="services__link"><img src="@img/svg/how-to-get_6.svg" alt=""></a>
+         </div>
+         <div class="services__col">
+            <div class="services__icon"><img src="@img/svg/services_4.svg" alt=""></div>
+            <div class="services__subtitle">Звонок-будильник</div>
+            <a href="" class="services__link"><img src="@img/svg/how-to-get_6.svg" alt=""></a>
+         </div>
+         <div class="services__col">
+            <div class="services__icon"><img src="@img/svg/services_5.svg" alt=""></div>
+            <div class="services__subtitle">Трансфер</div>
+            <a href="" class="services__link"><img src="@img/svg/how-to-get_6.svg" alt=""></a>
+         </div>
+         <div class="services__col">
+            <div class="services__icon"><img src="@img/svg/services_6.svg" alt=""></div>
+            <div class="services__subtitle">Детские кроватки по запросу</div>
+            <a href="" class="services__link"><img src="@img/svg/how-to-get_6.svg" alt=""></a>
+         </div>
+      </div>
+   </div>
+
+   <div class="rules">
+      <div class="rules__row">
+         <a href="" download="" class="rules__link">
+            <img src="img/svg/PDF.svg" alt="">
+            <span class="rules__name">Правила проживания в гостиничном комплексе</span>
+            <span class="rules__type-file">PDF, 0.5 MB</span>
+         </a>
+         <a href="" download="" class="rules__link">
+            <img src="img/svg/PDF.svg" alt="">
+            <span class="rules__name">Правила проживания с животными в гостиничном комплексе</span>
+            <span class="rules__type-file">PDF, 0.5 MB</span>
+         </a>
+      </div>
+   </div>
+
+</main>
+@@include('html/_footer.htm',{})
