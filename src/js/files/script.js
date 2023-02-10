@@ -41,7 +41,7 @@ function promotionOpen(target) {
 
 //#region main video
 
-export function playMainVideo() {
+function playMainVideo() {
    let startVideo = document.querySelector(".js-start-video");
    let mainVideo = document.querySelector(".js-main-video");
 
@@ -52,11 +52,10 @@ export function playMainVideo() {
          document.documentElement.classList.add('end');
          mainVideo.style.opacity = '1';
          mainVideo.play();
-         // document.querySelector('.first-block__red-hover').style.opacity = 1;
       });
    }, 150);
 }
-
+window.playMainVideo = playMainVideo;
 //#endregion
 
 

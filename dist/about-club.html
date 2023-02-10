@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Аренда беседок</title>
+	<title>О клубе</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -20,7 +20,7 @@
 
 <body>
 	<div class="preloader"><img src="img/loader.gif" alt=""></div>
-	<div class="wrapper black">
+	<div class="wrapper ">
 		<!-- data-scroll="200" data-scroll-show="100" -->
 		<header data-scroll="200" data-scroll-show="100" class="header">
 			<div class="header__top">
@@ -89,51 +89,51 @@
 				</div>
 			</div>
 		</header>
-		<main class="page gazebos-rental">
-
-			<div class="first-block">
-				<div class="first-block__image-ibg"><picture><source srcset="img/pictures/gazebos/first-block.webp" type="image/webp"><img src="img/pictures/gazebos/first-block.jpg" alt=""></picture></div>
-				<div class="first-block__fb-inner">
-					<nav class="breadcrumbs">
-						<ul class="breadcrumbs__list">
-							<li class="breadcrumbs__li">
-								<a href="" class="breadcrumbs__link">
-									<svg class="breadcrumbs__link_back-svg">
-										<use xlink:href="img/icons/icons.svg#svg-arrow-breadcrumbs"></use>
-									</svg>
-									Главная
-								</a>
-							</li>
-							<li class="breadcrumbs__li">
-								<a href="" class="breadcrumbs__link">
-									Крошка
-								</a>
-							</li>
-							<li class="breadcrumbs__li">
-								<a href="" class="breadcrumbs__link">
-									Крошка
-								</a>
-							</li>
-							<li class="breadcrumbs__li">
-								<span class="breadcrumbs__item">Последняя крошка</span>
-							</li>
-						</ul>
-					</nav>
-					<h1 class="first-block__title">Аренда беседок</h1>
-					<p class="first-block__subtitle">Гостиничный комплекс «Сибирский Сафари Клуб» приглашает всех желающих отдохнуть в теплые дни в беседках на живописном берегу реки Енисей. В беседках есть свет и электричество, мангалы.</p>
-					<button type="submit" class="button">Отправить</button>
+		<main class="page">
+			<div class="reserv">
+				<div class="reserv__container">
+					<form action="" class="reserv__form">
+						<div class="reserv__dates">
+							<div class="reserv__caption">Даты проживания:</div>
+							<input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+							<span>-</span>
+							<input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+						</div>
+						<div class="reserv__quantity">
+							<div class="reserv__caption">Количество гостей:</div>
+							<div data-quantity class="quantity">
+								<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+								<div class="quantity__input">
+									<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+								</div>
+								<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+							</div>
+						</div>
+						<div class="reserv__promotion">
+							<div class="promotion">
+								<div class="promotion__dd-link">Есть промокод</div>
+								<div class="promotion__dd" hidden>
+									<div class="promotion__dd-inner">
+										<label for="" class="promotion__label">Промокод</label>
+										<input autocomplete="off" type="text" name="form[]" class="promotion__input input">
+										<button type="button" class="promotion__button btn-gold">Подтвердить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="reserv__btn btn-gold">Забронировать</button>
+					</form>
 				</div>
 			</div>
 
-			<div class="gazebos-catalog">
-				<div class="gazebos-catalog__top">
-
-				</div>
-				<div class="gazebos-catalog__list">
-					<div class="gazebos-catalog__card">
-
-					</div>
-				</div>
+			<div class="video-block">
+				<h1 class="video-block__title">Ваш уголок <br> тишины и комфорта на берегу Енисея</h1>
+				<video pip="false" muted="" preload="auto" class="video-block__start-video js-start-video">
+					<source src="files/video/video-start.mp4" type="video/mp4">
+				</video>
+				<video pip="false" loop="" muted="" preload="auto" class="video-block__main-video js-main-video">
+					<source src="files/video/video-main.mp4" type="video/mp4">
+				</video>
 			</div>
 		</main>
 		<footer class="footer">
@@ -217,3 +217,8 @@
 </body>
 
 </html>
+<!-- Воспроизведение видео на первом экране. 
+Функция добавляется в window из основного файла скрипта -->
+<script>
+	window.playMainVideo()
+</script>

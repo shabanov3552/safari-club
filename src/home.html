@@ -1,18 +1,23 @@
 @@include('html/_header.htm',{
 "title": "Главная",
-"modifierClass": ""
+"modifierClass": "black"
 })
 <main class="page">
 	@@include('html/_reserv.htm',{})
-	<div class="video-block">
-		<h1 class="video-block__title">Ваш уголок <br> тишины и комфорта на берегу Енисея</h1>
-		<video pip="false" muted="" preload="auto" class="video-block__start-video js-start-video">
-			<source src="files/video/video-start.mp4" type="video/mp4">
-		</video>
-		<video pip="false" loop="" muted="" preload="auto" class="video-block__main-video js-main-video">
-			<source src="files/video/video-main.mp4" type="video/mp4">
-		</video>
+
+	<div class="main-slider">
+		<h1 class="main-slider__title">Ваш уголок <br> тишины и комфорта на берегу Енисея</h1>
+		<div class="main-slider__slider swiper">
+			<div class="main-slider__wrapper swiper-wrapper">
+				<div class="main-slider__slide swiper-slide"><img src="img/pictures/main-slider/slide-img_1.jpg" alt=""></div>
+				<div class="main-slider__slide swiper-slide"><img src="img/pictures/main-slider/slide-img_2.jpg" alt=""></div>
+				<div class="main-slider__slide swiper-slide"><img src="img/pictures/main-slider/slide-img_3.jpg" alt=""></div>
+				<div class="main-slider__slide swiper-slide"><img src="img/pictures/main-slider/slide-img_4.jpg" alt=""></div>
+				<div class="main-slider__slide swiper-slide"><img src="img/pictures/main-slider/slide-img_5.jpg" alt=""></div>
+			</div>
+		</div>
 	</div>
+
 	<div class="main-description">
 		<div class="main-description__container">
 			<div class="main-description__row">
@@ -24,9 +29,11 @@
 			</div>
 		</div>
 	</div>
+
 	@@include('html/_rooms.htm',{
 	"title": "Номера"
 	})
+
 	<div class="areas">
 		<div class="areas__wrapper">
 			<div class="areas__row">
@@ -65,8 +72,11 @@
 			</div>
 		</div>
 	</div>
+
 	@@include('html/_special-offers.htm',{})
+
 	<div class="ornament-bg-right">
+
 		<div class="review">
 			<div class="review__top">
 				<div class="review__title title-cormorant">Отзывы о нас</div>
@@ -75,6 +85,7 @@
 			<review-lab data-widgetid="63e111809ecd46456157fa6f"></review-lab>
 			<script src="https://app.reviewlab.ru/widget/index-es2015.js" defer></script>
 		</div>
+
 		<div class="partners">
 			<div class="partners__title title-cormorant">Партнеры</div>
 			<div class="partners__row">
@@ -83,6 +94,7 @@
 				<a href="" class="partners__link"><img src="@img/pictures/partners/logo_2.png" alt=""></a>
 			</div>
 		</div>
+
 	</div>
 
 </main>

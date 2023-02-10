@@ -1735,6 +1735,42 @@ textarea.input {
   max-width: 650px;
 }
 
+.main-slider {
+  position: relative;
+  height: 670px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 5rem;
+  padding-left: 15.3125rem;
+}
+
+.main-slider__title {
+  font-family: "Cormorant";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 73px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  max-width: 700px;
+}
+
+.main-slider__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0px, -200px);
+      -ms-transform: translate(0px, -200px);
+          transform: translate(0px, -200px);
+  height: calc(100% + 200px);
+  width: 100%;
+  z-index: -1;
+}
+
 .video-block {
   background: #f0edeb;
   position: relative;

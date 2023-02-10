@@ -31,9 +31,6 @@ export function addLoadedClass() {
 	window.addEventListener("load", function () {
 		setTimeout(function () {
 			document.documentElement.classList.add('loaded');
-			if (window.location.pathname == '/' || window.location.pathname == '/home.html' || window.location.pathname == '/safari-club/dist/home.html') {
-				playMainVideo();
-			}
 		}, 0);
 	});
 }

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230208221732">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230211024922">
 	<link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png">
@@ -20,7 +20,7 @@
 
 <body>
 	<div class="preloader"><img src="img/loader.gif" alt=""></div>
-	<div class="wrapper ">
+	<div class="wrapper black">
 		<!-- data-scroll="200" data-scroll-show="100" -->
 		<header data-scroll="200" data-scroll-show="100" class="header">
 			<div class="header__top">
@@ -125,15 +125,20 @@
 					</form>
 				</div>
 			</div>
-			<div class="video-block">
-				<h1 class="video-block__title">Ваш уголок <br> тишины и комфорта на берегу Енисея</h1>
-				<video pip="false" muted="" preload="auto" class="video-block__start-video js-start-video">
-					<source src="files/video/video-start.mp4" type="video/mp4">
-				</video>
-				<video pip="false" loop="" muted="" preload="auto" class="video-block__main-video js-main-video">
-					<source src="files/video/video-main.mp4" type="video/mp4">
-				</video>
+
+			<div class="main-slider">
+				<h1 class="main-slider__title">Ваш уголок <br> тишины и комфорта на берегу Енисея</h1>
+				<div class="main-slider__slider swiper">
+					<div class="main-slider__wrapper swiper-wrapper">
+						<div class="main-slider__slide swiper-slide"><picture><source srcset="img/pictures/main-slider/slide-img_1.webp" type="image/webp"><img src="img/pictures/main-slider/slide-img_1.jpg" alt=""></picture></div>
+						<div class="main-slider__slide swiper-slide"><picture><source srcset="img/pictures/main-slider/slide-img_2.webp" type="image/webp"><img src="img/pictures/main-slider/slide-img_2.jpg" alt=""></picture></div>
+						<div class="main-slider__slide swiper-slide"><picture><source srcset="img/pictures/main-slider/slide-img_3.webp" type="image/webp"><img src="img/pictures/main-slider/slide-img_3.jpg" alt=""></picture></div>
+						<div class="main-slider__slide swiper-slide"><picture><source srcset="img/pictures/main-slider/slide-img_4.webp" type="image/webp"><img src="img/pictures/main-slider/slide-img_4.jpg" alt=""></picture></div>
+						<div class="main-slider__slide swiper-slide"><picture><source srcset="img/pictures/main-slider/slide-img_5.webp" type="image/webp"><img src="img/pictures/main-slider/slide-img_5.jpg" alt=""></picture></div>
+					</div>
+				</div>
 			</div>
+
 			<div class="main-description">
 				<div class="main-description__container">
 					<div class="main-description__row">
@@ -145,6 +150,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="rooms">
 				<div class="rooms__title __container title-cormorant">Номера</div>
 				<div class="rooms__content">
@@ -379,6 +385,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="areas">
 				<div class="areas__wrapper">
 					<div class="areas__row">
@@ -417,6 +424,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="special-offers">
 				<!-- На главной выводятся вообще все спецпредложения, а на внутренних страницах выводятся только спецпредложения, релевантные странице. Коммент от Глеба -->
 				<div class="special-offers__header">
@@ -470,15 +478,18 @@
 
 				</div>
 			</div>
+
 			<div class="ornament-bg-right">
+
 				<div class="review">
 					<div class="review__top">
 						<div class="review__title title-cormorant">Отзывы о нас</div>
 						<a href="https://www.tripadvisor.ru/Restaurant_Review-g298525-d2334659-Reviews-Sibirski_Safari_club-Krasnoyarsk_Krasnoyarsk_Krai_Siberian_District.html" class="review__tripadvisor"><img src="img/svg/tripadvisor.svg" alt=""></a>
 					</div>
 					<review-lab data-widgetid="63e111809ecd46456157fa6f"></review-lab>
-					<script src="https://app.reviewlab.ru/widget/index-es2015.js?_v=20230208221732" defer></script>
+					<script src="https://app.reviewlab.ru/widget/index-es2015.js?_v=20230211024922" defer></script>
 				</div>
+
 				<div class="partners">
 					<div class="partners__title title-cormorant">Партнеры</div>
 					<div class="partners__row">
@@ -487,6 +498,7 @@
 						<a href="" class="partners__link"><picture><source srcset="img/pictures/partners/logo_2.webp" type="image/webp"><img src="img/pictures/partners/logo_2.png" alt=""></picture></a>
 					</div>
 				</div>
+
 			</div>
 
 		</main>
@@ -567,7 +579,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230208221732"></script>
+	<script src="js/app.min.js?_v=20230211024922"></script>
 </body>
 
 </html>

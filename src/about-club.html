@@ -1,0 +1,23 @@
+@@include('html/_header.htm',{
+"title": "О клубе",
+"modifierClass": ""
+})
+<main class="page">
+   @@include('html/_reserv.htm',{})
+
+   <div class="video-block">
+      <h1 class="video-block__title">Ваш уголок <br> тишины и комфорта на берегу Енисея</h1>
+      <video pip="false" muted="" preload="auto" class="video-block__start-video js-start-video">
+         <source src="files/video/video-start.mp4" type="video/mp4">
+      </video>
+      <video pip="false" loop="" muted="" preload="auto" class="video-block__main-video js-main-video">
+         <source src="files/video/video-main.mp4" type="video/mp4">
+      </video>
+   </div>
+</main>
+@@include('html/_footer.htm',{})
+<!-- Воспроизведение видео на первом экране. 
+Функция добавляется в window из основного файла скрипта -->
+<script>
+   window.playMainVideo()
+</script>

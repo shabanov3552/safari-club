@@ -1,4 +1,49 @@
 //====================================================================================================
+
+.main-slider {
+   position: relative;
+   height: 670px;
+   display: flex;
+   align-items: flex-end;
+   padding-bottom: rem(80);
+   padding-left: rem(245);
+
+   // .main-slider__title
+
+   &__title {
+      font-family: 'Cormorant';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 73px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      max-width: 700px;
+   }
+
+   // .main-slider__slider
+
+   &__slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(0px, -200px);
+      height: calc(100% + 200px);
+      width: 100%;
+      z-index: -1;
+   }
+
+   // .main-slider__wrapper
+
+   &__wrapper {}
+
+   // .main-slider__slide
+
+   &__slide {}
+}
+
+
+
 .video-block {
    background: #f0edeb;
    position: relative;
