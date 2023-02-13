@@ -8,6 +8,23 @@
    padding-bottom: rem(80);
    padding-left: rem(245);
 
+   @media (max-width:$pc) {
+      padding-bottom: rem(60);
+      padding-left: rem(60);
+   }
+
+   @media (max-width:$tablet) {
+      padding-left: rem(50);
+      padding-bottom: rem(43);
+      height: 530px;
+   }
+
+   @media (max-width:$mobile) {
+      height: 365px;
+      padding-left: rem(20);
+      padding-bottom: rem(20);
+   }
+
    // .main-slider__title
 
    &__title {
@@ -19,6 +36,16 @@
       text-transform: uppercase;
       color: #FFFFFF;
       max-width: 700px;
+
+      @media (max-width:$pc) {
+         font-size: 50px;
+         line-height: 61px;
+      }
+
+      @media (max-width:$mobile) {
+         font-size: 29px;
+         line-height: 35px;
+      }
    }
 
    // .main-slider__slider
@@ -31,6 +58,11 @@
       height: calc(100% + 200px);
       width: 100%;
       z-index: -1;
+
+      @media (max-width:$mobile) {
+         height: 100%;
+         transform: translate(0px, 0px);
+      }
    }
 
    // .main-slider__wrapper
@@ -39,107 +71,13 @@
 
    // .main-slider__slide
 
-   &__slide {}
-}
-
-
-
-.video-block {
-   background: #f0edeb;
-   position: relative;
-   width: 100%;
-   padding-left: rem(68);
-   padding-bottom: rem(60);
-   display: flex;
-   align-items: flex-end;
-
-   @media (min-width: $mobile) {
-      &::before {
-         content: "";
-         position: fixed;
-         top: 0;
-         left: 0;
-         width: 100vw;
-         height: 100vh;
-         background: #f0edeb;
-         z-index: 1;
-         transition: all 0.3s ease 0s;
-      }
-
-      .end & {
-         &::before {
-            opacity: 0;
-            visibility: hidden;
-         }
+   &__slide {
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
       }
    }
-
-   @include adaptiveValue("height", 673, 530, 2, 1980, 1000);
-   @include adaptiveValue("height", 530, 364, 3, 1000, 680);
-
-   @media (max-width: $tablet) {
-      padding-left: rem(50);
-      padding-bottom: rem(40);
-   }
-
-   @media (max-width: $mobile) {
-      padding-left: rem(40);
-      padding-bottom: rem(20);
-   }
-
-   @media (max-width: $mobileSmall) {
-      padding: 0 rem(15);
-      padding-bottom: rem(20);
-   }
-
-   // .video-block__title
-
-   &__title {
-      font-family: "Cormorant Garamond";
-      font-style: normal;
-      font-weight: 300;
-      text-transform: uppercase;
-      color: #3a230b;
-      position: relative;
-      max-width: 590px;
-      @include adaptiveValue("font-size", 50, 29, 0, 1000, 680);
-      @include adaptiveValue("line-height", 61, 35, 0, 1000, 680);
-
-      .end & {
-         z-index: 2;
-      }
-
-      @media (max-width: $mobile) {
-         max-width: 337px;
-      }
-   }
-
-   &__start-video,
-   &__main-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      height: 100%;
-      width: 100%;
-   }
-
-   // .video-block__start-video
-
-   &__start-video {
-      @media (min-width: $mobile) {
-         z-index: 6;
-      }
-
-      .end & {
-         opacity: 0;
-      }
-   }
-
-   // .video-block__main-video
-
-   &__main-video {}
 }
 
 //====================================================================================================
@@ -164,7 +102,10 @@
    // .main-description__row
 
    &__row {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 247px;
+      grid-template-rows: repeat(2, auto);
+      row-gap: 20px;
 
       @media (min-width: $mobile) {
          margin-right: rem(240);
@@ -177,6 +118,10 @@
          @media (max-width: $tablet) {
             margin: 0px rem(50);
          }
+      }
+
+      @media (max-width:$mobile) {
+         grid-template-columns: 1fr;
       }
    }
 
@@ -219,6 +164,32 @@
          font-size: 19px;
          line-height: 28px;
          gap: 20px;
+      }
+   }
+
+
+   // .main-description__btn
+
+   &__btn {
+      color: #CE8D3B;
+      grid-row: 2/3;
+      grid-column: 1/4;
+      display: flex;
+      align-items: center;
+      margin-left: rem(130);
+
+      @media (max-width: $pc) {
+         margin-left: rem(35);
+      }
+
+      svg {
+         width: 20px;
+         height: 15px;
+         margin-left: rem(14);
+
+         use {
+            fill: #CE8D3B;
+         }
       }
    }
 

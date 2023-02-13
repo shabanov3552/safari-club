@@ -379,3 +379,101 @@
       }
    }
 }
+
+.video-block {
+   background: #f0edeb;
+   position: relative;
+   width: 100%;
+   padding-left: rem(68);
+   padding-bottom: rem(60);
+   display: flex;
+   align-items: flex-end;
+
+   @media (min-width: $mobile) {
+      &::before {
+         content: "";
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100vw;
+         height: 100vh;
+         background: #f0edeb;
+         z-index: 1;
+         transition: all 0.3s ease 0s;
+      }
+
+      .end & {
+         &::before {
+            opacity: 0;
+            visibility: hidden;
+         }
+      }
+   }
+
+   @include adaptiveValue("height", 673, 530, 2, 1980, 1000);
+   @include adaptiveValue("height", 530, 364, 3, 1000, 680);
+
+   @media (max-width: $tablet) {
+      padding-left: rem(50);
+      padding-bottom: rem(40);
+   }
+
+   @media (max-width: $mobile) {
+      padding-left: rem(40);
+      padding-bottom: rem(20);
+   }
+
+   @media (max-width: $mobileSmall) {
+      padding: 0 rem(15);
+      padding-bottom: rem(20);
+   }
+
+   // .video-block__title
+
+   &__title {
+      font-family: "Cormorant Garamond";
+      font-style: normal;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #3a230b;
+      position: relative;
+      max-width: 590px;
+      @include adaptiveValue("font-size", 50, 29, 0, 1000, 680);
+      @include adaptiveValue("line-height", 61, 35, 0, 1000, 680);
+
+      .end & {
+         z-index: 2;
+      }
+
+      @media (max-width: $mobile) {
+         max-width: 337px;
+      }
+   }
+
+   &__start-video,
+   &__main-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+   }
+
+   // .video-block__start-video
+
+   &__start-video {
+      @media (min-width: $mobile) {
+         z-index: 6;
+      }
+
+      .end & {
+         opacity: 0;
+      }
+   }
+
+   // .video-block__main-video
+
+   &__main-video {}
+}
