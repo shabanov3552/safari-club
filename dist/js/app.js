@@ -4572,7 +4572,7 @@
                 on: {}
             });
             if (document.querySelector(".main-slider__slider")) new core(".main-slider__slider", {
-                modules: [ Autoplay, EffectFade ],
+                modules: [ Autoplay, EffectFade, Pagination ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
@@ -4586,6 +4586,10 @@
                 autoplay: {
                     delay: 3e3,
                     disableOnInteraction: false
+                },
+                pagination: {
+                    el: ".main-slider__slider .swiper-pagination",
+                    clickable: true
                 },
                 on: {}
             });
@@ -4608,7 +4612,6 @@
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 0,
-                autoHeight: true,
                 speed: 800,
                 pagination: {
                     el: ".rooms__navigation",

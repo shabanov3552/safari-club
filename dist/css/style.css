@@ -1322,6 +1322,7 @@ textarea.input {
   font-family: "Jost";
   border-bottom: 2.5px dotted #818181;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .promotion__dd-link:hover {
@@ -1370,6 +1371,11 @@ textarea.input {
 .promotion__input {
   width: 210px;
   margin-right: 0.9375rem;
+}
+
+.promotion__button {
+  height: 55px;
+  margin-top: -0.4375rem;
 }
 
 .rooms__title {
@@ -1821,6 +1827,33 @@ textarea.input {
      object-fit: cover;
 }
 
+.main-slider .swiper-pagination {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.main-slider .swiper-pagination .swiper-pagination-bullet {
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+  border-radius: 4px;
+  width: 8px;
+  height: 8px;
+}
+
+.main-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 0.7;
+}
+
 .main-description {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1869,6 +1902,8 @@ textarea.input {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 8.125rem;
+  font-size: 21px;
+  line-height: 28px;
 }
 
 .main-description__btn svg {
@@ -1888,6 +1923,12 @@ textarea.input {
   margin-top: -11.25rem;
   width: 247px;
   height: 412px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
 }
 
 .main-description__image img {
@@ -3551,6 +3592,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding: 3.125rem 4.375rem 3.125rem 6.25rem;
   }
 
+  .rooms__name {
+    padding: 1.25rem 2.5rem 1.25rem 2.625rem;
+  }
+
+  .rooms__name_active {
+    padding: 1.25rem 2.5rem 1.25rem 2.125rem;
+  }
+
   .special-offers__slider {
     padding: 5.625rem 6.25rem 3.75rem 1.875rem;
   }
@@ -4029,14 +4078,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding: 3.125rem 5rem;
   }
 
-  .rooms__name {
-    padding: 1.75rem 2.5rem 1.75rem 2.625rem;
-  }
-
-  .rooms__name_active {
-    padding: 1.75rem 2.5rem 1.75rem 2.125rem;
-  }
-
   .special-offers__header {
     padding: 0 2.5rem;
   }
@@ -4269,12 +4310,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .rooms__body {
     background: none;
-    height: auto;
+    height: 100%;
     padding: 0rem;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 440px 1fr;
     grid-template-rows: 440px 1fr;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .rooms__body-top {
@@ -4308,12 +4351,22 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     background: #3a230b;
     padding: 2.5rem;
     padding-top: 0.875rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .rooms__descr {
     font-size: 16px;
     line-height: 23px;
     margin-bottom: 1.0625rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
 
   .rooms__row {
@@ -4406,6 +4459,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             transform: translate(0px, 0px);
   }
 
+  .main-slider .swiper-pagination {
+    -webkit-transform: translate(0px, -50%);
+        -ms-transform: translate(0px, -50%);
+            transform: translate(0px, -50%);
+  }
+
   .main-description {
     padding: 1.875rem 0;
   }
@@ -4419,6 +4478,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     font-size: 19px;
     line-height: 28px;
     gap: 20px;
+  }
+
+  .main-description__btn {
+    margin: 0;
   }
 
   .main-description__image {
@@ -4688,6 +4751,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
       left: calc(-2.5rem + 2.5000000625 * (100vw - 47.9375rem) / 7.375);
     }
 }
+}
+
+@media ((max-width: 75.12375em) and (min-width: 47.99875em)) {
+  .rooms__slider {
+    height: 650px;
+  }
 }
 
 @media (min-width: 80em) and (max-width: 120em) {

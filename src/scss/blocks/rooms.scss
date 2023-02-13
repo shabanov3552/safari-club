@@ -39,6 +39,10 @@
 
    &__slider {
       position: relative;
+
+      @media ((max-width: em(1201.98)) and (min-width:$mobile)) {
+         height: 650px;
+      }
    }
 
    // .rooms__buttons
@@ -120,10 +124,11 @@
 
       @media (max-width: $mobile) {
          background: none;
-         height: auto;
+         height: 100%;
          padding: rem(0);
          display: grid;
          grid-template-rows: 440px 1fr;
+         grid-template-columns: 1fr;
       }
 
       @media (max-width: $mobileSmall) {
@@ -197,6 +202,8 @@
          background: #3a230b;
          padding: rem(40);
          padding-top: rem(14);
+         display: flex;
+         flex-direction: column;
       }
 
       @media (max-width: $mobileSmall) {
@@ -216,6 +223,7 @@
          font-size: 16px;
          line-height: 23px;
          margin-bottom: rem(17);
+         flex: 1 1 auto;
       }
    }
 
@@ -328,11 +336,13 @@
          }
       }
 
-      @media (max-width: $tablet) {
-         padding: rem(28) rem(40) rem(28) rem(42);
+      @media (max-width:$pc) {}
+
+      @media (max-width: $pc) {
+         padding: rem(20) rem(40) rem(20) rem(42);
 
          &_active {
-            padding: rem(28) rem(40) rem(28) rem(34);
+            padding: rem(20) rem(40) rem(20) rem(34);
          }
       }
 

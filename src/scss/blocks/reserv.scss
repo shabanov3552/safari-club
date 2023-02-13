@@ -209,6 +209,7 @@
       font-family: "Jost";
       border-bottom: 2.5px dotted #818181;
       cursor: pointer;
+      white-space: nowrap;
 
       &:hover {
          border-bottom: 2.5px dotted transparent;
@@ -294,6 +295,9 @@
    // .promotion__button
 
    &__button {
+      height: 55px;
+      margin-top: rem(-7);
+
       @media (max-width: $mobileSmall) {
          flex: 1 1 100%;
       }
