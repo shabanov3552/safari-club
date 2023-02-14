@@ -170,13 +170,9 @@
    // .room-detail__adv-icon
 
    &__adv-icon {
-      flex: 0 0 30px;
-      width: 28px;
-
-      img {
-         width: 100%;
-         object-fit: scale-down;
-      }
+      flex: 0 0 32px;
+      width: 32px;
+      object-fit: contain;
    }
 
    // .room-detail__adv-text

@@ -1,77 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: CormorantGaramond;
-  font-display: swap;
-  src: url("../fonts/CormorantGaramond-Light.woff2") format("woff2"), url("../fonts/CormorantGaramond-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: CormorantGaramond;
-  font-display: swap;
-  src: url("../fonts/CormorantGaramond-Bold.woff2") format("woff2"), url("../fonts/CormorantGaramond-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: CormorantGaramond;
-  font-display: swap;
-  src: url("../fonts/CormorantGaramond-Regular.woff2") format("woff2"), url("../fonts/CormorantGaramond-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Jost;
-  font-display: swap;
-  src: url("../fonts/Jost-Medium.woff2") format("woff2"), url("../fonts/Jost-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: CormorantGaramond;
-  font-display: swap;
-  src: url("../fonts/CormorantGaramond-SemiBold.woff2") format("woff2"), url("../fonts/CormorantGaramond-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Jost;
-  font-display: swap;
-  src: url("../fonts/Jost-Regular.woff2") format("woff2"), url("../fonts/Jost-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Jost;
-  font-display: swap;
-  src: url("../fonts/Jost-SemiBold.woff2") format("woff2"), url("../fonts/Jost-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
 * {
   padding: 0px;
   margin: 0px;
@@ -651,7 +579,8 @@ textarea.input {
 .black ._header-scroll .dropdown-menu__span,
 .black ._header-scroll .menu-link,
 .black ._header-scroll .menu-phone__descr,
-.black ._header-scroll .main-logo__text {
+.black ._header-scroll .main-logo__text,
+.black ._header-scroll .main-logo__bottom-text {
   color: #000;
 }
 
@@ -703,6 +632,12 @@ textarea.input {
   left: 0;
   right: 0;
   z-index: 8;
+}
+
+._header-scroll .header__top .header__container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__top .header__container {
@@ -793,6 +728,10 @@ textarea.input {
   gap: 90px;
 }
 
+._header-scroll .menu-left__top {
+  padding-bottom: 0.5rem;
+}
+
 .menu-left__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -818,7 +757,7 @@ textarea.input {
 }
 
 ._header-scroll .menu-right__top {
-  padding-bottom: 0.3125rem;
+  padding-bottom: 0.8125rem;
 }
 
 .menu-right__bottom {
@@ -1484,6 +1423,20 @@ textarea.input {
   margin-bottom: 0.9375rem;
 }
 
+.rooms__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32px;
+          flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.rooms__icon img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .rooms__descr {
   font-size: 24px;
   line-height: 36px;
@@ -1540,7 +1493,7 @@ textarea.input {
   padding: 2.25rem 2.5rem 2.25rem 5rem;
   font-family: "Cormorant Garamond";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 23px;
   line-height: 28px;
   color: #000000;
@@ -1696,6 +1649,9 @@ textarea.input {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   margin-bottom: 2.1875rem;
+  -webkit-transform: translate(-35px, 0px);
+      -ms-transform: translate(-35px, 0px);
+          transform: translate(-35px, 0px);
 }
 
 .breadcrumbs__list {
@@ -1801,7 +1757,7 @@ textarea.input {
 }
 
 .main-slider__title {
-  font-family: "Cormorant";
+  font-family: "Cormorant Garamond";
   font-style: normal;
   font-weight: 400;
   font-size: 60px;
@@ -2116,7 +2072,8 @@ textarea.input {
 }
 
 .partners__link img {
-  mix-blend-mode: darken;
+  max-width: 100%;
+  max-height: 86px;
 }
 
 .room-detail__price-block {
@@ -2220,15 +2177,11 @@ textarea.input {
 
 .room-detail__adv-icon {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 30px;
-          flex: 0 0 30px;
-  width: 28px;
-}
-
-.room-detail__adv-icon img {
-  width: 100%;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+      -ms-flex: 0 0 32px;
+          flex: 0 0 32px;
+  width: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .room-detail__adv-text {
@@ -3990,6 +3943,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .title-cormorant {
     font-size: 39px;
     line-height: 47px;
+  }
+
+  .gallery__slide {
+    width: 100%;
   }
 
   .how-to-get {

@@ -8,7 +8,8 @@
 		.dropdown-menu__span,
 		.menu-link,
 		.menu-phone__descr,
-		.main-logo__text {
+		.main-logo__text,
+		.main-logo__bottom-text {
 			color: #000;
 		}
 
@@ -82,6 +83,10 @@
 			left: 0;
 			right: 0;
 			z-index: 8;
+
+			.header__container {
+				align-items: center;
+			}
 		}
 
 		._header-show & {
@@ -281,6 +286,10 @@
 		@media (max-width: $pc) {
 			gap: 50px;
 		}
+
+		._header-scroll & {
+			padding-bottom: rem(8);
+		}
 	}
 
 	// .menu-left__bottom
@@ -317,7 +326,7 @@
 		}
 
 		._header-scroll & {
-			padding-bottom: rem(5);
+			padding-bottom: rem(13);
 		}
 	}
 

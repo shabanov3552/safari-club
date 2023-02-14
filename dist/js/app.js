@@ -4640,6 +4640,20 @@
                     prevEl: ".gallery__buttons .swiper-button-prev",
                     nextEl: ".gallery__buttons .swiper-button-next"
                 },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2
+                    },
+                    565: {
+                        slidesPerView: 3
+                    },
+                    768: {
+                        slidesPerView: 4
+                    },
+                    1001.98: {
+                        slidesPerView: "auto"
+                    }
+                },
                 on: {}
             });
         }

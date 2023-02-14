@@ -3,6 +3,7 @@
    z-index: 1;
    transition: all 0.3s ease 0s;
    margin-bottom: rem(35);
+   transform: translate(-35px, 0px);
 
    @media (max-width:$tablet) {
       margin-bottom: rem(20);
