@@ -8,8 +8,8 @@
 	<!-- <style>body{opacity: 0;}</style> -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@400;500;600&family=Montserrat:wght@400;600&display=swap&_v=20230214183542" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230214183542">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@400;500;600&family=Montserrat:wght@400;600&display=swap&_v=20230310021803" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230310021803">
 	<link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png">
@@ -130,13 +130,60 @@
 			</div>
 
 			<div class="video-block">
-				<h1 class="video-block__title">Ваш уголок <br> тишины и комфорта на берегу Енисея</h1>
+				<div class="video-block__header">
+					<nav class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__li">
+								<a href="" class="breadcrumbs__link">
+									<svg class="breadcrumbs__link_back-svg">
+										<use xlink:href="img/icons/icons.svg#svg-arrow-breadcrumbs"></use>
+									</svg>
+									Главная
+								</a>
+							</li>
+							<li class="breadcrumbs__li">
+								<a href="" class="breadcrumbs__link">
+									Крошка
+								</a>
+							</li>
+							<li class="breadcrumbs__li">
+								<a href="" class="breadcrumbs__link">
+									Крошка
+								</a>
+							</li>
+							<li class="breadcrumbs__li">
+								<span class="breadcrumbs__item">Последняя крошка</span>
+							</li>
+						</ul>
+					</nav>
+					<h1 class="video-block__title">О клубе</h1>
+				</div>
 				<video pip="false" muted="" preload="auto" class="video-block__start-video js-start-video">
 					<source src="files/video/video-start.mp4" type="video/mp4">
 				</video>
 				<video pip="false" loop="" muted="" preload="auto" class="video-block__main-video js-main-video">
 					<source src="files/video/video-main.mp4" type="video/mp4">
 				</video>
+			</div>
+
+			<div class="about">
+				<div class="about__wrapper">
+					<div class="about__container">
+
+						<div class="about__descr">
+							<p>«Сибирский сафари клуб» — место с историей. Она началась ещё в 1953 году, когда на месте будущего рекреационного комплекса стоял дом охотника. Деревянные лавки и стол, шкуры, нехитрая посуда — вряд ли вы смогли бы предположить, что пройдёт несколько десятилетий и всё это преобразится в роскошные номера с инфраструктурой для идеального отдыха.</p>
+							<picture><source srcset="img/pictures/conf-hall_1.webp" type="image/webp"><img src="img/pictures/conf-hall_1.png" alt=""></picture>
+							<p>Энергетика места оказалась настолько сильна, что вдохновила на создание уникального пространства — точки притяжения для туристов со всего мира. Так появился «Сибирский сафари клуб». Если с сибирским всё очевидно и понятно, то «сафари» стало отсылкой к охотничьим корням. Но сафари это не только и не столько про охоту, сколько о мирных экскурсиях в дикую природу. Все смыслы в названии объединило слово клуб, как символ сообщества первооткрывателей, любителей путешествий и ярких впечатлений.</p>
+							<picture><source srcset="img/pictures/conf-hall_1.webp" type="image/webp"><img src="img/pictures/conf-hall_1.png" alt=""></picture>
+							<p>Сегодня «Сибирский сафари клуб» — место силы для тех, кто умеет создавать правильный фон для работы и отдыха. Здесь вас приятно удивят уютные номера — от одноместных до семейных, ресторан, конференц-зал, сауны и бассейн.</p>
+							<p>За стенами комплекса располагается природное пространство — у вас захватит дух от простора и живописного вида на могучий Енисей, который открывается с летней террасы и из комфортабельных беседок.</p>
+							<picture><source srcset="img/pictures/conf-hall_1.webp" type="image/webp"><img src="img/pictures/conf-hall_1.png" alt=""></picture>
+							<p>Наконец, картину делают полной радушие, с которым у нас встречают каждого гостя, безупречный сервис и индивидуальный подход. «Сибирский сафари клуб» — вдохновляющая история, которую вы с удовольствием впишите в страницы вашей жизни.</p>
+							<picture><source srcset="img/pictures/conf-hall_1.webp" type="image/webp"><img src="img/pictures/conf-hall_1.png" alt=""></picture>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</main>
 		<footer class="footer">
@@ -216,12 +263,8 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230214183542"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230310021803" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230310021803"></script>
 </body>
 
 </html>
-<!-- Воспроизведение видео на первом экране. 
-Функция добавляется в window из основного файла скрипта -->
-<script>
-	window.playMainVideo()
-</script>

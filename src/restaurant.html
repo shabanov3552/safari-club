@@ -1,0 +1,265 @@
+@@include('html/_header.htm',{
+"title": "Ресторан",
+"modifierClass": "black"
+})
+<main class="page restaurant">
+
+   @@include('html/_first-block.htm',{
+   "src": "img/pictures/restaurant/main-img.jpg",
+   "title": "Ресторан в Сибирском Сафари Клубе",
+   "subtitle": "Идеальное место для проведения вашего мероприятия или изысканного ужина",
+   "hidden": ""
+   })
+
+   <div class="main-description">
+      <div class="main-description__container">
+         <div class="main-description__row">
+            <div class="main-description__text">
+               <p>Панорамные окна, заливающие зал светом, дерево и мягкая мебель создают особую атмосферу тепла. Ресторан в Сибирском Сафари Клубе - это место, куда приятно приходить по поводу и без.</p>
+               <p>Встреча с партнерами, праздник, романтическое свидание или просто ужин с друзьями - вам всегда будет комфортно и уютно в нашем ресторане.</p>
+            </div>
+            <div class="main-description__image"><img src="@img/pictures/main-descr_2.jpg" alt=""></div>
+         </div>
+      </div>
+   </div>
+
+   <div class="rest-menu">
+      <div class="rest-menu__cont">
+         <div class="rest-menu__header">
+            <div class="rest-menu__title title-cormorant">
+               Меню ресторана
+            </div>
+         </div>
+         <div class="rest-menu__main">
+            <div data-tabs class="rest-menu__tabs">
+               <div data-tabs-body class="rest-menu__content">
+                  @@include('html/rest/_menu-body.htm',{
+                  "src1": "img/pictures/restaurant/menu/menu_1.jpg",
+                  "src2": "img/pictures/restaurant/menu/menu_2.jpg",
+                  "src3": "img/pictures/restaurant/menu/menu_1.jpg"
+                  })
+                  @@include('html/rest/_menu-body.htm',{
+                  "src1": "img/pictures/restaurant/menu/menu_kids-1.jpg",
+                  "src2": "img/pictures/restaurant/menu/menu_kids-2.jpg",
+                  "src3": "img/pictures/restaurant/menu/menu_1.jpg"
+                  })
+                  @@include('html/rest/_menu-body.htm',{
+                  "src1": "img/pictures/restaurant/menu/menu_banket-1.jpg",
+                  "src2": "img/pictures/restaurant/menu/menu_banket-2.jpg",
+                  "src3": "img/pictures/restaurant/menu/menu_1.jpg"
+                  })
+                  @@include('html/rest/_menu-body.htm',{
+                  "src1": "img/pictures/restaurant/menu/menu_furshet-1.jpg",
+                  "src2": "img/pictures/restaurant/menu/menu_furshet-2.jpg",
+                  "src3": "img/pictures/restaurant/menu/menu_1.jpg"
+                  })
+                  @@include('html/rest/_menu-body.htm',{
+                  "src1": "img/pictures/restaurant/menu/menu_vine-1.jpg",
+                  "src2": "img/pictures/restaurant/menu/menu_vine-2.jpg",
+                  "src3": "img/pictures/restaurant/menu/menu_alco-2.jpg"
+                  })
+                  @@include('html/rest/_menu-body.htm',{
+                  "src1": "img/pictures/restaurant/menu/menu_1.jpg",
+                  "src2": "img/pictures/restaurant/menu/menu_1.jpg",
+                  "src3": "img/pictures/restaurant/menu/menu_1.jpg"
+                  })
+                  @@include('html/rest/_menu-body.htm',{
+                  "src1": "img/pictures/restaurant/menu/menu_1.jpg",
+                  "src2": "img/pictures/restaurant/menu/menu_1.jpg",
+                  "src3": "img/pictures/restaurant/menu/menu_1.jpg"
+                  })
+               </div>
+               <nav data-tabs-titles class="rest-menu__navigation">
+                  <button type="button" class="rest-menu__nav-item _tab-active">
+                     <span class="rest-menu__nav-name">
+                        Основное меню
+                     </span>
+                     <a href="files/menu/menu-main.pdf" target="_blank" class="rest-menu__link">
+                        <img src="@img/svg/PDF_2.svg" alt="">
+                        <span>Открыть PDF</span>
+                     </a>
+                  </button>
+                  <button type="button" class="rest-menu__nav-item">
+                     <span class="rest-menu__nav-name">
+                        Детское меню
+                     </span>
+                     <a href="files/menu/menu-kids.pdf" target="_blank" class="rest-menu__link">
+                        <img src="@img/svg/PDF_2.svg" alt="">
+                        <span>Открыть PDF</span>
+                     </a>
+                  </button>
+                  <button type="button" class="rest-menu__nav-item">
+                     <span class="rest-menu__nav-name">
+                        Банкетное меню
+                     </span>
+                     <a href="files/menu/menu-banket.pdf" target="_blank" class="rest-menu__link">
+                        <img src="@img/svg/PDF_2.svg" alt="">
+                        <span>Открыть PDF</span>
+                     </a>
+                  </button>
+                  <button type="button" class="rest-menu__nav-item">
+                     <span class="rest-menu__nav-name">
+                        Фуршетное меню
+                     </span>
+                     <a href="files/menu/menu-furshet.pdf" target="_blank" class="rest-menu__link">
+                        <img src="@img/svg/PDF_2.svg" alt="">
+                        <span>Открыть PDF</span>
+                     </a>
+                  </button>
+                  <button type="button" class="rest-menu__nav-item">
+                     <span class="rest-menu__nav-name">
+                        Алкогольная карта
+                     </span>
+                     <a href="files/menu/menu-alco.pdf" target="_blank" class="rest-menu__link">
+                        <img src="@img/svg/PDF_2.svg" alt="">
+                        <span>Открыть PDF</span>
+                     </a>
+                  </button>
+                  <button type="button" class="rest-menu__nav-item">
+                     <span class="rest-menu__nav-name">
+                        Полуфабрикаты на заказ
+                     </span>
+                     <a href="" target="_blank" class="rest-menu__link">
+                        <img src="@img/svg/PDF_2.svg" alt="">
+                        <span>Открыть PDF</span>
+                     </a>
+                  </button>
+                  <button type="button" class="rest-menu__nav-item">
+                     <span class="rest-menu__nav-name">
+                        Пироги на заказ
+                     </span>
+                     <a href="" target="_blank" class="rest-menu__link">
+                        <img src="@img/svg/PDF_2.svg" alt="">
+                        <span>Открыть PDF</span>
+                     </a>
+                  </button>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="tables">
+      <div class="tables__title title-cormorant">Расположение столов</div>
+      <div class="tables__layout">
+         <img src="img/pictures/restaurant/tables-layout.png" alt="">
+      </div>
+   </div>
+
+   <div class="page-form-reserv">
+      <div class="page-form-reserv__wrapper">
+         <div class="page-form-reserv__left">
+            <div class="page-form-reserv__title">Забронировать</div>
+            <div class="page-form-reserv__subtitle">Оставьте контактные данные и мы вам перезвоним</div>
+         </div>
+         <div class="page-form-reserv__center">
+            <form class="page-form-reserv__form form" action="" method="" data-parsley-validate data-parsley-trigger="change" required="">
+               <div class="form__line">
+                  <div class="form__line-name">Ваше имя *</div>
+                  <label class="form__label">
+                     <input required type="text" name="" class="form__input input">
+                     <svg class="form__clear-svg">
+                        <use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+                     </svg>
+                  </label>
+               </div>
+               <div class="form__line">
+                  <div class="form__line-name">Контактный номер *</div>
+                  <label class="form__label">
+                     <input required type="text" name="" class="form__input input js_phone">
+                     <svg class="form__clear-svg">
+                        <use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+                     </svg>
+                  </label>
+               </div>
+               <div class="form__line">
+                  <div class="form__line-name">Под какое мероприятие бронь?</div>
+                  <label class="form__label">
+                     <input required type="text" name="" class="form__input input">
+                     <svg class="form__clear-svg">
+                        <use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+                     </svg>
+                  </label>
+               </div>
+               <button type="submit" class="form__button btn-gold">Отправить</button>
+               <div class="form__consent">Отправляя данные, я даю свое <a href="" class="form__consent-link">согласие на обработку перс. данных</a></div>
+            </form>
+         </div>
+         <div class="page-form-reserv__right">
+            <img src="@img/pictures/page-form-reserv.jpg" alt="">
+         </div>
+      </div>
+   </div>
+
+   <!-- Галлерея без слайдера -->
+   <div class="gallery gallery_no-slider" data-gallery>
+      <div class="gallery__row">
+         <div class="gallery__image" data-src="@img/pictures/restaurant/gallery/1.png">
+            <img src="@img/pictures/restaurant/gallery/1.png" alt="">
+         </div>
+         <div class="gallery__image" data-src="@img/pictures/restaurant/gallery/2.png">
+            <img src="@img/pictures/restaurant/gallery/2.png" alt="">
+         </div>
+         <div class="gallery__image" data-src="@img/pictures/restaurant/gallery/3.png">
+            <img src="@img/pictures/restaurant/gallery/3.png" alt="">
+         </div>
+         <div class="gallery__image" data-src="@img/pictures/restaurant/gallery/4.png">
+            <img src="@img/pictures/restaurant/gallery/4.png" alt="">
+         </div>
+         <div class="gallery__image" data-src="@img/pictures/restaurant/gallery/5.png">
+            <img src="@img/pictures/restaurant/gallery/5.png" alt="">
+         </div>
+         <div class="gallery__image" data-src="@img/pictures/restaurant/gallery/6.png">
+            <img src="@img/pictures/restaurant/gallery/6.png" alt="">
+         </div>
+         <div class="gallery__image" data-src="@img/pictures/restaurant/gallery/7.png">
+            <img src="@img/pictures/restaurant/gallery/7.png" alt="">
+         </div>
+         <div class="gallery__image" data-src="@img/pictures/restaurant/gallery/8.png">
+            <img src="@img/pictures/restaurant/gallery/8.png" alt="">
+         </div>
+      </div>
+   </div>
+
+   <div class="events-block">
+      <div class="events-block__title title-cormorant">Банкетные мероприятия</div>
+      <div class="events-block__row">
+         <div class="events-block__left">
+            <img src="img/pictures/events/bg-img_1.png" alt="">
+         </div>
+         <div class="events-block__content">
+            <div class="events-block__descr">Атмосфера вашего праздника
+               в ресторане с видом на Енисей</div>
+            <button class="events-block__button btn-gold">Забронировать</button>
+            <div class="events-block__images-row">
+               <div class="events-block__image">
+
+                  <img src="img/pictures/events/content-img_1.png" alt="">
+               </div>
+               <div class="events-block__image">
+
+                  <img src="img/pictures/events/content-img_2.png" alt="">
+               </div>
+               <div class="events-block__image">
+
+                  <img src="img/pictures/events/content-img_3.png" alt="">
+               </div>
+            </div>
+            <div class="events-block__rules">
+               <div class="rules">
+                  <div class="rules__row">
+                     <a href="" download="" class="rules__link">
+                        <img src="img/svg/PDF.svg" alt="">
+                        <span class="rules__name">Условия бронирования зала под банкеты</span>
+                        <span class="rules__type-file">PDF, 0.5 MB</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   @@include('html/_special-offers.htm',{})
+</main>
+@@include('html/_footer.htm',{})

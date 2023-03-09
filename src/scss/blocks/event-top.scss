@@ -1,0 +1,99 @@
+.events-top {
+
+   // .events-top__title
+
+   &__title {
+      text-align: center;
+      margin-bottom: rem(44);
+   }
+
+   // .events-top__wrapper
+
+   &__wrapper {
+      display: grid;
+      grid-template-columns: 550px 1fr;
+      gap: 80px;
+
+      @media (max-width:$pc) {
+         grid-template-columns: 1.5fr 2fr;
+         gap: 30px;
+      }
+   }
+
+   // .events-top__main-event
+
+   &__main-event {
+
+      .event-card {
+
+         // .event-card__image
+
+         &__image {}
+
+         // .event-card__content
+
+         &__content {}
+
+         // .event-card__title
+
+         &__title {}
+
+         // .event-card__row
+
+         &__row {}
+
+         // .event-card__type
+
+         &__type {}
+
+         // .event-card__date
+
+         &__date {}
+
+         // .event-card__descr
+
+         &__descr {}
+      }
+
+   }
+
+   // .events-top__right
+
+   &__right {
+      .event-card {
+         flex-direction: row;
+         // .event-card__image
+
+         &__image {
+            margin-right: rem(30);
+            flex: 0 0 384px;
+            max-height: 262px;
+         }
+
+         // .event-card__content
+
+         &__content {}
+
+         // .event-card__title
+
+         &__title {}
+
+         // .event-card__row
+
+         &__row {}
+
+         // .event-card__type
+
+         &__type {}
+
+         // .event-card__date
+
+         &__date {}
+
+         // .event-card__descr
+
+         &__descr {}
+      }
+
+   }
+}

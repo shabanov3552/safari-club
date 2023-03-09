@@ -1,0 +1,84 @@
+@@include('html/_header.htm',{
+"title": "Событие деталка",
+"modifierClass": ""
+})
+<main class="page event-detail">
+   @@include('html/_reserv.htm',{})
+   <div class="event-detail__wrapper">
+      <div class="event-detail__container">
+         @@include('html/_breadcrumbs.htm',{})
+         <div class="event-detail__title title-cormorant">День банного кутежа</div>
+         <div class="event-detail__center">
+            <div class="event-detail__date">19.02.2023</div>
+            <div class="event-detail__type">Акция</div>
+         </div>
+         <div class="event-detail__row">
+            <div class="event-detail__descr">
+               <p>В это время в бане не парились, а отдыхали, общались, проводили время с семьёй и друзьями.</p>
+               <p>Не зря говорят - баня лечит.</p>
+               <p>Баня - это не только приятное времяпрепровождение, но и очищение души и тела.</p>
+               <p>Банный день, как правило, праздновали в воскресенье.</p>
+               <p>Это был особый день, когда люди отдыхали и общались.</p>
+               <p>Во время банных гуляний было принято проводить различные обряды, которые позволяли получить хорошую погоду и урожай.</p>
+               <p>А сегодня мы празднуем день банного кутя.</p>
+            </div>
+            <div class="event-detail__image"><img src="img/pictures/events/card_4.png" alt=""></div>
+         </div>
+         <div class="event-detail__gallery">
+            <!-- Галлерея без слайдера -->
+            <div class="gallery gallery_no-slider" data-gallery>
+               <div class="gallery__row">
+                  <div class="gallery__image" data-src="img/pictures/services-detail_1.png">
+                     <img src="img/pictures/services-detail_1.png" alt="">
+                  </div>
+                  <div class="gallery__image" data-src="img/pictures/events/event-detail_1.png">
+                     <img src="img/pictures/events/event-detail_1.png" alt="">
+                  </div>
+                  <div class="gallery__image" data-src="img/pictures/sauna/play-room_3.png">
+                     <img src="img/pictures/sauna/play-room_3.png" alt="">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="event-detail__share">
+            <div class="event-detail__share-title">Поделиться</div>
+            <!-- uSocial -->
+            <script async src="https://usocial.pro/usocial/usocial.js?uid=820bc3ae41f61697&v=6.1.5" data-script="usocial" charset="utf-8"></script>
+            <div class="uSocial-Share" data-pid="6f27e699e8b3b722649a4423bf0fcece" data-type="share" data-options="round-rect,style3,default,absolute,horizontal,size48,eachCounter0,counter0,nomobile,mobile_position_right" data-social="vk,ok,telegram,wa,vi"></div>
+            <!-- /uSocial -->
+         </div>
+
+         <div class="events">
+            <div class="events__title title-cormorant">Смотрите также</div>
+            <div class="events__catalog">
+               @@include('html/_event-card.htm',{
+               "modClass": "event-card_first-card",
+               "src": "img/pictures/events/card_1.png",
+               "title": "Открытие сезона ресторанных посиделок",
+               "type": "Мероприятие",
+               "descr": "Станет отличной возможностью отдохнуть от городской суеты и окунуться в атмосферу культуры!"
+               })
+
+               @@include('html/_event-card.htm',{
+               "modClass": "event-card_second-card",
+               "src": "img/pictures/events/card_2.png",
+               "title": "Последнее воскресенье лета, прощальные цены на аренду беседок",
+               "type": "Акция",
+               "descr": "Если вы еще не отпустили теплые деньки и шашлык еще не встал поперек горла – заруливайте"
+               })
+
+               @@include('html/_event-card.htm',{
+               "modClass": "event-card_third-card",
+               "src": "img/pictures/events/card_3.png",
+               "title": "Красноярская Ибица",
+               "type": "Федеральное мероприятие",
+               "descr": "Самая крупная вечеринка лета по эту сторону Урала"
+               })
+            </div>
+         </div>
+
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})

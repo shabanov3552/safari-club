@@ -3,7 +3,29 @@
    z-index: 1;
    transition: all 0.3s ease 0s;
    margin-bottom: rem(35);
-   transform: translate(-35px, 0px);
+
+   .contacts &,
+   .certificates &,
+   .video-block & {
+      margin-top: rem(40);
+      transform: translate(0px, 0px);
+
+      @media (max-width:$mobile) {
+         margin-top: rem(30);
+      }
+   }
+
+   .services-detail &,
+   .events &,
+   .event-detail &,
+   .vacancy & {
+      transform: translate(0px, 0px);
+   }
+
+   @media (min-width:$mobile) {
+      transform: translate(-35px, 0px);
+
+   }
 
    @media (max-width:$tablet) {
       margin-bottom: rem(20);
@@ -17,6 +39,16 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
+
+      .contacts &,
+      .certificates &,
+      .services-detail &,
+      .events &,
+      .event-detail &,
+      .vacancy &,
+      .video-block & {
+         justify-content: center;
+      }
 
       &::-webkit-scrollbar {
          display: none;
@@ -48,6 +80,17 @@
 
    &__link {
       color: #FFE1BA;
+
+      .contacts &,
+      .certificates &,
+      .services-detail &,
+      .events &,
+      .event-detail &,
+      .vacancy &,
+      .video-block & {
+         color: #CE8D3B;
+      }
+
       font-size: 14px;
       line-height: 22px;
       white-space: nowrap;
@@ -61,6 +104,16 @@
 
          use {
             fill: #FFE1BA;
+
+            .contacts &,
+            .certificates &,
+            .services-detail &,
+            .events &,
+            .event-detail &,
+            .vacancy &,
+            .video-block & {
+               fill: #CE8D3B;
+            }
          }
       }
    }
@@ -69,6 +122,17 @@
 
    &__item {
       color: #FFE1BA;
+
+      .contacts &,
+      .certificates &,
+      .services-detail &,
+      .events &,
+      .event-detail &,
+      .vacancy &,
+      .video-block & {
+         color: #CE8D3B;
+      }
+
       font-size: 14px;
       line-height: 22px;
       white-space: nowrap;

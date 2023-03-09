@@ -8,6 +8,7 @@ textarea {
 	-moz-appearance: none;
 	appearance: none;
 }
+
 .input {
 	border-radius: 0 !important;
 	width: 100%;
@@ -17,15 +18,26 @@ textarea {
 	padding-right: rem(14);
 	background: #ffffff;
 	border: 1px solid rgba(0, 0, 0, 0.230742);
-	&._form-focus {
-	}
-	&._form-error {
+
+	&._form-focus {}
+
+	&._form-error {}
+
+	&.parsley-error {
+		border: 2px solid rgb(207, 35, 35);
 	}
 }
+
 input[type="date" i]::-webkit-calendar-picker-indicator {
 	background-image: url(@img/svg/calendar.svg);
 }
+
 textarea.input {
-	resize: none;
-	padding: 0px 0px;
+	resize: vertical;
+	padding-top: rem(10);
+	padding-bottom: rem(10);
+
+	&::-webkit-scrollbar {
+		width: 0;
+	}
 }

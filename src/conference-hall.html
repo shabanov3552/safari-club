@@ -1,0 +1,122 @@
+@@include('html/_header.htm',{
+"title": "Аренда конференц-зала",
+"modifierClass": "black"
+})
+<main class="page conference-hall">
+
+   @@include('html/_first-block.htm',{
+   "src": "img/pictures/rooms/room_10.jpg",
+   "title": "Аренда конференц-зала",
+   "subtitle": "",
+   "hidden": ""
+   })
+
+   <div class="conference-hall__wrapper">
+
+      <div class="room-detail">
+         <!-- Верстка этого блока чуть-чуть отличается от такого же блока в деталке номера -->
+         <div class="room-detail__price-block">
+            <div class="room-detail__price-row">
+               <h2 class="room-detail__price-title">Стоимость аренды</h2>
+               <div class="room-detail__price-col">
+                  <div class="room-detail__row">
+                     <div class="room-detail__name">До 4 часов</div>
+                     <div class="room-detail__value">2500 ₽ / час</div>
+                  </div>
+                  <div class="room-detail__row">
+                     <div class="room-detail__name">Свыше 4 часов</div>
+                     <div class="room-detail__value">2300 ₽ / час</div>
+                  </div>
+               </div>
+               <div class="room-detail__content-image"><img src="@img/pictures/rooms/room-content_2.jpg" alt=""></div>
+            </div>
+         </div>
+      </div>
+
+      <div class="conference-hall__services">
+         <div class="conference-hall__row">
+            <div class="conference-hall__image"><img src="@img/pictures/conf-hall_1.png" alt=""></div>
+            <div class="conference-hall__col">
+               <div class="conference-hall__subtitle">Включенные услуги</div>
+               <ul class="conference-hall__list">
+                  <li class="conference-hall__item"><span class="conference-hall__services-name">Мультимедийный экран</span></li>
+                  <li class="conference-hall__item"><span class="conference-hall__services-name">LCD-проектор</span></li>
+                  <li class="conference-hall__item"><span class="conference-hall__services-name">Флип-чарт (5 листов бумаги)</span></li>
+                  <li class="conference-hall__item"><span class="conference-hall__services-name">Пульт для презентаций</span></li>
+                  <li class="conference-hall__item"><span class="conference-hall__services-name">Настольный микрофон</span></li>
+                  <li class="conference-hall__item"><span class="conference-hall__services-name">Кулер с водой и стаканчики</span></li>
+               </ul>
+            </div>
+            <div class="conference-hall__col">
+               <div class="conference-hall__subtitle">Не включенные услуги</div>
+               <ul class="conference-hall__list conference-hall__list_grid">
+                  <li class="conference-hall__item">
+                     <span class="conference-hall__services-name">Аренда ноутбука</span><span class="conference-hall__services-price">300 ₽ / час</span>
+                  </li>
+                  <li class="conference-hall__item">
+                     <span class="conference-hall__services-name">Доп. бумага для флип-чарта</span><span class="conference-hall__services-price">20 ₽ / лист</span>
+                  </li>
+                  <li class="conference-hall__item">
+                     <span class="conference-hall__services-name">Ручка</span><span class="conference-hall__services-price">30 ₽ / шт.</span>
+                  </li>
+                  <li class="conference-hall__item">
+                     <span class="conference-hall__services-name">Блокнот А5</span><span class="conference-hall__services-price">70 ₽ / шт.</span>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="conference-hall__rules">
+            <div class="rules">
+               <div class="rules__row">
+                  <a href="" download="" class="rules__link">
+                     <img src="img/svg/PDF.svg" alt="">
+                     <span class="rules__name">Условия предоставления конференц-зала</span>
+                     <span class="rules__type-file">PDF, 0.5 MB</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+
+   <div class="page-form-reserv">
+      <div class="page-form-reserv__wrapper">
+         <div class="page-form-reserv__left">
+            <div class="page-form-reserv__title">бронирование конференц-зала</div>
+            <div class="page-form-reserv__subtitle">Оставьте заявку и мы свяжемся с вами в ближайшее время для уточнения деталей</div>
+         </div>
+         <div class="page-form-reserv__center">
+            <form class="page-form-reserv__form form" action="" method="" data-parsley-validate data-parsley-trigger="change" required="">
+               <div class="form__line">
+                  <div class="form__line-name">Ваше имя</div>
+                  <label class="form__label">
+                     <input required type="text" name="" class="form__input input">
+                     <svg class="form__clear-svg">
+                        <use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+                     </svg>
+                  </label>
+               </div>
+               <div class="form__line">
+                  <div class="form__line-name">Телефон</div>
+                  <label class="form__label">
+                     <input required type="text" name="" class="form__input input js_phone">
+                     <svg class="form__clear-svg">
+                        <use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+                     </svg>
+                  </label>
+               </div>
+               <button type="submit" class="form__button btn-gold">Отправить</button>
+               <div class="form__consent">Отправляя данные, я даю свое <a href="" class="form__consent-link">согласие на обработку перс. данных</a></div>
+            </form>
+         </div>
+         <div class="page-form-reserv__right">
+            <img src="@img/pictures/conf-hall_2.png" alt="">
+         </div>
+      </div>
+   </div>
+
+</main>
+@@include('html/_footer.htm',{})

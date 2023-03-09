@@ -447,6 +447,11 @@ class SelectConstructor {
 			tempButton.remove();
 		}
 		const selectItem = originalSelect.parentElement;
+
+		var evt = document.createEvent("HTMLEvents");
+		evt.initEvent("change", false, true);
+		originalSelect.dispatchEvent(evt);
+
 		// Вызов коллбэк функции
 		this.selectCallback(selectItem, originalSelect);
 	}

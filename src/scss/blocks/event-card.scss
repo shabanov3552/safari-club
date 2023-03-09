@@ -1,0 +1,62 @@
+.event-card {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+
+   // .event-card__image
+
+   &__image {
+
+
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   // .event-card__content
+
+   &__content {}
+
+   // .event-card__title
+
+   &__title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: rem(25);
+      flex: 1 1 auto;
+   }
+
+   // .event-card__row
+
+   &__row {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 45px;
+      row-gap: 6px;
+      margin-bottom: rem(20);
+   }
+
+   // .event-card__type
+
+   &__type {
+      font-size: 20px;
+      line-height: 24px;
+      color: #CE8D3B;
+   }
+
+   // .event-card__date
+
+   &__date {
+      line-height: 24px;
+   }
+
+   // .event-card__descr
+
+   &__descr {
+      line-height: 24px;
+   }
+}

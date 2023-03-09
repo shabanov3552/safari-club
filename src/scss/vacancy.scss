@@ -1,0 +1,146 @@
+.vacancy {
+
+   // .vacancy__wrapper
+
+   &__wrapper {
+      padding-top: rem(50);
+      padding-bottom: rem(30);
+      position: relative;
+
+      &::after {
+         content: "";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         height: 50px;
+         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+      }
+
+      @media (min-width:$tablet) {
+         background: url(../img/ornament-bg-left.png) left repeat-y;
+      }
+   }
+
+   // .vacancy__container
+
+   &__container {
+      padding-bottom: rem(100);
+      position: relative;
+
+      @media (max-width:$laptop) and (min-width:$tablet) {
+         padding: 0 rem(80);
+         padding-bottom: rem(50);
+      }
+
+      @media (max-width:$mobile) {
+         padding-bottom: rem(30);
+      }
+
+      &::before,
+      &::after {
+         content: '';
+         position: absolute;
+         z-index: 2;
+      }
+
+      &::after {
+         bottom: -43px;
+         left: 50%;
+         transform: translate(-50%, 0px);
+         width: 27px;
+         height: 27px;
+         background: url(../img/svg/footer-rhomb.svg);
+      }
+
+      &::before {
+         height: 1px;
+         background: rgba(0, 0, 0, 0.3);
+         bottom: -30px;
+         left: 15px;
+         right: 15px;
+      }
+   }
+
+   // .vacancy__title
+
+   &__title {
+      text-align: center;
+      margin-bottom: rem(40);
+   }
+
+   // .vacancy__list
+
+   &__list {
+      max-width: 1000px;
+      margin: 0 auto;
+   }
+
+   // .vacancy__item
+
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: rem(50);
+      }
+   }
+
+   // .vacancy__subtitle
+
+   &__subtitle {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 37px;
+      margin-bottom: rem(15);
+   }
+
+   // .vacancy__descr
+
+   &__descr {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: rem(18);
+   }
+
+   // .vacancy__row
+
+   &__row {
+      display: flex;
+      gap: 70px;
+
+      &:not(:last-child) {
+         margin-bottom: rem(10);
+      }
+
+      @media (max-width:$mobile) {
+         flex-direction: column;
+         gap: 5px;
+
+         &:not(:last-child) {
+            margin-bottom: rem(20);
+         }
+      }
+
+   }
+
+
+   // .vacancy__name
+
+   &__name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      flex: 0 0 160px;
+
+      @media (max-width:$mobile) {
+         flex: none;
+      }
+   }
+
+   // .vacancy__value
+
+   &__value {
+      line-height: 20px;
+   }
+}
+
+.title-cormorant {}

@@ -1,0 +1,220 @@
+.certificates {
+
+   // .certificates__title
+
+   &__title {
+      text-align: center;
+      margin-bottom: rem(50);
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(30);
+      }
+   }
+
+   // .certificates__row
+
+   &__row {
+      display: flex;
+      gap: 130px;
+      max-width: 1240px;
+      margin: 0 auto;
+      margin-bottom: rem(-70);
+      padding: 0 rem(80);
+
+      @media (max-width:$pc) {
+         gap: 80px;
+      }
+
+      @media (max-width:$laptop) {
+         margin-bottom: rem(-50);
+      }
+
+      @media (max-width:$tablet) {
+         padding: 0 rem(20);
+         gap: 30px;
+      }
+
+      @media (max-width:$mobile) {
+         display: block;
+         padding: 0;
+         margin-bottom: rem(30);
+      }
+   }
+
+   // .certificates__main-image
+
+   &__main-image {
+      @media (max-width:$mobile) {
+         height: 470px;
+         max-width: 450px;
+         margin: 0 auto;
+         margin-bottom: rem(40);
+      }
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   // .certificates__descr
+
+   &__descr {
+      padding-top: rem(50);
+      font-size: 21px;
+      line-height: 28px;
+
+      @media (min-width:$laptop) {
+         flex: 0 0 580px;
+         width: 580px;
+
+         p {
+            &:first-child {
+               margin-right: rem(80);
+            }
+
+            &:last-child {
+               margin-left: rem(80);
+            }
+         }
+      }
+
+      @media (max-width:$mobile) {
+         padding: 0 rem(20);
+         font-size: 18px;
+         line-height: 26px;
+      }
+
+      p {
+         &:not(:last-child) {
+            margin-bottom: rem(50);
+
+            @media (max-width:$mobile) {
+               margin-bottom: rem(30);
+            }
+         }
+      }
+   }
+
+   // .certificates__form
+
+   &__form {
+      background: #F0EDEB url(../img/ornament-bg-left.png) left repeat-y;
+      background-blend-mode: multiply;
+      padding: 0 rem(80);
+      padding-top: rem(150);
+      padding-bottom: rem(60);
+
+      @media (max-width:$laptop) {
+         padding-top: rem(120);
+      }
+
+      @media (max-width:$tablet) {
+         padding: 0 rem(20);
+         padding-top: rem(120);
+         padding-bottom: rem(60);
+      }
+
+      @media (max-width:$mobile) {
+         background: #F0EDEB;
+         padding-top: rem(25);
+         padding-bottom: rem(40);
+      }
+   }
+
+   // .certificates__form-row
+
+   &__form-row {
+      @media (min-width:$tablet) {
+         max-width: 1030px;
+         margin: 0 auto;
+         display: grid;
+         grid-template-columns: minmax(360px, 412px) minmax(415px, 455px);
+         @include adaptiveValue("column-gap", 160, 50, 0, 1920, 1000);
+         justify-content: space-between;
+
+      }
+   }
+
+   // .certificates__left
+
+   &__left {
+      @media (max-width:$tablet) {
+         margin-bottom: rem(40);
+      }
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(20);
+      }
+   }
+
+   // .certificates__form-title
+
+   &__form-title {
+      font-family: 'Cormorant Garamond';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 61px;
+      text-transform: uppercase;
+      color: #3A230B;
+      margin-bottom: rem(30);
+
+      @media (max-width:$laptop) {
+         font-size: 40px;
+         line-height: 48px;
+      }
+
+      @media (max-width:$mobile) {
+         font-size: 30px;
+         line-height: 36px;
+         text-align: center;
+         margin-bottom: rem(25);
+      }
+   }
+
+   // .certificates__form-descr
+
+   &__form-descr {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: rem(75);
+
+      @media (max-width:$tablet) {
+         margin-bottom: rem(25);
+      }
+   }
+
+   // .certificates__rules
+
+   &__rules {
+      .rules {
+         padding: 0;
+
+         // .rules__row
+
+         &__row {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+         }
+
+         // .rules__link
+
+         &__link {}
+
+         // .rules__name
+
+         &__name {}
+
+         // .rules__type-file
+
+         &__type-file {}
+      }
+   }
+
+   // .certificates__right
+
+   &__right {
+      flex: 0 1 65%;
+   }
+}

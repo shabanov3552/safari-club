@@ -1,0 +1,97 @@
+@@include('html/_header.htm',{
+"title": "Подарочные сертификаты",
+"modifierClass": ""
+})
+<main class="page certificates">
+   @@include('html/_reserv.htm',{})
+
+   @@include('html/_breadcrumbs.htm',{})
+
+   <div class="certificates__title title-cormorant">Подарочные сертификаты</div>
+   <div class="certificates__row">
+      <div class="certificates__main-image"><img src="img/pictures/certif-main.png" alt=""></div>
+      <div class="certificates__descr">
+         <p>Есть ли такой подарок, которым невозможно не угодить? Кажется, мы придумали лучший подарок по любому поводу!</p>
+         <p>Подарите сертификат в наш клуб, а с ним и хорошее настроение, веселье и вкусную еду всем, кого хотите порадовать.</p>
+      </div>
+   </div>
+   <div class="certificates__form">
+      <div class="certificates__form-row">
+         <div class="certificates__left">
+            <div class="certificates__form-title">Заказать подарочный сертификат</div>
+            <div class="certificates__form-descr">Заказывайте подарочные сертификаты по тел. <a href="tel:+73912053525">+7 (391)205-35-25</a> или воспользуйтесь этой формой</div>
+            <div class="certificates__rules">
+               <div class="rules">
+                  <div class="rules__row">
+                     <a href="" download="" class="rules__link">
+                        <img src="img/svg/PDF.svg" alt="">
+                        <span class="rules__name">Правила использования подарочных сертификатов</span>
+                        <span class="rules__type-file">PDF, 0.5 MB</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="certificates__right">
+            <form class="form" action="" method="" data-parsley-validate data-parsley-trigger="change" required="">
+               <div class="form__line">
+                  <div class="form__line-name">Ваше имя *</div>
+                  <label class="form__label">
+                     <input required type="text" name="" class="form__input input">
+                     <svg class="form__clear-svg">
+                        <use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+                     </svg>
+                  </label>
+               </div>
+               <div class="form__line">
+                  <div class="form__line-name">Контактный номер *</div>
+                  <label class="form__label">
+                     <input required type="text" name="" class="form__input input js_phone">
+                     <svg class="form__clear-svg">
+                        <use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+                     </svg>
+                  </label>
+               </div>
+               <div class="form__line">
+                  <div class="form__line-name">E-mail</div>
+                  <label class="form__label">
+                     <input type="text" name="" class="form__input input">
+                     <svg class="form__clear-svg">
+                        <use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+                     </svg>
+                  </label>
+               </div>
+               <div class="form__line">
+                  <div class="form__line-name">Номинал сертификата *</div>
+                  <label class="form__label">
+                     <input required type="text" name="" class="form__input input">
+                     <svg class="form__clear-svg">
+                        <use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+                     </svg>
+                  </label>
+                  <div class="form__input-descr">От 1000 рублей. Действует на все услуги клуба</div>
+               </div>
+               <div class="form__line">
+                  <div class="form__line-name">Оплата</div>
+                  <select name="form[]" data-class-modif="form">
+                     <option value="1" selected>Наличные</option>
+                     <option value="2">Банковской картой</option>
+                  </select>
+               </div>
+               <div class="form__line">
+                  <div class="form__line-name">Дополнительная информация</div>
+                  <label class="form__label">
+                     <textarea data-autoheight data-autoheight-min="80" autocomplete="off" name="form[]" placeholder="" data-error="Ошибка" class="form__input input"></textarea>
+                     <svg class="form__clear-svg">
+                        <use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+                     </svg>
+                  </label>
+               </div>
+               <button type="submit" class="form__button btn-gold">Заказать</button>
+               <div class="form__consent">Отправляя данные, я даю свое <a href="" class="form__consent-link">согласие на обработку перс. данных</a></div>
+            </form>
+         </div>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})

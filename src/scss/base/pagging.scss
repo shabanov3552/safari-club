@@ -2,18 +2,34 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	// .pagging__arrow
-	&__arrow {
-	}
+	&__arrow {}
+
 	// .pagging__list
 	&__list {
 		display: flex;
-		li {
-		}
+		gap: 30px;
+
+		li {}
 	}
+
 	// .pagging__item
 	&__item {
+		font-family: 'Cormorant Garamond';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 70px;
+		line-height: 85px;
+		/* identical to box height */
+
+		text-align: center;
+		text-transform: uppercase;
+
+		color: #3A230B;
+
 		&._active {
+			color: #CE8D3B;
 		}
 	}
 }

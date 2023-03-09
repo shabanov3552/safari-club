@@ -1,0 +1,224 @@
+.conference-hall {
+
+   // .conference-hall__wrapper
+
+   &__wrapper {
+      @media (min-width:$tablet) {
+         background: url(../img/ornament-bg-right.png) right no-repeat;
+
+      }
+   }
+
+   // .conference-hall__services
+
+   &__services {
+      padding-top: rem(100);
+      padding-bottom: rem(80);
+      position: relative;
+
+      @media (max-width:$mobile) {
+         padding-top: rem(50);
+      }
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: -65px;
+         top: 0;
+         width: 100%;
+         max-width: 1400px;
+         padding: 0 rem(20);
+         left: 50%;
+         transform: translate(-50%, 0px);
+         height: 1px;
+         background: rgba(0, 0, 0, 0.4);
+
+         @media (max-width: em(1450)) {
+            left: 20px;
+            width: 96%;
+            max-width: 100%;
+            transform: translate(0px, 0px);
+         }
+      }
+
+      &::after {
+         content: '';
+         width: 27px;
+         height: 27px;
+         position: absolute;
+         top: -78px;
+         top: -13px;
+         left: 50%;
+         transform: translate(-50%, 0px);
+         background: url(../img/svg/footer-rhomb.svg);
+      }
+
+      @media (max-width:$mobile) {
+         padding-bottom: rem(30);
+      }
+   }
+
+   // .conference-hall__row
+
+   &__row {
+      display: grid;
+      grid-template-columns: minmax(100px, 420px) repeat(2, 400px);
+      gap: 150px;
+      padding-right: 200px;
+      @include adaptiveValue("padding-right", 200, 20, 0, 1920, 1500);
+      margin-bottom: rem(80);
+
+      @media (max-width:$pc) {
+         gap: 60px;
+      }
+
+      @media (max-width:$laptop) {
+         gap: 20px;
+         grid-template-columns: repeat(2, 1fr);
+         padding: 0 rem(90);
+      }
+
+      @media (max-width:$tablet) {
+         padding: 0 rem(20);
+         display: block;
+         margin-bottom: rem(40);
+      }
+   }
+
+   // .conference-hall__image
+
+   &__image {
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      @media (max-width:$laptop) {
+         display: none;
+      }
+   }
+
+   // .conference-hall__col
+
+   &__col {
+      @media (max-width:$tablet) {
+         margin-bottom: rem(40);
+      }
+   }
+
+   // .conference-hall__subtitle
+
+   &__subtitle {
+      font-family: 'Cormorant Garamond';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 48px;
+      text-transform: uppercase;
+      margin-bottom: rem(47);
+      color: #3A230B;
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(30);
+      }
+   }
+
+   // .conference-hall__list
+
+   &__list {
+      padding-left: rem(25);
+
+      // .conference-hall__list_grid
+
+      &_grid {
+         .conference-hall__item {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: minmax(240px, 1fr) 1fr;
+
+            @media (max-width:$mobileSmall) {
+               grid-template-columns: minmax(140px, 1fr) 1fr;
+               gap: 15px;
+
+            }
+         }
+      }
+   }
+
+   // .conference-hall__item
+
+   &__item {
+      line-height: 20px;
+      font-size: 16px;
+      position: relative;
+
+      &:not(:last-child) {
+         margin-bottom: rem(7);
+      }
+
+      &::before {
+         background: url(../img/svg/list-style-rhomb.svg);
+         content: '';
+         position: absolute;
+         top: 5px;
+         left: -17px;
+         display: block;
+         width: 10px;
+         height: 10px;
+      }
+   }
+
+   // .conference-hall__services-name
+
+   &__services-name {}
+
+   // .conference-hall__services-price
+
+   &__services-price {
+      font-weight: 600;
+   }
+
+   // .conference-hall__rules
+
+   &__rules {
+      padding-left: rem(575);
+
+      @media (max-width:$pc) {
+         padding-left: rem(490);
+      }
+
+      @media (max-width:$laptop) {
+         padding: 0 rem(90);
+      }
+
+      @media (max-width:$tablet) {
+         padding: 0 rem(20);
+      }
+
+      .rules {
+         padding: 0;
+         // .rules__row
+
+         &__row {
+            max-width: 100%;
+         }
+
+         // .rules__link
+
+         &__link {}
+
+         // .rules__name
+
+         &__name {}
+
+         // .rules__type-file
+
+         &__type-file {}
+      }
+   }
+
+   .page-form-reserv {
+      margin-bottom: 0;
+   }
+}

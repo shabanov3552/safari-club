@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Ресторан</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@400;500;600&family=Montserrat:wght@400;600&display=swap&_v=20230310021803" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230310021803">
+	<link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png">
+	<link rel="manifest" href="files/favicon/site.webmanifest">
+	<link rel="mask-icon" href="files/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="preloader"><img src="img/loader.gif" alt=""></div>
+	<div class="wrapper black">
+		<!-- data-scroll="200" data-scroll-show="100" -->
+		<header data-scroll="200" data-scroll-show="100" class="header">
+			<div class="header__top">
+				<div class="header__container">
+					<div class="header__left-menu menu-left">
+						<div class="menu-left__top">
+							<div class="menu-phone" data-da=".mobile-menu__header, 1280">
+								<div class="menu-phone__descr">Служба бронирования</div>
+								<a href="tel:+73912053525" class="menu-phone__link">+7 (391) 205-35-25</a>
+							</div>
+							<div class="menu-phone" data-da=".mobile-menu__header, 1280">
+								<div class="menu-phone__descr">Ресторан</div>
+								<a href="tel:+73912053540" class="menu-phone__link">+7 (391) 205-35-40</a>
+							</div>
+						</div>
+						<div class="menu-left__bottom" data-da=".mobile-menu__center, 1280">
+							<a href="" class="menu-link">Номера</a>
+							<a href="" class="menu-link">Ресторан</a>
+							<a href="" class="menu-link">Сауна</a>
+							<a href="" class="menu-link">Конференц-зал</a>
+						</div>
+					</div>
+					<a href="" class="header__logo main-logo">
+						<span class="main-logo__text main-logo__text_left">Сибирский</span>
+						<span class="main-logo__img">
+							<img src="img/svg/logo-black.svg" alt="">
+							<img src="img/svg/logo-white.svg" alt="">
+						</span>
+						<span class="main-logo__text main-logo__text_right">Сафари Клуб</span>
+						<span class="main-logo__bottom-text">гостиничный комплекс</span>
+					</a>
+					<div class="header__right-menu menu-right">
+						<div class="menu-right__top">
+							<a href="" data-popup="#callback" class="callback-btn" data-da=".mobile-menu__header, 1280">
+								<img src="img/svg/call-back.svg" alt="">
+								<span class="callback-btn__text">Заказать звонок</span>
+							</a>
+							<a href="" class="lang-switch" data-da=".mobile-menu__header, 1280">En</a>
+							<a href="" data-popup="#reserv" class="reserv-btn btn-gold">Забронировать</a>
+						</div>
+						<div class="menu-right__bottom" data-da=".mobile-menu__center, 1280">
+							<a href="" class="menu-link">Беседки</a>
+							<a href="" class="menu-link">Подарочные сертификаты</a>
+							<div class="dropdown-menu">
+								<span class="dropdown-menu__span">Клуб</span>
+								<svg class="dropdown-menu__arrow">
+									<use xlink:href="img/icons/icons.svg#svg-arrow-dropdown"></use>
+								</svg>
+								<ul class="dropdown-menu__list">
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">О нас</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Команда</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">События</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Фотогалерея</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Видеогалерея</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Вакансии</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Документы</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="header__mobile-menu mobile-menu">
+						<div class="mobile-menu__header"></div>
+						<div class="mobile-menu__center"></div>
+					</div>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+		</header>
+		<main class="page restaurant">
+
+			<div class="first-block">
+				<div class="first-block__image-ibg"><picture><source srcset="img/pictures/restaurant/main-img.webp" type="image/webp"><img src="img/pictures/restaurant/main-img.jpg" alt=""></picture></div>
+				<div class="first-block__fb-inner">
+					<nav class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__li">
+								<a href="" class="breadcrumbs__link">
+									<svg class="breadcrumbs__link_back-svg">
+										<use xlink:href="img/icons/icons.svg#svg-arrow-breadcrumbs"></use>
+									</svg>
+									Главная
+								</a>
+							</li>
+							<li class="breadcrumbs__li">
+								<a href="" class="breadcrumbs__link">
+									Крошка
+								</a>
+							</li>
+							<li class="breadcrumbs__li">
+								<a href="" class="breadcrumbs__link">
+									Крошка
+								</a>
+							</li>
+							<li class="breadcrumbs__li">
+								<span class="breadcrumbs__item">Последняя крошка</span>
+							</li>
+						</ul>
+					</nav>
+					<h1 class="first-block__title">Ресторан в Сибирском Сафари Клубе</h1>
+					<p class="first-block__subtitle">Идеальное место для проведения вашего мероприятия или изысканного ужина</p>
+					<button type="submit" class="first-block__button btn-gold ">Забронировать</button>
+				</div>
+			</div>
+
+			<div class="main-description">
+				<div class="main-description__container">
+					<div class="main-description__row">
+						<div class="main-description__text">
+							<p>Панорамные окна, заливающие зал светом, дерево и мягкая мебель создают особую атмосферу тепла. Ресторан в Сибирском Сафари Клубе - это место, куда приятно приходить по поводу и без.</p>
+							<p>Встреча с партнерами, праздник, романтическое свидание или просто ужин с друзьями - вам всегда будет комфортно и уютно в нашем ресторане.</p>
+						</div>
+						<div class="main-description__image"><picture><source srcset="img/pictures/main-descr_2.webp" type="image/webp"><img src="img/pictures/main-descr_2.jpg" alt=""></picture></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="rest-menu">
+				<div class="rest-menu__cont">
+					<div class="rest-menu__header">
+						<div class="rest-menu__title title-cormorant">
+							Меню ресторана
+						</div>
+					</div>
+					<div class="rest-menu__main">
+						<div data-tabs class="rest-menu__tabs">
+							<div data-tabs-body class="rest-menu__content">
+								<div class="rest-menu__body">
+									<div class="rest-menu__slider swiper">
+
+										<div class="rest-menu__wrapper swiper-wrapper">
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_1.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_2.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_2.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_1.jpg" alt=""></picture>
+											</div>
+										</div>
+
+
+
+									</div>
+									<button type="button" class="swiper-button-prev">
+										<img src="img/svg/menu-slider-left.svg" alt="">
+									</button>
+									<button type="button" class="swiper-button-next">
+										<img src="img/svg/menu-slider-right.svg" alt="">
+									</button>
+								</div>
+								<div class="rest-menu__body">
+									<div class="rest-menu__slider swiper">
+
+										<div class="rest-menu__wrapper swiper-wrapper">
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_kids-1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_kids-1.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_kids-2.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_kids-2.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_1.jpg" alt=""></picture>
+											</div>
+										</div>
+
+
+
+									</div>
+									<button type="button" class="swiper-button-prev">
+										<img src="img/svg/menu-slider-left.svg" alt="">
+									</button>
+									<button type="button" class="swiper-button-next">
+										<img src="img/svg/menu-slider-right.svg" alt="">
+									</button>
+								</div>
+								<div class="rest-menu__body">
+									<div class="rest-menu__slider swiper">
+
+										<div class="rest-menu__wrapper swiper-wrapper">
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_banket-1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_banket-1.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_banket-2.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_banket-2.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_1.jpg" alt=""></picture>
+											</div>
+										</div>
+
+
+
+									</div>
+									<button type="button" class="swiper-button-prev">
+										<img src="img/svg/menu-slider-left.svg" alt="">
+									</button>
+									<button type="button" class="swiper-button-next">
+										<img src="img/svg/menu-slider-right.svg" alt="">
+									</button>
+								</div>
+								<div class="rest-menu__body">
+									<div class="rest-menu__slider swiper">
+
+										<div class="rest-menu__wrapper swiper-wrapper">
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_furshet-1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_furshet-1.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_furshet-2.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_furshet-2.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_1.jpg" alt=""></picture>
+											</div>
+										</div>
+
+
+
+									</div>
+									<button type="button" class="swiper-button-prev">
+										<img src="img/svg/menu-slider-left.svg" alt="">
+									</button>
+									<button type="button" class="swiper-button-next">
+										<img src="img/svg/menu-slider-right.svg" alt="">
+									</button>
+								</div>
+								<div class="rest-menu__body">
+									<div class="rest-menu__slider swiper">
+
+										<div class="rest-menu__wrapper swiper-wrapper">
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_vine-1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_vine-1.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_vine-2.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_vine-2.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_alco-2.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_alco-2.jpg" alt=""></picture>
+											</div>
+										</div>
+
+
+
+									</div>
+									<button type="button" class="swiper-button-prev">
+										<img src="img/svg/menu-slider-left.svg" alt="">
+									</button>
+									<button type="button" class="swiper-button-next">
+										<img src="img/svg/menu-slider-right.svg" alt="">
+									</button>
+								</div>
+								<div class="rest-menu__body">
+									<div class="rest-menu__slider swiper">
+
+										<div class="rest-menu__wrapper swiper-wrapper">
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_1.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_1.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_1.jpg" alt=""></picture>
+											</div>
+										</div>
+
+
+
+									</div>
+									<button type="button" class="swiper-button-prev">
+										<img src="img/svg/menu-slider-left.svg" alt="">
+									</button>
+									<button type="button" class="swiper-button-next">
+										<img src="img/svg/menu-slider-right.svg" alt="">
+									</button>
+								</div>
+								<div class="rest-menu__body">
+									<div class="rest-menu__slider swiper">
+
+										<div class="rest-menu__wrapper swiper-wrapper">
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_1.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_1.jpg" alt=""></picture>
+											</div>
+											<div class="rest-menu__slide swiper-slide">
+												<picture><source srcset="img/pictures/restaurant/menu/menu_1.webp" type="image/webp"><img src="img/pictures/restaurant/menu/menu_1.jpg" alt=""></picture>
+											</div>
+										</div>
+
+
+
+									</div>
+									<button type="button" class="swiper-button-prev">
+										<img src="img/svg/menu-slider-left.svg" alt="">
+									</button>
+									<button type="button" class="swiper-button-next">
+										<img src="img/svg/menu-slider-right.svg" alt="">
+									</button>
+								</div>
+							</div>
+							<nav data-tabs-titles class="rest-menu__navigation">
+								<button type="button" class="rest-menu__nav-item _tab-active">
+									<span class="rest-menu__nav-name">
+										Основное меню
+									</span>
+									<a href="files/menu/menu-main.pdf" target="_blank" class="rest-menu__link">
+										<img src="img/svg/PDF_2.svg" alt="">
+										<span>Открыть PDF</span>
+									</a>
+								</button>
+								<button type="button" class="rest-menu__nav-item">
+									<span class="rest-menu__nav-name">
+										Детское меню
+									</span>
+									<a href="files/menu/menu-kids.pdf" target="_blank" class="rest-menu__link">
+										<img src="img/svg/PDF_2.svg" alt="">
+										<span>Открыть PDF</span>
+									</a>
+								</button>
+								<button type="button" class="rest-menu__nav-item">
+									<span class="rest-menu__nav-name">
+										Банкетное меню
+									</span>
+									<a href="files/menu/menu-banket.pdf" target="_blank" class="rest-menu__link">
+										<img src="img/svg/PDF_2.svg" alt="">
+										<span>Открыть PDF</span>
+									</a>
+								</button>
+								<button type="button" class="rest-menu__nav-item">
+									<span class="rest-menu__nav-name">
+										Фуршетное меню
+									</span>
+									<a href="files/menu/menu-furshet.pdf" target="_blank" class="rest-menu__link">
+										<img src="img/svg/PDF_2.svg" alt="">
+										<span>Открыть PDF</span>
+									</a>
+								</button>
+								<button type="button" class="rest-menu__nav-item">
+									<span class="rest-menu__nav-name">
+										Алкогольная карта
+									</span>
+									<a href="files/menu/menu-alco.pdf" target="_blank" class="rest-menu__link">
+										<img src="img/svg/PDF_2.svg" alt="">
+										<span>Открыть PDF</span>
+									</a>
+								</button>
+								<button type="button" class="rest-menu__nav-item">
+									<span class="rest-menu__nav-name">
+										Полуфабрикаты на заказ
+									</span>
+									<a href="" target="_blank" class="rest-menu__link">
+										<img src="img/svg/PDF_2.svg" alt="">
+										<span>Открыть PDF</span>
+									</a>
+								</button>
+								<button type="button" class="rest-menu__nav-item">
+									<span class="rest-menu__nav-name">
+										Пироги на заказ
+									</span>
+									<a href="" target="_blank" class="rest-menu__link">
+										<img src="img/svg/PDF_2.svg" alt="">
+										<span>Открыть PDF</span>
+									</a>
+								</button>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tables">
+				<div class="tables__title title-cormorant">Расположение столов</div>
+				<div class="tables__layout">
+					<picture><source srcset="img/pictures/restaurant/tables-layout.webp" type="image/webp"><img src="img/pictures/restaurant/tables-layout.png" alt=""></picture>
+				</div>
+			</div>
+
+			<div class="page-form-reserv">
+				<div class="page-form-reserv__wrapper">
+					<div class="page-form-reserv__left">
+						<div class="page-form-reserv__title">Забронировать</div>
+						<div class="page-form-reserv__subtitle">Оставьте контактные данные и мы вам перезвоним</div>
+					</div>
+					<div class="page-form-reserv__center">
+						<form class="page-form-reserv__form form" action="" method="" data-parsley-validate data-parsley-trigger="change" required="">
+							<div class="form__line">
+								<div class="form__line-name">Ваше имя *</div>
+								<label class="form__label">
+									<input required type="text" name="" class="form__input input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+									</svg>
+								</label>
+							</div>
+							<div class="form__line">
+								<div class="form__line-name">Контактный номер *</div>
+								<label class="form__label">
+									<input required type="text" name="" class="form__input input js_phone">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+									</svg>
+								</label>
+							</div>
+							<div class="form__line">
+								<div class="form__line-name">Под какое мероприятие бронь?</div>
+								<label class="form__label">
+									<input required type="text" name="" class="form__input input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+									</svg>
+								</label>
+							</div>
+							<button type="submit" class="form__button btn-gold">Отправить</button>
+							<div class="form__consent">Отправляя данные, я даю свое <a href="" class="form__consent-link">согласие на обработку перс. данных</a></div>
+						</form>
+					</div>
+					<div class="page-form-reserv__right">
+						<picture><source srcset="img/pictures/page-form-reserv.webp" type="image/webp"><img src="img/pictures/page-form-reserv.jpg" alt=""></picture>
+					</div>
+				</div>
+			</div>
+
+			<!-- Галлерея без слайдера -->
+			<div class="gallery gallery_no-slider" data-gallery>
+				<div class="gallery__row">
+					<div class="gallery__image" data-src="img/pictures/restaurant/gallery/1.png">
+						<picture><source srcset="img/pictures/restaurant/gallery/1.webp" type="image/webp"><img src="img/pictures/restaurant/gallery/1.png" alt=""></picture>
+					</div>
+					<div class="gallery__image" data-src="img/pictures/restaurant/gallery/2.png">
+						<picture><source srcset="img/pictures/restaurant/gallery/2.webp" type="image/webp"><img src="img/pictures/restaurant/gallery/2.png" alt=""></picture>
+					</div>
+					<div class="gallery__image" data-src="img/pictures/restaurant/gallery/3.png">
+						<picture><source srcset="img/pictures/restaurant/gallery/3.webp" type="image/webp"><img src="img/pictures/restaurant/gallery/3.png" alt=""></picture>
+					</div>
+					<div class="gallery__image" data-src="img/pictures/restaurant/gallery/4.png">
+						<picture><source srcset="img/pictures/restaurant/gallery/4.webp" type="image/webp"><img src="img/pictures/restaurant/gallery/4.png" alt=""></picture>
+					</div>
+					<div class="gallery__image" data-src="img/pictures/restaurant/gallery/5.png">
+						<picture><source srcset="img/pictures/restaurant/gallery/5.webp" type="image/webp"><img src="img/pictures/restaurant/gallery/5.png" alt=""></picture>
+					</div>
+					<div class="gallery__image" data-src="img/pictures/restaurant/gallery/6.png">
+						<picture><source srcset="img/pictures/restaurant/gallery/6.webp" type="image/webp"><img src="img/pictures/restaurant/gallery/6.png" alt=""></picture>
+					</div>
+					<div class="gallery__image" data-src="img/pictures/restaurant/gallery/7.png">
+						<picture><source srcset="img/pictures/restaurant/gallery/7.webp" type="image/webp"><img src="img/pictures/restaurant/gallery/7.png" alt=""></picture>
+					</div>
+					<div class="gallery__image" data-src="img/pictures/restaurant/gallery/8.png">
+						<picture><source srcset="img/pictures/restaurant/gallery/8.webp" type="image/webp"><img src="img/pictures/restaurant/gallery/8.png" alt=""></picture>
+					</div>
+				</div>
+			</div>
+
+			<div class="events-block">
+				<div class="events-block__title title-cormorant">Банкетные мероприятия</div>
+				<div class="events-block__row">
+					<div class="events-block__left">
+						<picture><source srcset="img/pictures/events/bg-img_1.webp" type="image/webp"><img src="img/pictures/events/bg-img_1.png" alt=""></picture>
+					</div>
+					<div class="events-block__content">
+						<div class="events-block__descr">Атмосфера вашего праздника
+							в ресторане с видом на Енисей</div>
+						<button class="events-block__button btn-gold">Забронировать</button>
+						<div class="events-block__images-row">
+							<div class="events-block__image">
+
+								<picture><source srcset="img/pictures/events/content-img_1.webp" type="image/webp"><img src="img/pictures/events/content-img_1.png" alt=""></picture>
+							</div>
+							<div class="events-block__image">
+
+								<picture><source srcset="img/pictures/events/content-img_2.webp" type="image/webp"><img src="img/pictures/events/content-img_2.png" alt=""></picture>
+							</div>
+							<div class="events-block__image">
+
+								<picture><source srcset="img/pictures/events/content-img_3.webp" type="image/webp"><img src="img/pictures/events/content-img_3.png" alt=""></picture>
+							</div>
+						</div>
+						<div class="events-block__rules">
+							<div class="rules">
+								<div class="rules__row">
+									<a href="" download="" class="rules__link">
+										<img src="img/svg/PDF.svg" alt="">
+										<span class="rules__name">Условия бронирования зала под банкеты</span>
+										<span class="rules__type-file">PDF, 0.5 MB</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="special-offers">
+				<!-- На главной выводятся вообще все спецпредложения, а на внутренних страницах выводятся только спецпредложения, релевантные странице. Коммент от Глеба -->
+				<div class="special-offers__header">
+					<div class="special-offers__title">Специальные предложения</div>
+					<div class="special-offers__top-image"><picture><source srcset="img/pictures/special-offers/header-image_1.webp" type="image/webp"><img src="img/pictures/special-offers/header-image_1.jpg" alt=""></picture></div>
+				</div>
+				<!-- Оболочка слайдера -->
+				<div class="special-offers__slider swiper">
+					<!-- Двигающееся часть слайдера -->
+					<div class="special-offers__wrapper swiper-wrapper">
+						<!-- Слайд -->
+						<div class="special-offers__slide swiper-slide">
+							<div class="special-offers__image-ibg"><picture><source srcset="img/pictures/special-offers/special-offers-bg_1.webp" type="image/webp"><img src="img/pictures/special-offers/special-offers-bg_1.jpg" alt=""></picture></div>
+							<div class="special-offers__left-photo"><picture><source srcset="img/pictures/special-offers/special-offers-content_1.webp" type="image/webp"><img src="img/pictures/special-offers/special-offers-content_1.jpg" alt=""></picture></div>
+							<div class="special-offers__info">
+								<div class="special-offers__info-title">Предложение для молодоженов</div>
+								<div class="special-offers__subtitle">Свадебный номер Люкс или номер на ваш выбор по специальной цене для молодоженов со скидкой 20%</div>
+								<div class="special-offers__desc">
+									<ul>
+										<li>Проживание в номере выбранной категории</li>
+										<li>Поздний выезд до 15:00 или ранний зезд с 7:00 без дополнительной оплаты</li>
+										<li>Бесплатный завтрак с доставкой в номер</li>
+										<li>Шампанское, конфеты</li>
+										<li>Охраняемая парковка при гостинице</li>
+									</ul>
+									<p>Забронировать номер и узнать подробную информацию вы можете по телефону +7 (391) 205-35-35</p>
+								</div>
+							</div>
+						</div>
+						<div class="special-offers__slide swiper-slide">
+							<div class="special-offers__image-ibg"><picture><source srcset="img/pictures/special-offers/special-offers-bg_2.webp" type="image/webp"><img src="img/pictures/special-offers/special-offers-bg_2.jpg" alt=""></picture></div>
+							<div class="special-offers__left-photo"><picture><source srcset="img/pictures/special-offers/special-offers-content_2.webp" type="image/webp"><img src="img/pictures/special-offers/special-offers-content_2.jpg" alt=""></picture></div>
+							<div class="special-offers__info">
+								<div class="special-offers__info-title">Аренда всех беседок на целый день</div>
+								<div class="special-offers__subtitle">У вас большой праздник? Соберутся все друзья и родственники? Всех накормим и развеселим.</div>
+								<div class="special-offers__desc">
+									<ul>
+										<li>Аренда посуды</li>
+										<li>Никто не останется голодным, у нас есть ресторан</li>
+										<li>Круглосуточная работа комплекса, оставайтесь до утра</li>
+									</ul>
+									<p>Забронировать номер и узнать подробную информацию вы можете по телефону +7 (391) 205-35-35</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="special-offers__buttons">
+						<button type="button" class="swiper-button-prev"><img src="img/svg/arrow-slide-left.svg" alt=""></button>
+						<button type="button" class="swiper-button-next"><img src="img/svg/arrow-slide-right.svg" alt=""></button>
+					</div>
+
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__wrapper">
+				<div class="footer__top">
+					<div class="footer__col">
+						<div class="footer__col-descr">Служба бронирования</div>
+						<a href="tel:+73912053525" class="footer__link">
+							<img src="img/svg/phone.svg" alt="">
+							<span>+7 (391)205-35-25</span>
+						</a>
+						<a href="mailto:hotel@sibsafariclub.ru" class="footer__link">
+							<img src="img/svg/mail.svg" alt="">
+							<span>hotel@sibsafariclub.ru</span>
+						</a>
+					</div>
+					<div class="footer__col">
+						<div class="footer__col-descr">Ресторан</div>
+						<a href="tel:+73912053540" class="footer__link">
+							<img src="img/svg/phone.svg" alt="">
+							<span>+7 (391) 205-35-40</span>
+						</a>
+						<a href="mailto:rest@sibsafariclub.ru" class="footer__link">
+							<img src="img/svg/mail.svg" alt="">
+							<span>rest@sibsafariclub.ru</span>
+						</a>
+					</div>
+					<div class="footer__col">
+						<a href="" class="footer__link">
+							<img src="img/svg/map.svg" alt="">
+							<span>г.Красноярск, ул.Судостроительная, 117«А»</span>
+						</a>
+						<a href="" class="footer__link">
+							<span>inst: @sibsafariclub</span>
+						</a>
+						<a href="" class="footer__link">
+							<img src="img/svg/vk.svg" alt="">
+							<span>sibsafariclub</span>
+							<img src="img/svg/link-icon.svg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="footer__center">
+					<div class="pay">
+						<div class="pay__top">Принимаем к оплате:</div>
+						<div class="pay__row">
+							<img src="img/svg/pay_mir.svg" alt="">
+							<img src="img/svg/pay_visa.svg" alt="">
+							<img src="img/svg/pay_master.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom copyright">
+					<div class="copyright__wrapper">
+						<div class="copyright__body">
+							<div class="copyright__item">2023 @ ЗАО «Сибирский Сафари Клуб»</div>
+							<a href="/policy" class="copyright__item">Политика конфиденциальности</a>
+							<a href="/consent" class="copyright__item">Согласие на обработку персональных данных</a>
+							<a href="https://websalt.ru" target="_blank" class="copyright__item">Создание сайта
+								<svg class="copyright__svg">
+									<use xlink:href="img/icons/icons.svg#svg-logo_salt"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230310021803" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230310021803"></script>
+</body>
+
+</html>

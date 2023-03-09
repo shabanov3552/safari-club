@@ -75,12 +75,12 @@ import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
+
 flsForms.formFieldsInit({
 	viewPass: false,
-	autoHeight: false
+	autoHeight: true
 });
-*/
+
 
 /* Oтправка формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
@@ -93,7 +93,7 @@ flsForms.formQuantity();
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-// import './libs/select.js'
+import './libs/select.js'
 
 /* Модуль работы с календарем */
 // import './files/forms/datepicker.js'
@@ -105,7 +105,7 @@ flsForms.formQuantity();
 Документация плагина: https://github.com/RobinHerbots/inputmask
 Сниппет(HTML):
 */
-// import "./files/forms/inputmask.js";
+import "./files/forms/inputmask.js";
 
 /* Модуль работы с ползунком */
 /*
@@ -213,5 +213,8 @@ import "./libs/dynamic_adapt.js";
 // Прочее ========================================================================================================================================================================================================================================================
 // ========================================================================================================================================================================================================================================================
 /* Подключаем файлы со своим кодом */
+import './libs/parsley.min.js';
+import './libs/ru.js';
+import './libs/ru.extra.js';
 import "./files/script.js";
 //============================================================================================================================================================================================================================================

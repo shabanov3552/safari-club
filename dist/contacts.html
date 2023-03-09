@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Контакты</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@400;500;600&family=Montserrat:wght@400;600&display=swap&_v=20230310021803" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230310021803">
+	<link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png">
+	<link rel="manifest" href="files/favicon/site.webmanifest">
+	<link rel="mask-icon" href="files/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="preloader"><img src="img/loader.gif" alt=""></div>
+	<div class="wrapper ">
+		<!-- data-scroll="200" data-scroll-show="100" -->
+		<header data-scroll="200" data-scroll-show="100" class="header">
+			<div class="header__top">
+				<div class="header__container">
+					<div class="header__left-menu menu-left">
+						<div class="menu-left__top">
+							<div class="menu-phone" data-da=".mobile-menu__header, 1280">
+								<div class="menu-phone__descr">Служба бронирования</div>
+								<a href="tel:+73912053525" class="menu-phone__link">+7 (391) 205-35-25</a>
+							</div>
+							<div class="menu-phone" data-da=".mobile-menu__header, 1280">
+								<div class="menu-phone__descr">Ресторан</div>
+								<a href="tel:+73912053540" class="menu-phone__link">+7 (391) 205-35-40</a>
+							</div>
+						</div>
+						<div class="menu-left__bottom" data-da=".mobile-menu__center, 1280">
+							<a href="" class="menu-link">Номера</a>
+							<a href="" class="menu-link">Ресторан</a>
+							<a href="" class="menu-link">Сауна</a>
+							<a href="" class="menu-link">Конференц-зал</a>
+						</div>
+					</div>
+					<a href="" class="header__logo main-logo">
+						<span class="main-logo__text main-logo__text_left">Сибирский</span>
+						<span class="main-logo__img">
+							<img src="img/svg/logo-black.svg" alt="">
+							<img src="img/svg/logo-white.svg" alt="">
+						</span>
+						<span class="main-logo__text main-logo__text_right">Сафари Клуб</span>
+						<span class="main-logo__bottom-text">гостиничный комплекс</span>
+					</a>
+					<div class="header__right-menu menu-right">
+						<div class="menu-right__top">
+							<a href="" data-popup="#callback" class="callback-btn" data-da=".mobile-menu__header, 1280">
+								<img src="img/svg/call-back.svg" alt="">
+								<span class="callback-btn__text">Заказать звонок</span>
+							</a>
+							<a href="" class="lang-switch" data-da=".mobile-menu__header, 1280">En</a>
+							<a href="" data-popup="#reserv" class="reserv-btn btn-gold">Забронировать</a>
+						</div>
+						<div class="menu-right__bottom" data-da=".mobile-menu__center, 1280">
+							<a href="" class="menu-link">Беседки</a>
+							<a href="" class="menu-link">Подарочные сертификаты</a>
+							<div class="dropdown-menu">
+								<span class="dropdown-menu__span">Клуб</span>
+								<svg class="dropdown-menu__arrow">
+									<use xlink:href="img/icons/icons.svg#svg-arrow-dropdown"></use>
+								</svg>
+								<ul class="dropdown-menu__list">
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">О нас</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Команда</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">События</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Фотогалерея</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Видеогалерея</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Вакансии</a></li>
+									<li class="dropdown-menu__item"><a href="" class="dropdown-menu__link">Документы</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="header__mobile-menu mobile-menu">
+						<div class="mobile-menu__header"></div>
+						<div class="mobile-menu__center"></div>
+					</div>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+		</header>
+		<main class="page contacts">
+			<div class="reserv">
+				<div class="reserv__container">
+					<form action="" class="reserv__form">
+						<div class="reserv__dates">
+							<div class="reserv__caption">Даты проживания:</div>
+							<input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+							<span>-</span>
+							<input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+						</div>
+						<div class="reserv__quantity">
+							<div class="reserv__caption">Количество гостей:</div>
+							<div data-quantity class="quantity">
+								<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+								<div class="quantity__input">
+									<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+								</div>
+								<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+							</div>
+						</div>
+						<div class="reserv__promotion">
+							<div class="promotion">
+								<div class="promotion__dd-link">Есть промокод</div>
+								<div class="promotion__dd" hidden>
+									<div class="promotion__dd-inner">
+										<label for="" class="promotion__label">Промокод</label>
+										<input autocomplete="off" type="text" name="form[]" class="promotion__input input">
+										<button type="button" class="promotion__button btn-gold">Подтвердить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="reserv__btn btn-gold">Забронировать</button>
+					</form>
+				</div>
+			</div>
+
+			<nav class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__li">
+						<a href="" class="breadcrumbs__link">
+							<svg class="breadcrumbs__link_back-svg">
+								<use xlink:href="img/icons/icons.svg#svg-arrow-breadcrumbs"></use>
+							</svg>
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__li">
+						<a href="" class="breadcrumbs__link">
+							Крошка
+						</a>
+					</li>
+					<li class="breadcrumbs__li">
+						<a href="" class="breadcrumbs__link">
+							Крошка
+						</a>
+					</li>
+					<li class="breadcrumbs__li">
+						<span class="breadcrumbs__item">Последняя крошка</span>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="contacts__wrapper">
+				<div class="contacts__title title-cormorant">Контакты</div>
+				<div class="contacts__grid">
+					<div class="contacts__col">
+						<div class="contacts__subtitle">Служба бронирования</div>
+						<a href="" class="contacts__tel">+7 (391) 205-35-25</a>
+						<a href="" class="contacts__mail">hotel@sibsafariclub.ru </a>
+					</div>
+					<div class="contacts__col">
+						<div class="contacts__subtitle">Ресторан</div>
+						<a href="" class="contacts__tel">+7 (391) 205-35-40</a>
+						<a href="" class="contacts__mail">rest@sibsafariclub.ru</a>
+					</div>
+					<div class="contacts__col">
+						<div class="contacts__subtitle">Бухгалтерия</div>
+						<a href="" class="contacts__tel">+7 (391) 205-40-29</a>
+						<a href="" class="contacts__mail">buh@sibsafariclub.ru</a>
+					</div>
+					<div class="contacts__col">
+						<div class="contacts__subtitle">Менеджер гостиничного комплекса</div>
+						<a href="" class="contacts__tel">+7 (391) 205-35-40</a>
+						<a href="" class="contacts__tel"> +7 (391) 205-35-25</a>
+						<a href="" class="contacts__mail">manager@sibsafariclub.ru</a>
+						<div class="contacts__descr">Корпоративные заявки, качество обслуживания, разрешение конфликтных ситуаций</div>
+					</div>
+					<div class="contacts__col">
+						<div class="contacts__subtitle">Для коммерческих предложений</div>
+						<a href="" class="contacts__mail">info@sibsafariclub.ru</a>
+					</div>
+					<div class="contacts__col">
+						<div class="contacts__subtitle">Адрес</div>
+						<div class="contacts__text">660012, Россия, г. Красноярск, ул. Судостроительная, 117 А</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="contacts-map">
+				<div id="map"></div>
+				<script>
+					if (document.querySelector('#map')) {
+						mapAdd();
+
+						function mapAdd() {
+							let tag = document.createElement('script');
+							tag.src = "https://api-maps.yandex.ru/2.1/?apikey=353b84f2-b09a-4cef-8467-9163e85a640f&lang=ru_RU";
+							let firstScriptTag = document.getElementsByTagName('script')[0];
+							firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+						}
+						setTimeout(function() {
+
+							ymaps.ready(init);
+
+							function init() {
+								var myMap = new ymaps.Map("map", {
+									center: [55.98939259042629, 92.84522013614479],
+									zoom: 14.5,
+									controls: ['zoomControl'],
+								});
+								let addresFirst = new ymaps.Placemark([55.98939259042629, 92.84522013614479], {}, {
+									iconLayout: 'default#imageWithContent',
+									iconImageHref: 'img/icons/map.svg',
+									iconImageSize: [76, 66],
+									iconImageOffset: [-30, -60],
+									iconContentOffset: [0, 0],
+								});
+								myMap.geoObjects.add(addresFirst);
+								myMap.behaviors.disable('scrollZoom');
+							}
+
+						}, 1000);
+					}
+				</script>
+			</div>
+
+			<div class="page-form-reserv">
+				<div class="page-form-reserv__wrapper">
+					<div class="page-form-reserv__left">
+						<div class="page-form-reserv__title">Забронировать</div>
+						<div class="page-form-reserv__subtitle">Оставьте контактные данные и мы вам перезвоним</div>
+					</div>
+					<div class="page-form-reserv__center">
+						<form class="page-form-reserv__form form" action="" method="" data-parsley-validate data-parsley-trigger="change" required="">
+							<div class="form__line">
+								<div class="form__line-name">Ваше имя</div>
+								<label class="form__label">
+									<input required type="text" name="" class="form__input input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+									</svg>
+								</label>
+							</div>
+							<div class="form__line">
+								<div class="form__line-name">E-mail</div>
+								<label class="form__label">
+									<input required type="text" name="" class="form__input input js_phone">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+									</svg>
+								</label>
+							</div>
+							<div class="form__line">
+								<div class="form__line-name">Контактный телефон</div>
+								<label class="form__label">
+									<input required type="text" name="" class="form__input input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+									</svg>
+								</label>
+							</div>
+							<div class="form__line">
+								<div class="form__line-name">Сообщение</div>
+								<label class="form__label">
+									<textarea data-autoheight autocomplete="off" name="form[]" placeholder="" data-error="Ошибка" class="form__input input"></textarea>
+
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+									</svg>
+								</label>
+							</div>
+							<button type="submit" class="form__button btn-gold">Отправить</button>
+							<div class="form__consent">Отправляя данные, я даю свое <a href="" class="form__consent-link">согласие на обработку перс. данных</a></div>
+						</form>
+					</div>
+					<div class="page-form-reserv__right">
+						<picture><source srcset="img/pictures/page-form-reserv_2.webp" type="image/webp"><img src="img/pictures/page-form-reserv_2.png" alt=""></picture>
+					</div>
+				</div>
+			</div>
+
+			<div class="how-to-get">
+				<div class="how-to-get__title title-cormorant">Как добраться до клуба</div>
+				<div class="how-to-get__row">
+					<div class="how-to-get__col">
+						<div class="how-to-get__icon"><img src="img/svg/how-to-get_1.svg" alt=""></div>
+						<div class="how-to-get__subtitle">Аэропорт</div>
+						<div class="how-to-get__price">40 минут, от 600 ₽</div>
+						<div class="how-to-get__descr">Трансфер в отель осуществляется на минибасе.</div>
+					</div>
+					<div class="how-to-get__col">
+						<div class="how-to-get__icon"><img src="img/svg/how-to-get_2.svg" alt=""></div>
+						<div class="how-to-get__subtitle">Ж/Д</div>
+						<div class="how-to-get__price">20 минут, от 100 ₽</div>
+						<div class="how-to-get__descr">К вам подъедет водитель, который встретит вас у входа в здание вокзала.</div>
+					</div>
+					<div class="how-to-get__col">
+						<div class="how-to-get__icon"><img src="img/svg/how-to-get_3.svg" alt=""></div>
+						<div class="how-to-get__subtitle">Автовокзал</div>
+						<div class="how-to-get__price">30 минут, от 100 ₽</div>
+						<div class="how-to-get__descr">Трансфер в отель осуществляется на минибасе.</div>
+					</div>
+					<div class="how-to-get__col">
+						<div class="how-to-get__icon"><img src="img/svg/how-to-get_4.svg" alt=""></div>
+						<div class="how-to-get__subtitle">Автобусы</div>
+						<div class="how-to-get__price">32 ₽</div>
+						<div class="how-to-get__descr">Остановок всего две — они расположены недалеко друг от друга.</div>
+					</div>
+				</div>
+				<a href="" class="how-to-get__link">
+					<img src="img/svg/how-to-get_5.svg" alt="">
+					<span>Услуги трансфера</span>
+					<img src="img/svg/how-to-get_6.svg" alt="">
+				</a>
+			</div>
+
+			<div class="contacts__footer footer-contacts">
+				<div class="footer-contacts__container">
+					<div class="footer-contacts__message">Уважаемый гость! Если у Вас возникли претензии по качеству обслуживания в нашем гостиничном комплексе, Вы можете обратиться:</div>
+					<div class="footer-contacts__right">
+						<div class="footer-contacts__title">«Управление Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по Красноярскому краю» (сокращенное наименование - Управление Роспотребнадзора по Красноярскому краю)</div>
+						<div class="footer-contacts__col">
+							<div class="footer-contacts__row">
+								<div class="footer-contacts__name">Адрес</div>
+								<div class="footer-contacts__value">660097, г.Красноярск, ул. Каратанова, д. 21</div>
+							</div>
+							<div class="footer-contacts__row">
+								<div class="footer-contacts__name">E-mail</div>
+								<div class="footer-contacts__value">office@24.rospotrebnadzor.ru</div>
+							</div>
+							<div class="footer-contacts__row">
+								<div class="footer-contacts__name">Приёмная Телефоны</div>
+								<div class="footer-contacts__value">8 (391) 226-89-50 (многоканальный), 8 (495) 380-28-43 (московский номер)</div>
+							</div>
+							<div class="footer-contacts__row">
+								<div class="footer-contacts__name">Факс</div>
+								<div class="footer-contacts__value">8 (391) 226-90-49</div>
+							</div>
+							<div class="footer-contacts__row">
+								<div class="footer-contacts__name">Консультант по защите прав потребителей</div>
+								<div class="footer-contacts__value">8 (391) 226-89-98</div>
+							</div>
+							<div class="footer-contacts__row">
+								<div class="footer-contacts__name">Пресс-секретарь Телефоны</div>
+								<div class="footer-contacts__value">8 (391) 226-89-99, 8 (391) 232-12-75</div>
+							</div>
+							<div class="footer-contacts__row">
+								<div class="footer-contacts__name">E-mail</div>
+								<div class="footer-contacts__value">info@24.rospotrebnadzor.ru</div>
+							</div>
+							<div class="footer-contacts__row">
+								<div class="footer-contacts__name">Режим работы</div>
+								<div class="footer-contacts__value">понедельник-четверг с 9.00 до 18.00, пятница с 9.00 до 16.45 Обед: с 13.00 до 13.45</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__wrapper">
+				<div class="footer__top">
+					<div class="footer__col">
+						<div class="footer__col-descr">Служба бронирования</div>
+						<a href="tel:+73912053525" class="footer__link">
+							<img src="img/svg/phone.svg" alt="">
+							<span>+7 (391)205-35-25</span>
+						</a>
+						<a href="mailto:hotel@sibsafariclub.ru" class="footer__link">
+							<img src="img/svg/mail.svg" alt="">
+							<span>hotel@sibsafariclub.ru</span>
+						</a>
+					</div>
+					<div class="footer__col">
+						<div class="footer__col-descr">Ресторан</div>
+						<a href="tel:+73912053540" class="footer__link">
+							<img src="img/svg/phone.svg" alt="">
+							<span>+7 (391) 205-35-40</span>
+						</a>
+						<a href="mailto:rest@sibsafariclub.ru" class="footer__link">
+							<img src="img/svg/mail.svg" alt="">
+							<span>rest@sibsafariclub.ru</span>
+						</a>
+					</div>
+					<div class="footer__col">
+						<a href="" class="footer__link">
+							<img src="img/svg/map.svg" alt="">
+							<span>г.Красноярск, ул.Судостроительная, 117«А»</span>
+						</a>
+						<a href="" class="footer__link">
+							<span>inst: @sibsafariclub</span>
+						</a>
+						<a href="" class="footer__link">
+							<img src="img/svg/vk.svg" alt="">
+							<span>sibsafariclub</span>
+							<img src="img/svg/link-icon.svg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="footer__center">
+					<div class="pay">
+						<div class="pay__top">Принимаем к оплате:</div>
+						<div class="pay__row">
+							<img src="img/svg/pay_mir.svg" alt="">
+							<img src="img/svg/pay_visa.svg" alt="">
+							<img src="img/svg/pay_master.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom copyright">
+					<div class="copyright__wrapper">
+						<div class="copyright__body">
+							<div class="copyright__item">2023 @ ЗАО «Сибирский Сафари Клуб»</div>
+							<a href="/policy" class="copyright__item">Политика конфиденциальности</a>
+							<a href="/consent" class="copyright__item">Согласие на обработку персональных данных</a>
+							<a href="https://websalt.ru" target="_blank" class="copyright__item">Создание сайта
+								<svg class="copyright__svg">
+									<use xlink:href="img/icons/icons.svg#svg-logo_salt"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230310021803" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230310021803"></script>
+</body>
+
+</html>

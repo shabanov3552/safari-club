@@ -193,7 +193,22 @@ body {
 @import "blocks/special-offers";
 @import "blocks/breadcrumbs";
 @import "blocks/first-block";
+@import "blocks/event-top.scss";
+@import "blocks/event-card.scss";
+@import "base/pagging.scss";
 
 // Подключение стилей отдельных страниц
 @import "home";
 @import "room-detail";
+@import "gazebos-rental";
+@import "restaurant";
+@import "contacts";
+@import "conference-hall";
+@import "sauna";
+@import "sauna-detail";
+@import "certificates";
+@import "services-detail-template";
+@import "events";
+@import "events-detail";
+@import "vacancy";
+@import "about";

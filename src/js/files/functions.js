@@ -31,6 +31,9 @@ export function addLoadedClass() {
 	window.addEventListener("load", function () {
 		setTimeout(function () {
 			document.documentElement.classList.add('loaded');
+			if (document.querySelector('.video-block')) {
+				window.playMainVideo()
+			}
 		}, 0);
 	});
 }
@@ -395,6 +398,7 @@ export function tabs() {
 	}
 	function setTabsAction(e) {
 		const el = e.target;
+
 		if (el.closest('[data-tabs-title]')) {
 			const tabTitle = el.closest('[data-tabs-title]');
 			const tabsBlock = tabTitle.closest('[data-tabs]');
@@ -405,7 +409,9 @@ export function tabs() {
 				tabTitle.classList.add('_tab-active');
 				setTabsStatus(tabsBlock);
 			}
-			e.preventDefault();
+			if (!el.closest('.rest-menu__link')) {
+				e.preventDefault();
+			}
 		}
 	}
 }

@@ -5,24 +5,38 @@ import { flsModules } from "./modules.js";
 
 
 //#region Global click
+
 document.addEventListener("click", function (e) {
    let target = e.target;
 
    if (document.querySelector('.promotion')) { promotionOpen(target); }
+
+   // показать всплывашку бронирования в хедере
    if (target.closest('.reserv-btn')) {
       if (document.querySelector('.header').classList.contains('_header-scroll')) {
          const wrapper = document.querySelector('.wrapper');
          const reservFormHeight = document.querySelector('.reserv').clientHeight;
          wrapper.classList.add('show-reserv');
          wrapper.style.paddingTop = `${reservFormHeight}px`;
-
       }
       e.preventDefault();
    }
+
+   // очистка инпута
+   if (e.target.closest('.form__clear-svg')) {
+      let input = e.target.closest('.form__line').querySelector('input') || e.target.closest('.form__line').querySelector('textarea');
+      input.value = '';
+      input.classList.remove('_form-focus');
+      input.parentElement.classList.remove('_form-focus');
+      e.target.closest('.form__clear-svg').classList.remove('_active');
+      // Inputmask.remove(input);
+   }
 });
+
 //#endregion
 
 //#region открытие поля ввода промокода
+
 function promotionOpen(target) {
    let dropDown = document.querySelector('.promotion__dd');
 
@@ -37,9 +51,10 @@ function promotionOpen(target) {
       _slideUp(dropDown, 300);
    }
 }
+
 //#endregion
 
-//#region main video
+//#region Проиграть видео на главном экране
 
 function playMainVideo() {
    let startVideo = document.querySelector(".js-start-video");
@@ -56,8 +71,8 @@ function playMainVideo() {
    }, 150);
 }
 window.playMainVideo = playMainVideo;
-//#endregion
 
+//#endregion
 
 //#region
 

@@ -1,0 +1,526 @@
+.gazebos-catalog {
+   margin-top: rem(76);
+   // .gazebos-catalog__top
+
+   &__top {
+      margin-bottom: rem(35);
+      position: relative;
+      max-width: 1600px;
+      margin: 0 auto;
+      width: 1600px;
+
+      // height: 511px;
+      @media (max-width: em(1600)) {
+
+         @include adaptiveValue("margin-left", 0, -300, 0, 1600, 1000);
+      }
+
+      @media (max-width:$tablet) {
+         width: 600px;
+         margin: 0 auto;
+      }
+
+      @media (max-width: em(600)) {
+         @include adaptiveValue("margin-left", 0, -120, 0, 600, 320);
+
+      }
+   }
+
+   // .gazebos-catalog__map
+
+   &__map {
+
+      img {
+         width: 100%;
+         object-fit: contain;
+      }
+   }
+
+   // .gazebos-catalog__anchor-list
+
+   &__anchor-list {}
+
+   // .gazebos-catalog__card-anchor
+
+   &__card-anchor {
+      position: absolute;
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 32px;
+      text-align: center;
+      color: #FFFFFF;
+      background: url(../img/svg/gazebos-anchor.svg) center/contain no-repeat;
+      width: 44px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: rem(8);
+      padding-left: rem(8);
+
+      @media (max-width:$tablet) {
+         font-size: 9px;
+         width: 16px;
+         height: 15px;
+         padding-bottom: rem(2);
+         padding-left: rem(1);
+      }
+
+      // .gazebos-catalog__card-anchor_1
+
+      &_1 {
+         top: 70%;
+         left: 24%;
+      }
+
+      // .gazebos-catalog__card-anchor_2
+
+      &_2 {
+         top: 70%;
+         left: 36.3%;
+      }
+
+      // .gazebos-catalog__card-anchor_3
+
+      &_3 {
+         top: 74%;
+         left: 42%;
+      }
+
+      // .gazebos-catalog__card-anchor_4
+
+      &_4 {
+         top: 73%;
+         left: 51.5%;
+      }
+
+      // .gazebos-catalog__card-anchor_5
+
+      &_5 {
+         top: 73%;
+         left: 58.5%;
+      }
+
+      // .gazebos-catalog__card-anchor_6
+
+      &_6 {
+         top: 72%;
+         left: 65%;
+      }
+
+      // .gazebos-catalog__card-anchor_7
+
+      &_7 {
+         top: 61%;
+         left: 31.3%;
+      }
+
+      // .gazebos-catalog__card-anchor_8
+
+      &_8 {
+         top: 53%;
+         left: 37%;
+      }
+
+      // .gazebos-catalog__card-anchor_9
+
+      &_9 {
+         top: 58%;
+         left: 44.5%;
+      }
+
+      // .gazebos-catalog__card-anchor_10
+
+      &_10 {
+         top: 45%;
+         left: 30%;
+         width: 64.24px;
+         height: 58.64px;
+
+         @media (max-width:$tablet) {
+            width: 24px;
+            height: 21px;
+         }
+      }
+
+      // .gazebos-catalog__card-anchor_11
+
+      &_11 {
+         top: 59%;
+         left: 51.5%;
+      }
+   }
+
+
+
+
+   // .gazebos-catalog__row
+
+   &__row {
+      margin-top: rem(35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+
+      @media (max-width:$tablet) {
+         max-width: 715px;
+         margin: rem(35) auto 0;
+      }
+
+      @media (max-width:$mobile) {
+         flex-wrap: wrap;
+      }
+
+      img {}
+   }
+
+   // .gazebos-catalog__text
+
+   &__text {
+      font-family: 'Cormorant Garamond';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 36px;
+      color: #3A230B;
+
+      @media (max-width:$mobile) {
+         text-align: center;
+         order: 3;
+         flex: 1 1 100%;
+      }
+   }
+
+   // .gazebos-catalog__list
+
+   &__list {
+      padding: 0 rem(20);
+      padding-top: rem(50);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      column-gap: 20px;
+      row-gap: 30px;
+      max-width: 1480px;
+      margin: 0 auto rem(40);
+
+      @media (max-width:$pc) {
+         max-width: 1100px;
+      }
+   }
+
+   // .gazebos-catalog__footer
+
+   &__footer {
+      line-height: 23px;
+      color: #6B6B6B;
+      max-width: 475px;
+      margin-left: 50%;
+
+      @media (max-width:$tablet) {
+         margin: 0px rem(20);
+         max-width: 100%;
+      }
+   }
+}
+
+.gazebo-card {
+   background: #F0EDEB;
+   border-radius: 15px;
+   position: relative;
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      width: 33px;
+      height: 33px;
+      transform: translate(-50%, 0px) rotate(-45deg);
+      background: #F0EDEB;
+      border: 6px solid #fff;
+   }
+
+   // .gazebo-card__header
+
+   &__header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.119745);
+      padding: rem(50) rem(40) rem(30);
+      position: relative;
+
+      @media (max-width:$tablet) {
+         padding: rem(30);
+      }
+
+      &::before,
+      &::after {
+         content: '';
+         position: absolute;
+         top: -13px;
+         width: 26px;
+         height: 26px;
+         background-color: #fff;
+         transform: rotate(-45deg);
+      }
+
+      &::before {
+         left: -13px;
+      }
+
+      &::after {
+         right: -13px;
+      }
+   }
+
+   // .gazebo-card__top
+
+   &__top {
+      display: flex;
+      margin-bottom: rem(30);
+
+   }
+
+   // .gazebo-card__title
+
+   &__title {
+      font-family: 'Cormorant Garamond';
+      text-transform: uppercase;
+      color: #3A230B;
+      margin-right: rem(36);
+      display: flex;
+      height: 70px;
+
+   }
+
+   // .gazebo-card__name
+
+   &__name {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-right: rem(10);
+
+      span {
+         &:last-child {
+            font-size: 40px;
+            line-height: 48px;
+         }
+      }
+   }
+
+   // .gazebo-card__number
+
+   &__number {
+      font-weight: 400;
+      font-size: 130px;
+      line-height: 157px;
+      transform: translate(0px, -60px);
+   }
+
+   // .gazebo-card__sizes
+
+   &__sizes {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      margin-top: rem(45);
+   }
+
+   // .gazebo-card__capacity
+
+   &__capacity {}
+
+   // .gazebo-card__area
+
+   &__area {}
+
+   // .gazebo-card__days
+
+   &__days {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      display: flex;
+      gap: 35px;
+
+      .price {
+         color: #CE8D3B;
+      }
+   }
+
+   // .gazebo-card__price-holidays
+   // .gazebo-card__price-default
+
+   &__price-holidays,
+   &__price-default {
+      display: flex;
+      flex-direction: column;
+   }
+
+   // .gazebo-card__price-holidays
+
+   &__price-holidays {}
+
+   // .gazebo-card__price-default
+
+   &__price-default {}
+
+   // .gazebo-card__center
+
+   &__center {
+      padding: rem(20) rem(50) rem(50);
+      position: relative;
+
+      &::before,
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: -13px;
+         width: 26px;
+         height: 26px;
+         background-color: #fff;
+         transform: rotate(-45deg);
+      }
+
+      &::before {
+         left: -13px;
+      }
+
+      &::after {
+         right: -13px;
+      }
+   }
+
+   // .gazebo-card__date
+
+   &__date {
+      margin-bottom: rem(22);
+   }
+
+   // .gazebo-card__label
+
+   &__label {
+      span {
+         font-family: 'Jost';
+         font-style: normal;
+         font-weight: 500;
+         font-size: 18px;
+         line-height: 22px;
+         color: #818181;
+         margin-right: rem(9);
+      }
+
+      display: flex;
+      align-items: center;
+   }
+
+   // .gazebo-card__timepicker
+
+   &__timepicker {
+      margin-bottom: rem(12);
+   }
+
+   // .gazebo-card__hours
+
+   &__hours {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 7px;
+      position: relative;
+      z-index: 1;
+   }
+
+   // .gazebo-card__hours-fragment
+
+   &__hours-fragment {
+      font-size: 18px;
+      line-height: 52px;
+      color: #000000;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      // .gazebo-card__hours-fragment_in-selected-range
+
+      &_in-selected-range,
+      &_hovered {
+         background: #fff;
+
+         &::after {
+            content: "";
+            background-color: #fff;
+            height: 100%;
+            left: 50%;
+            position: absolute;
+            top: 0;
+            -webkit-transform: translateZ(-10px);
+            transform: translateZ(-10px);
+            width: 100%;
+            z-index: -1;
+         }
+      }
+
+      // .gazebo-card__hours-fragment_selected
+
+      &_selected {
+         background: #CE8D3B;
+         border-radius: 10px;
+         color: #fff;
+      }
+
+      // .gazebo-card__hours-fragment_hovered
+
+      &_hovered {}
+
+      // .gazebo-card__hours-fragment_last-in-row
+
+      &_last-in-row {
+         &::after {
+            display: none;
+         }
+      }
+
+      // .gazebo-card__hours-fragment_last-selected
+
+      &_last-selected {
+         &::after {
+            display: none;
+         }
+      }
+
+      // .gazebo-card__hours-fragment_brr
+
+      &_brr {}
+
+      // .gazebo-card__hours-fragment_last-hovered
+
+      &_last-hovered {}
+   }
+
+   // .gazebo-card__time-fragment
+
+   &__time-fragment {}
+
+   // .gazebo-card__button
+
+   &__button {
+      width: 100%;
+   }
+}
+
+.days {}
+
+.price {}
+
+.btn-gold {}

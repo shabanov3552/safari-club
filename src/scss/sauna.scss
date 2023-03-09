@@ -1,0 +1,550 @@
+.sauna {
+
+   // .sauna__cards
+
+   &__cards {
+      padding: rem(0) rem(230) rem(0) rem(150);
+
+      @media (max-width:$pc) {
+         padding: 0 rem(100);
+      }
+
+      @media (max-width:$laptop) {
+         padding: 0 rem(80);
+      }
+
+      @media (max-width:$tablet) {
+         padding: 0 rem(0);
+      }
+   }
+}
+
+.sauna-item {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   column-gap: 150px;
+   position: relative;
+   padding-bottom: rem(70);
+   padding-top: rem(90);
+
+   @media (max-width:$laptop) {
+      gap: 80px;
+   }
+
+   @media (max-width:$tablet) {
+      display: block;
+   }
+
+   @media (max-width:$mobile) {
+      padding-top: rem(30);
+      padding-bottom: rem(40);
+   }
+
+   &:not(:last-child) {
+
+      &::before {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         width: 100%;
+         max-width: 1400px;
+         padding: 0 rem(20);
+         transform: translate(-50%, 0px);
+         height: 1px;
+         background: rgba(0, 0, 0, 0.4);
+
+         @media (max-width: em(1450)) {
+            left: 20px;
+            width: 96%;
+            max-width: 100%;
+            transform: translate(0px, 0px);
+         }
+
+         @media (max-width:$mobile) {
+            width: 90%;
+         }
+      }
+
+      &::after {
+         content: '';
+         width: 27px;
+         height: 27px;
+         position: absolute;
+         bottom: -13px;
+         left: 50%;
+         transform: translate(-50%, 0px);
+         background: url(../img/svg/footer-rhomb.svg);
+      }
+   }
+
+   &:nth-child(even) {
+      .sauna-item__images {
+         grid-column: 2/3;
+      }
+
+      .sauna-item__content {
+         grid-column: 1/2;
+         grid-row: 1;
+      }
+
+      .sauna-item__absolut-img {
+         transform: translate(-50%, -23px);
+         left: 0;
+
+         @media (max-width:$pc) {
+            left: -50px;
+            transform: translate(0px, 0px);
+         }
+      }
+   }
+
+
+
+   // .sauna-item__images
+
+   &__images {
+      position: relative;
+
+      @media (max-width:$tablet) {
+         margin-bottom: rem(30);
+      }
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   // .sauna-item__main-img
+
+   &__main-img {
+      height: 100%;
+      max-height: 450px;
+
+      @media (max-width:$pc) {
+         max-height: 320px;
+      }
+
+      @media (max-width:$laptop) {
+         max-height: 280px;
+      }
+
+      @media (max-width:$tablet) {
+         max-height: none;
+         height: 250px;
+      }
+   }
+
+   // .sauna-item__absolut-img
+
+   &__absolut-img {
+      width: 270px;
+      height: 177px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(210px, -23px);
+
+      @media (max-width:$pc) {
+         transform: translate(0px, 0px);
+         right: -50px;
+         width: 189.83px;
+         height: 126.21px;
+      }
+
+      @media (max-width:$laptop) {
+         right: -20px;
+         bottom: 50px;
+      }
+
+      @media (max-width:$tablet) {
+         display: none;
+      }
+   }
+
+   // .sauna-item__content
+
+   &__content {
+      @media (min-width:$pc) {
+         display: flex;
+      }
+
+      @media (max-width:$tablet) {
+         padding: 0 rem(20);
+      }
+   }
+
+   // .sauna-item__title
+
+   &__title {
+      font-family: "Cormorant Garamond";
+      text-transform: uppercase;
+      color: #3A230B;
+      margin-right: 2.25rem;
+      display: flex;
+      height: 70px;
+
+      @media (max-width:$tablet) and (min-width:$mobile) {
+         margin-bottom: rem(30);
+      }
+   }
+
+   // .sauna-item__name
+
+   &__name {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-right: 0.625rem;
+
+      @media (max-width:$pc) {
+         display: block;
+      }
+
+      span {
+         &:last-child {
+            font-size: 40px;
+            line-height: 48px;
+
+            @media (max-width:$pc) {
+               margin-left: rem(12);
+            }
+         }
+      }
+   }
+
+   // .sauna-item__number
+
+   &__number {
+      font-weight: 400;
+      font-size: 130px;
+      line-height: 157px;
+      transform: translate(0px, -60px);
+
+      @media (max-width:$pc) {
+         font-size: 100px;
+         line-height: 121px;
+         transform: translate(0px, -35px);
+      }
+
+      @media (max-width:$mobile) {
+         font-size: 40px;
+         line-height: 48px;
+         transform: translate(0px, 0px);
+      }
+   }
+
+   // .sauna-item__col
+
+   &__col {
+      @media (min-width:$tablet) {
+         padding-top: rem(40);
+
+      }
+   }
+
+   // .sauna-item__descr
+
+   &__descr {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: rem(27);
+   }
+
+   // .sauna-item__price
+
+   &__price {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: rem(50);
+
+      @media (max-width:$pc) {
+         margin-bottom: rem(20);
+      }
+
+      span {
+         color: #CE8D3B;
+      }
+
+
+   }
+
+   // .sauna-item__more-btn
+
+   &__more-btn {
+      margin-bottom: rem(70);
+      color: #000;
+
+      @media (max-width:$pc) {
+         margin-bottom: rem(20);
+      }
+
+      svg {
+         use {
+            fill: #CE8D3B;
+         }
+      }
+   }
+
+   // .sauna-item__button
+
+   &__button {
+      @media (max-width:$mobile) {
+         width: 100%;
+      }
+   }
+}
+
+//========================================================================================================================================================
+
+.sauna {
+
+   // .sauna__play-room
+
+   &__play-room {
+      margin-bottom: rem(150);
+
+      @media (max-width:$tablet) {
+         margin-bottom: rem(90);
+      }
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(50);
+      }
+   }
+}
+
+.play-room {
+   @media (max-width:$mobile) {
+      background: #F0EDEB;
+      padding-top: rem(40);
+      padding-bottom: rem(30);
+   }
+
+   // .play-room__header
+
+   &__header {
+      padding: rem(70) 0;
+      position: relative;
+
+      @media (min-width:$mobile) {
+         &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: calc(100% + 150px);
+            background: #F0EDEB url(../img/ornament-bg-right.png) right no-repeat;
+            background-blend-mode: multiply;
+            top: 0;
+            left: 0;
+            z-index: -1;
+         }
+      }
+
+      @media (max-width:$mobile) {
+         padding: 0;
+         margin-bottom: rem(40);
+      }
+
+      .play-room__container {
+         @media (min-width:$mobile) {
+            display: flex;
+            gap: 70px;
+         }
+
+         @media (max-width:$pc) {
+            max-width: 1070px;
+
+         }
+      }
+
+
+   }
+
+   // .play-room__title
+
+   &__title {
+      font-size: 40px;
+      line-height: 48px;
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(20);
+      }
+   }
+
+   // .play-room__descr
+
+   &__descr {
+      font-size: 21px;
+      line-height: 28px;
+
+      @media (min-width:$tablet) {
+         padding-top: rem(85);
+      }
+   }
+
+   // .play-room__row
+
+   &__row {
+      display: flex;
+      gap: 20px;
+
+      justify-content: center;
+
+      @media (min-width:$mobile) {
+         @include adaptiveValue("height", 300, 175, 0, 1920, 1000);
+
+      }
+
+      @media (max-width:$mobile) {
+         flex-direction: column;
+      }
+   }
+
+   // .play-room__image
+
+   &__image {
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
+
+//========================================================================================================================================================
+
+.sauna {
+
+   // .sauna__container
+
+   &__container {
+      margin-bottom: rem(135);
+
+      @media (max-width:$pc) {
+         max-width: 1080px;
+      }
+
+      @media (max-width:$tablet) {
+         max-width: 820px;
+         margin-bottom: rem(100);
+      }
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(50);
+      }
+   }
+
+   // .sauna__rules-row
+
+   &__rules-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 150px;
+
+      @media (max-width:$pc) {
+         gap: 100px;
+      }
+
+      @media (max-width:$tablet) {
+         gap: 65px;
+         display: flex;
+         flex-direction: column;
+      }
+
+      @media (max-width:$mobile) {
+         gap: 34px;
+      }
+   }
+
+   // .sauna__rules-col
+
+   &__rules-col {
+      display: flex;
+      flex-direction: column;
+
+      &:first-child {
+         flex: 0 1 60%;
+      }
+   }
+
+   // .sauna__rules-descr
+
+   &__rules-descr {
+      margin-bottom: rem(125);
+      font-size: 21px;
+      line-height: 28px;
+      flex: 1 1 auto;
+
+      @media (max-width:$tablet) {
+         margin-bottom: rem(45);
+      }
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(35);
+         font-size: 18px;
+         line-height: 26px;
+      }
+   }
+
+   // .sauna__rules-icon
+
+   &__rules-icon {
+      margin-bottom: rem(30);
+
+      @media (max-width:$tablet) {
+         display: none;
+      }
+   }
+
+   // .sauna__rules-text
+
+   &__rules-text {
+      font-size: 21px;
+      line-height: 28px;
+
+      @media (max-width:$mobile) {
+         font-size: 18px;
+         line-height: 26px;
+      }
+   }
+
+   .rules {
+      padding: 0;
+      // .rules__row
+
+      &__row {
+         display: flex;
+
+         @media (max-width:$pc) {
+            gap: 30px;
+         }
+
+         @media (max-width:$tablet) {
+            justify-content: space-between;
+         }
+
+         @media (max-width:$mobile) {
+            flex-direction: column;
+         }
+      }
+
+      // .rules__link
+
+      &__link {}
+
+      // .rules__name
+
+      &__name {}
+
+      // .rules__type-file
+
+      &__type-file {}
+   }
+}

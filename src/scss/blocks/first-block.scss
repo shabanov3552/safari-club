@@ -1,4 +1,4 @@
-   // .room-detail__first-block
+   // .first-block
 
    .first-block {
       position: relative;
@@ -89,6 +89,45 @@
          @media (max-width:$mobile) {
             font-size: 18px;
             line-height: 26px;
+         }
+
+         .restaurant & {
+
+            @media (min-width:$pc) {
+               float: left;
+            }
+         }
+      }
+
+      // .first-block__button
+
+      &__button {
+         color: #fff;
+
+         &.hidden {
+            display: none;
+         }
+
+         @media (max-width:$mobileSmall) {
+            width: 100%;
+         }
+
+         margin-top: rem(40);
+
+         @media (max-width:$pc) {
+            margin-top: rem(30);
+         }
+
+         @media (max-width:$mobile) {
+            margin-top: rem(25);
+         }
+
+         .restaurant & {
+            margin-top: rem(25);
+
+            @media (min-width:$pc) {
+               margin-top: rem(0);
+            }
          }
       }
    }

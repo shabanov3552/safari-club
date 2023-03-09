@@ -47,6 +47,9 @@
 }
 
 .header {
+	position: relative;
+	z-index: 2;
+
 	&._header-scroll {
 		padding-top: rem(119);
 

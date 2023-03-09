@@ -22,6 +22,19 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 			}
 		});
 	}
+	document.body.addEventListener("input", function (e) {
+		const targetElement = e.target;
+		if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
+			if (targetElement.dataset.placeholder) {
+				targetElement.placeholder = '';
+			}
+			if (!targetElement.hasAttribute('data-no-focus-classes')) {
+				targetElement.classList.add('_form-focus');
+				targetElement.parentElement.classList.add('_form-focus');
+				if (targetElement.parentElement.querySelector('.form__clear-svg')) targetElement.parentElement.querySelector('.form__clear-svg').classList.add('_active');
+			}
+		}
+	});
 	document.body.addEventListener("focusin", function (e) {
 		const targetElement = e.target;
 		if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
@@ -31,8 +44,31 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.add('_form-focus');
 				targetElement.parentElement.classList.add('_form-focus');
+				targetElement.addEventListener('input', function (e) {
+					if (e.target.value.length > 0) {
+						if (targetElement.parentElement.querySelector('.form__clear-svg')) targetElement.parentElement.querySelector('.form__clear-svg').classList.add('_active');
+					}
+				})
 			}
 			formValidate.removeError(targetElement);
+		}
+		if (targetElement.classList.contains('js_phone')) {
+			//'+7(999) 999 9999'
+			//'+38(999) 999 9999'
+			//'+375(99)999-99-99'
+			targetElement.classList.add('_mask');
+			Inputmask('+7(x99) 999 9999', {
+				clearIncomplete: true,
+				clearMaskOnLostFocus: true,
+				definitions: {
+					x: {
+						validator: '[0-79-9]'
+					}
+				},
+				onincomplete: function () {
+					targetElement.inputmask.remove();
+				}
+			}).mask(targetElement);
 		}
 	});
 	document.body.addEventListener("focusout", function (e) {
@@ -41,9 +77,16 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 			if (targetElement.dataset.placeholder) {
 				targetElement.placeholder = targetElement.dataset.placeholder;
 			}
-			if (!targetElement.hasAttribute('data-no-focus-classes')) {
-				targetElement.classList.remove('_form-focus');
-				targetElement.parentElement.classList.remove('_form-focus');
+			if (targetElement.value.length == 0) {
+				if (!targetElement.hasAttribute('data-no-focus-classes')) {
+					targetElement.classList.remove('_form-focus');
+					targetElement.parentElement.classList.remove('_form-focus');
+					targetElement.nextElementSibling.classList.remove('_active')
+				}
+			}
+			if (targetElement.classList.contains('js_phone')) {
+				Inputmask.remove(targetElement);
+
 			}
 			// Моментальная валидация
 			if (targetElement.hasAttribute('data-validate')) {
