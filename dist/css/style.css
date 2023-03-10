@@ -2935,12 +2935,20 @@ textarea.input::-webkit-scrollbar {
   color: #6B6B6B;
   max-width: 475px;
   margin-left: 50%;
+  margin-bottom: 2.5rem;
 }
 
 .gazebo-card {
   background: #F0EDEB;
   border-radius: 15px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .gazebo-card::before {
@@ -2961,6 +2969,9 @@ textarea.input::-webkit-scrollbar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.119745);
   padding: 3.125rem 2.5rem 1.875rem;
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .gazebo-card__header::before,
@@ -3184,6 +3195,119 @@ textarea.input::-webkit-scrollbar {
 
 .gazebo-card__button {
   width: 100%;
+}
+
+.gazebos-rental__footer {
+  background-color: #F0EDEB;
+  background-blend-mode: multiply;
+  padding: 6.25rem 0;
+  margin-bottom: 8.125rem;
+}
+
+.gazebos-rental__container {
+  position: relative;
+}
+
+.gazebos-rental__flex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3.125rem;
+  gap: 100px;
+}
+
+.gazebos-rental__footer-title {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 61px;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  color: #3A230B;
+}
+
+.gazebos-rental__footer-descr {
+  line-height: 24px;
+}
+
+.gazebos-rental__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 45px;
+  line-height: 20px;
+}
+
+.gazebos-rental__row:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+
+.gazebos-rental__name {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 160px;
+          flex: 0 0 160px;
+}
+
+.gazebos-rental__price {
+  font-weight: 600;
+}
+
+.gazebos-rental__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 261.5px;
+  height: 335.54px;
+}
+
+.gazebos-rental__image img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.gazebos-rental__rules {
+  margin-bottom: 10.625rem;
+}
+
+.gazebos-rental__rules-row {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.gazebos-rental__rules-col:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 35%;
+          flex: 0 1 35%;
+}
+
+.gazebos-rental__rules-col:last-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 65%;
+          flex: 0 1 65%;
+}
+
+.gazebos-rental__rules-col .rules {
+  padding: 0;
+}
+
+.gazebos-rental__rules-col .rules__row {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.gazebos-rental__rules-descr {
+  font-size: 21px;
+  line-height: 28px;
+  margin-bottom: 3.75rem;
+}
+
+.gazebos-rental__gallery {
+  margin-bottom: 10.625rem;
 }
 
 .restaurant .rest-menu {
@@ -5851,6 +5975,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             flex: 0 0 200px;
   }
 
+  .no-webp .gazebos-rental__footer{
+    background: url(../img/ornament-bg-left.png) left repeat-y, url(../img/ornament-bg-right.png) right repeat-y; }
+
   .rest-menu__header {
     padding: 0 3.125rem;
   }
@@ -6288,6 +6415,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin-top: -4rem;
+  }
+
+  .gazebos-rental__flex {
+    gap: 150px;
+    padding: 0;
+    padding-right: 15.625rem;
+  }
+
+  .gazebos-rental__rules-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 100px;
   }
 
   .no-webp .rest-menu__cont::after{
@@ -7071,6 +7211,34 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             column-gap: 70px;
   }
 
+  .gazebo-card__header {
+    padding: 1.875rem;
+  }
+
+  .gazebo-card__center {
+    padding: 1.875rem;
+  }
+
+  .gazebos-rental__image {
+    display: none;
+  }
+
+  .gazebos-rental__rules {
+    margin-bottom: 6.25rem;
+  }
+
+  .gazebos-rental__rules-col:first-child {
+    margin-bottom: 4.0625rem;
+  }
+
+  .gazebos-rental__rules-descr {
+    margin-bottom: 2.5rem;
+  }
+
+  .gazebos-rental__gallery {
+    margin-bottom: 7.5rem;
+  }
+
   .rest-menu__tabs {
     -ms-grid-columns: 265px 1fr;
     grid-template-columns: 265px 1fr;
@@ -7498,13 +7666,95 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin: 2.1875rem auto 0;
   }
 
+  .gazebos-catalog__list {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
   .gazebos-catalog__footer {
     margin: 0px 1.25rem;
     max-width: 100%;
   }
 
   .gazebo-card__header {
-    padding: 1.875rem;
+    padding: 1.25rem;
+  }
+
+  .gazebo-card__top {
+    display: block;
+    margin-bottom: 0.9375rem;
+  }
+
+  .gazebo-card__title {
+    margin-right: 0;
+    height: auto;
+    margin-bottom: 0.9375rem;
+  }
+
+  .gazebo-card__name {
+    display: block;
+  }
+
+  .gazebo-card__number {
+    font-size: 40px;
+    line-height: 48px;
+    -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+
+  .gazebo-card__sizes {
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .gazebo-card__capacity {
+    margin-right: 0.9375rem;
+  }
+
+  .gazebo-card__days {
+    display: block;
+  }
+
+  .gazebo-card__price-holidays,
+  .gazebo-card__price-default {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .gazebo-card__price-holidays {
+    margin-bottom: 0.9375rem;
+  }
+
+  .gazebo-card__center {
+    padding: 1.25rem;
+  }
+
+  .gazebos-rental__footer {
+    padding: 1.875rem 0;
+    margin-bottom: 4.375rem;
+  }
+
+  .gazebos-rental__flex {
+    display: block;
+  }
+
+  .gazebos-rental__col:first-child {
+    margin-bottom: 2.5rem;
+  }
+
+  .gazebos-rental__rules {
+    margin-bottom: 5rem;
+  }
+
+  .gazebos-rental__gallery {
+    margin-bottom: 5.625rem;
   }
 
   .rest-menu__header {
@@ -8115,6 +8365,31 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             flex: 1 1 100%;
   }
 
+  .gazebos-catalog__footer {
+    margin-bottom: 1.875rem;
+  }
+
+  .gazebos-rental__footer {
+    margin-bottom: 3.125rem;
+  }
+
+  .gazebos-rental__flex {
+    padding: 0;
+  }
+
+  .gazebos-rental__footer-title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .gazebos-rental__rules {
+    margin-bottom: 3.125rem;
+  }
+
+  .gazebos-rental__gallery {
+    margin-bottom: 3.125rem;
+  }
+
   .rest-menu__nav-item {
     padding: 1.125rem 1.25rem;
   }
@@ -8524,6 +8799,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 
+  .gazebos-catalog__list {
+    padding: 0;
+    padding-top: 3.125rem;
+  }
+
   .rest-menu__link {
     display: none;
   }
@@ -8579,6 +8859,31 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 23.43625em) {
+  .gazebo-card__header {
+    padding: 1.25rem 0.625rem;
+  }
+
+  .gazebo-card__sizes {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .gazebo-card__days {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .gazebo-card__center {
+    padding: 1.25rem 0.625rem;
+  }
+
+  .gazebo-card__hours-fragment {
+    font-size: 14px;
+    line-height: 44px;
   }
 }
 
@@ -9089,6 +9394,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 @media (min-width: 47.99875em){
 
   .webp .how-to-get{ background: url(../img/ornament-bg-left.webp) left no-repeat; }
+}
+
+@media (min-width: 47.99875em){
+
+  .webp .gazebos-rental__footer{ background: url(../img/ornament-bg-left.webp) left repeat-y, url(../img/ornament-bg-right.webp) right repeat-y; }
 }
 
 @media (min-width: 47.99875em){
