@@ -8179,6 +8179,36 @@
                     });
                 }));
             }
+            if (document.querySelector(".documents__slider")) new core(".documents__slider", {
+                modules: [ Navigation ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 5,
+                spaceBetween: 80,
+                autoHeight: true,
+                speed: 800,
+                navigation: {
+                    prevEl: ".documents__slider .swiper-button-prev",
+                    nextEl: ".documents__slider .swiper-button-next"
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1
+                    },
+                    550: {
+                        slidesPerView: 2
+                    },
+                    835: {
+                        slidesPerView: 3
+                    },
+                    1120: {
+                        slidesPerView: 4
+                    },
+                    1405: {
+                        slidesPerView: 5
+                    }
+                }
+            });
         }
         window.addEventListener("load", (function(e) {
             initSliders();
@@ -9952,7 +9982,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         plugins: [ lg_zoom_min, lg_thumbnail_min ],
                         licenseKey: "7EC452A9-0CFD441C-BD984C7C-17C8456E",
                         speed: 500,
-                        selector: ".gallery__slide a, .gallery__image"
+                        selector: ".gallery__slide a, .gallery__image, .documents__item, .gallery-detail__item, .play-room__image, .rest-menu__slide"
                     })
                 });
             }));

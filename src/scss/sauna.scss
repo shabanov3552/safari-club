@@ -410,6 +410,8 @@
    // .play-room__image
 
    &__image {
+      cursor: pointer;
+
       img {
          width: 100%;
          height: 100%;

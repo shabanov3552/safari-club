@@ -1,0 +1,61 @@
+@@include('html/_header.htm',{
+"title": "Фотогалерея",
+"modifierClass": ""
+})
+<main class="page main-gallery">
+   @@include('html/_reserv.htm',{})
+
+   @@include('html/_breadcrumbs.htm',{})
+
+   <div class="main-gallery__container">
+      <div class="main-gallery__title title-cormorant">Фотогалерея</div>
+      <div class="main-gallery__grid">
+         <a href="" class="main-gallery__item">
+            <div class="main-gallery__image-ibg"><img src="img/pictures/conf-hall_1.png" alt=""></div>
+            <div class="main-gallery__item-descr">
+               <div class="main-gallery__name">Номерной фонд</div>
+               <div class="main-gallery__date">19.02.2023</div>
+               <div class="main-gallery__counter">
+                  <div class="main-gallery__icon"><img src="img/svg/count-icon.svg" alt=""></div>
+                  <div class="main-gallery__count">14</div>
+               </div>
+            </div>
+         </a>
+         <a href="" class="main-gallery__item">
+            <div class="main-gallery__image-ibg"><img src="img/pictures/conf-hall_1.png" alt=""></div>
+            <div class="main-gallery__item-descr">
+               <div class="main-gallery__name">Ресторан</div>
+               <div class="main-gallery__date">19.02.2023</div>
+               <div class="main-gallery__counter">
+                  <div class="main-gallery__icon"><img src="img/svg/count-icon.svg" alt=""></div>
+                  <div class="main-gallery__count">14</div>
+               </div>
+            </div>
+         </a>
+         <a href="" class="main-gallery__item">
+            <div class="main-gallery__image-ibg"><img src="img/pictures/conf-hall_1.png" alt=""></div>
+            <div class="main-gallery__item-descr">
+               <div class="main-gallery__name">Конференц-зал</div>
+               <div class="main-gallery__date">19.02.2023</div>
+               <div class="main-gallery__counter">
+                  <div class="main-gallery__icon"><img src="img/svg/count-icon.svg" alt=""></div>
+                  <div class="main-gallery__count">14</div>
+               </div>
+            </div>
+         </a>
+         <a href="" class="main-gallery__item">
+            <div class="main-gallery__image-ibg"><img src="img/pictures/conf-hall_1.png" alt=""></div>
+            <div class="main-gallery__item-descr">
+               <div class="main-gallery__name">Выездные регистрации</div>
+               <div class="main-gallery__date">19.02.2023</div>
+               <div class="main-gallery__counter">
+                  <div class="main-gallery__icon"><img src="img/svg/count-icon.svg" alt=""></div>
+                  <div class="main-gallery__count">14</div>
+               </div>
+            </div>
+         </a>
+      </div>
+      <div class="main-gallery__pagging">@@include('html/_pagging.htm',{})</div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})

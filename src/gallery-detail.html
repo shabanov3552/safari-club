@@ -1,0 +1,29 @@
+@@include('html/_header.htm',{
+"title": "Фотогалерея детальнаая",
+"modifierClass": ""
+})
+<main class="page gallery-detail">
+   @@include('html/_reserv.htm',{})
+
+   @@include('html/_breadcrumbs.htm',{})
+
+   <div class="gallery-detail__container">
+      <div class="gallery-detail__title title-cormorant">Фотогалерея</div>
+      <div class="gallery-detail__grid" data-gallery>
+         <div class="gallery-detail__item" data-src="img/pictures/conf-hall_1.png">
+            <img src="img/pictures/conf-hall_1.png" alt="">
+         </div>
+         <div class="gallery-detail__item" data-src="img/pictures/conf-hall_2.png">
+            <img src="img/pictures/conf-hall_2.png" alt="">
+         </div>
+         <div class="gallery-detail__item" data-src="img/pictures/restaurant/gallery/1.png">
+            <img src="img/pictures/restaurant/gallery/1.png" alt="">
+         </div>
+         <div class="gallery-detail__item" data-src="img/pictures/gazebos/gallery_1.png">
+            <img src="img/pictures/gazebos/gallery_1.png" alt="">
+         </div>
+      </div>
+      <div class="gallery-detail__pagging">@@include('html/_pagging.htm',{})</div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})

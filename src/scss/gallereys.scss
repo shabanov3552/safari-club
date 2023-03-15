@@ -1,0 +1,147 @@
+.main-gallery {
+
+   // .main-gallery__container
+
+   &__container {
+      @media (max-width:$mobile) {
+         padding: 0;
+      }
+   }
+
+   // .main-gallery__title
+
+   &__title {
+      margin-bottom: rem(40);
+      text-align: center;
+   }
+
+   // .main-gallery__grid
+
+   &__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(475px, 1fr));
+      gap: 10px;
+      margin-bottom: rem(60);
+
+      @media (max-width:$tablet) {
+         grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+         margin-bottom: rem(40);
+      }
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(20);
+      }
+   }
+
+   // .main-gallery__item
+
+   &__item {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding-top: 37%;
+
+      &:hover {
+
+         .main-gallery__name,
+         .main-gallery__date,
+         .main-gallery__counter {
+            transform: translate(0px, -10px);
+         }
+      }
+   }
+
+   // .main-gallery__image-ibg
+
+   &__image-ibg {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+   }
+
+   // .main-gallery__item-descr
+
+   &__item-descr {
+      transition: all 0.3s ease 0s;
+      color: #FFFFFF;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+      padding-left: rem(60);
+      padding-bottom: rem(30);
+      padding-top: rem(80);
+      padding-right: rem(20);
+      width: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      grid-template-rows: 1fr auto;
+      column-gap: 35px;
+      row-gap: 15px;
+
+      @media (max-width:$tablet) {
+         padding-left: rem(20);
+      }
+   }
+
+   // .main-gallery__name
+
+   &__name {
+      transition: all 0.3s ease 0s;
+      grid-column: 1/3;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 32px;
+   }
+
+   // .main-gallery__date
+
+   &__date {
+      transition: all 0.3s ease 0s;
+      line-height: 24px;
+   }
+
+   // .main-gallery__counter
+
+   &__counter {
+      transition: all 0.3s ease 0s;
+      display: flex;
+      gap: 10px;
+   }
+
+   // .main-gallery__icon
+
+   &__icon {}
+
+   // .main-gallery__count
+
+   &__count {
+      line-height: 24px;
+   }
+
+   // .main-gallery__pagging
+
+   &__pagging {}
+}
+
+
+.gallery-detail {
+
+   // .gallery-detail__container
+
+   &__container {}
+
+   // .gallery-detail__title
+
+   &__title {}
+
+   // .gallery-detail__grid
+
+   &__grid {}
+
+   // .gallery-detail__item
+
+   &__item {}
+
+   // .gallery-detail__pagging
+
+   &__pagging {}
+}

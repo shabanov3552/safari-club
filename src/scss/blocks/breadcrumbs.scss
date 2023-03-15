@@ -5,8 +5,9 @@
    margin-bottom: rem(35);
 
    .contacts &,
-   .certificates &,
-   .video-block & {
+   .main-gallery &,
+   .documents &,
+   .certificates & {
       margin-top: rem(40);
       transform: translate(0px, 0px);
 
@@ -18,8 +19,23 @@
    .services-detail &,
    .events &,
    .event-detail &,
-   .vacancy & {
+   .vacancy &,
+   .video-block & {
       transform: translate(0px, 0px);
+   }
+
+   .contacts &,
+   .main-gallery &,
+   .documents &,
+   .certificates &,
+   .services-detail &,
+   .events &,
+   .event-detail &,
+   .vacancy &,
+   .video-block & {
+      display: flex;
+      justify-content: center;
+      padding: 0 rem(10);
    }
 
    @media (min-width:$mobile) {
@@ -40,15 +56,17 @@
       scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
 
-      .contacts &,
-      .certificates &,
-      .services-detail &,
-      .events &,
-      .event-detail &,
-      .vacancy &,
-      .video-block & {
-         justify-content: center;
-      }
+      // .contacts &,
+      // .main-gallery &,
+      // .documents &,
+      // .certificates &,
+      // .services-detail &,
+      // .events &,
+      // .event-detail &,
+      // .vacancy &,
+      // .video-block & {
+      //    justify-content: center;  
+      // }
 
       &::-webkit-scrollbar {
          display: none;
@@ -82,6 +100,8 @@
       color: #FFE1BA;
 
       .contacts &,
+      .main-gallery &,
+      .documents &,
       .certificates &,
       .services-detail &,
       .events &,
@@ -106,6 +126,8 @@
             fill: #FFE1BA;
 
             .contacts &,
+            .main-gallery &,
+            .documents &,
             .certificates &,
             .services-detail &,
             .events &,
@@ -124,6 +146,8 @@
       color: #FFE1BA;
 
       .contacts &,
+      .main-gallery &,
+      .documents &,
       .certificates &,
       .services-detail &,
       .events &,

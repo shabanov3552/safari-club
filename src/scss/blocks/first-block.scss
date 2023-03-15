@@ -30,6 +30,10 @@
          padding-left: rem(170);
          padding-bottom: rem(100);
 
+         .sauna-detail & {
+            padding-top: rem(320);
+         }
+
          @media (max-width: em(1300)) {
             padding: rem(220) rem(100) rem(100);
          }
@@ -52,6 +56,13 @@
          color: #ffffff;
          margin-bottom: rem(30);
          max-width: 1050px;
+
+         @media (min-width:$laptop) {
+            .conference-hall & {
+               font-size: 106px;
+               line-height: 128px;
+            }
+         }
 
          @media (min-width:$tablet) {
 

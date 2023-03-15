@@ -4,7 +4,7 @@
    transition: top 0.3s ease 0s;
    top: 0;
    position: relative;
-   z-index: 1;
+   z-index: 5;
 
    @media (max-width: $mobileSmall) {
       position: relative;
@@ -12,7 +12,7 @@
 
    .show-reserv & {
       position: fixed;
-      top: 118px;
+      top: 127px;
       width: 100%;
       z-index: 7;
 
@@ -176,24 +176,6 @@
          color: #fff;
       }
    }
-}
-
-.quantity {
-   // .quantity__button
-
-   &__button {
-      // .quantity__button_minus
-
-      &_minus {}
-
-      // .quantity__button_plus
-
-      &_plus {}
-   }
-
-   // .quantity__input
-
-   &__input {}
 }
 
 .promotion {

@@ -167,15 +167,17 @@
 
          &_no-slider {
             padding: 0;
+
+            .gallery__row {
+               grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+               grid-template-rows: auto;
+               gap: 10px;
+            }
          }
 
          // .gallery__row
 
-         &__row {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            grid-template-rows: auto;
-            gap: 10px;
-         }
+         &__row {}
 
          // .gallery__image
 
