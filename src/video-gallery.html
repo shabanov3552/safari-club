@@ -1,0 +1,26 @@
+@@include('html/_header.htm',{
+"title": "Видеогалерея",
+"modifierClass": ""
+})
+<main class="page video-gallery">
+   @@include('html/_reserv.htm',{})
+
+   @@include('html/_breadcrumbs.htm',{})
+
+   <div class="video-gallery__container">
+      <div class="video-gallery__title title-cormorant">Видеогалерея</div>
+      <div class="video-gallery__grid">
+         <div class="video-gallery__item" data-popup="#video" data-popup-youtube="lLhzcOxHtQE">
+         </div>
+         <div class="video-gallery__item" data-popup="#video" data-popup-youtube="rTb7NYjA1cw">
+         </div>
+         <div class="video-gallery__item" data-popup="#video" data-popup-youtube="MHpUXMCvzZ8">
+         </div>
+         <div class="video-gallery__item" data-popup="#video" data-popup-youtube="HSajWaLy-HU">
+         </div>
+      </div>
+      <div class="video-gallery__pagging">@@include('html/_pagging.htm',{})</div>
+   </div>
+   <script src="https://apis.google.com/js/api.js"></script>
+</main>
+@@include('html/_footer.htm',{})

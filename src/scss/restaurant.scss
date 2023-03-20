@@ -58,9 +58,8 @@
       @media (min-width:$tablet) {
          &::after {
             content: "";
-            background: url(../img/ornament-bg-left.png) left no-repeat;
+            background: #F0EDEB url(../img/ornament-bg-left.png) left no-repeat;
             background-blend-mode: multiply;
-            background-color: #F0EDEB;
             position: absolute;
             top: 50%;
             left: 0;
@@ -329,7 +328,7 @@
 
    &__title {
       padding-left: rem(870);
-      @include adaptiveValue("padding-left", 870, 330, 0, 1920, 1000);
+      @include adaptiveValue("padding-left", 870, 330, 1, 1920, 1000);
       max-width: 590px;
 
       @media (max-width:$tablet) {

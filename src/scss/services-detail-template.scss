@@ -209,7 +209,8 @@
       gap: 80px;
 
       @media (max-width:$tablet) {
-         display: block;
+         flex-direction: column-reverse;
+         gap: 30px;
       }
    }
 
@@ -234,9 +235,7 @@
       position: relative;
       align-self: start;
 
-      @media (max-width:$tablet) {
-         display: none;
-      }
+
 
       &::before,
       &::after {

@@ -13,7 +13,7 @@
    border: 2px solid #e9be87;
    border-image-source: url(../img/svg/border-hand.svg);
    border-image-slice: 36 36 18 35;
-   border-image-width: 31px 31px 20px 20px;
+   border-image-width: 31px 31px 20px 31px;
    border-image-repeat: stretch stretch;
    border-style: solid;
 }
@@ -689,4 +689,36 @@
          object-fit: contain;
       }
    }
+}
+
+.error-404 {
+
+   // .error-404__wrapper
+
+   &__wrapper {}
+
+   // .error-404__container
+
+   &__container {
+      .areas {
+         padding-top: rem(45);
+      }
+   }
+
+   // .error-404__title
+
+   &__title {
+      text-align: center;
+      margin-bottom: rem(30);
+   }
+
+   // .error-404__subtitle
+
+   &__subtitle {
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      margin-bottom: rem(45);
+   }
+
 }

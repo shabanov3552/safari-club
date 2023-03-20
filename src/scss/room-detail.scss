@@ -90,6 +90,11 @@
       .conference-hall & {
          font-weight: 600;
          max-width: 428px;
+         padding-right: rem(170);
+
+         @media (max-width:$pc) {
+            padding-right: rem(0);
+         }
       }
    }
 

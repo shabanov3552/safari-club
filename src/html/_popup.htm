@@ -1,10 +1,91 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
+<div class="pp-open" data-popup="#popup-thanks"></div>
+<div class="pp-open" data-popup="#popup-reserv"></div>
+<div class="pp-open" data-popup="#popup-callback"></div>
+<div id="popup-thanks" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
+			<button data-close type="button" class="popup__close"></button>
+			<div class="popup__title">Спасибо <br> за обращение</div>
 			<div class="popup__text">
-				Text
+				Наш менеджер свяжется с вами в ближайшее время для уточнения деталей
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>
+
+<div id="popup-reserv" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"></button>
+			<div class="popup__title">Бронирование</div>
+			<div class="popup__form">
+				<form class="form" action="" method="" data-parsley-validate data-parsley-trigger="change" required="">
+					<div class="form__line">
+						<div class="form__line-name">Ваше имя</div>
+						<label class="form__label">
+							<input required type="text" name="" class="form__input input">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+							</svg>
+						</label>
+					</div>
+					<div class="form__line">
+						<div class="form__line-name">Контактный телефон</div>
+						<label class="form__label">
+							<input required type="text" name="" class="form__input input js_phone">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+							</svg>
+						</label>
+					</div>
+					<button type="submit" class="form__button btn-gold">Отправить</button>
+					<div class="form__consent">Отправляя данные, я даю свое <a href="" class="form__consent-link">согласие на обработку перс. данных</a></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="callback" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"></button>
+			<div class="popup__title">Заказ звонка</div>
+			<div class="popup__form">
+				<form class="form" action="" method="" data-parsley-validate data-parsley-trigger="change" required="">
+					<div class="form__line">
+						<div class="form__line-name">Ваше имя</div>
+						<label class="form__label">
+							<input required type="text" name="" class="form__input input">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+							</svg>
+						</label>
+					</div>
+					<div class="form__line">
+						<div class="form__line-name">Контактный телефон</div>
+						<label class="form__label">
+							<input required type="text" name="" class="form__input input js_phone">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
+							</svg>
+						</label>
+					</div>
+					<button type="submit" class="form__button btn-gold">Отправить</button>
+					<div class="form__consent">Отправляя данные, я даю свое <a href="" class="form__consent-link">согласие на обработку перс. данных</a></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="video" aria-hidden="true" class="popup video-popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"></button>
+			<div data-popup-youtube-place class="popup__video">
+
+			</div>
+		</div>
+	</div>
+</div>

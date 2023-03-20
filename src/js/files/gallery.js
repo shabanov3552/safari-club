@@ -49,6 +49,10 @@ if (galleries.length) {
 				// showZoomInOutIcons: true,
 				licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
 				speed: 500,
+				mobileSettings: {
+					controls: true,
+					showCloseIcon: true
+				},
 				selector: '.gallery__slide a, .gallery__image, .documents__item, .gallery-detail__item, .play-room__image, .rest-menu__slide'
 			})
 		});

@@ -5,6 +5,9 @@
    margin-bottom: rem(35);
 
    .contacts &,
+   .error-404 &,
+   .video-gallery &,
+   .gallery-detail &,
    .main-gallery &,
    .documents &,
    .certificates & {
@@ -17,6 +20,7 @@
    }
 
    .services-detail &,
+   .team &,
    .events &,
    .event-detail &,
    .vacancy &,
@@ -25,10 +29,14 @@
    }
 
    .contacts &,
+   .error-404 &,
+   .video-gallery &,
+   .gallery-detail &,
    .main-gallery &,
    .documents &,
    .certificates &,
    .services-detail &,
+   .team &,
    .events &,
    .event-detail &,
    .vacancy &,
@@ -56,11 +64,11 @@
       scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
 
-      // .contacts &,
+      // .contacts &, .error-404 &, .video-gallery &, .gallery-detail &,
       // .main-gallery &,
       // .documents &,
       // .certificates &,
-      // .services-detail &,
+      // .services-detail &, .team &,
       // .events &,
       // .event-detail &,
       // .vacancy &,
@@ -100,10 +108,14 @@
       color: #FFE1BA;
 
       .contacts &,
+      .error-404 &,
+      .video-gallery &,
+      .gallery-detail &,
       .main-gallery &,
       .documents &,
       .certificates &,
       .services-detail &,
+      .team &,
       .events &,
       .event-detail &,
       .vacancy &,
@@ -126,10 +138,14 @@
             fill: #FFE1BA;
 
             .contacts &,
+            .error-404 &,
+            .video-gallery &,
+            .gallery-detail &,
             .main-gallery &,
             .documents &,
             .certificates &,
             .services-detail &,
+            .team &,
             .events &,
             .event-detail &,
             .vacancy &,
@@ -146,10 +162,14 @@
       color: #FFE1BA;
 
       .contacts &,
+      .error-404 &,
+      .video-gallery &,
+      .gallery-detail &,
       .main-gallery &,
       .documents &,
       .certificates &,
       .services-detail &,
+      .team &,
       .events &,
       .event-detail &,
       .vacancy &,

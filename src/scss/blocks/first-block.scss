@@ -32,6 +32,10 @@
 
          .sauna-detail & {
             padding-top: rem(320);
+
+            @media (max-width:$mobile) {
+               padding-top: rem(210);
+            }
          }
 
          @media (max-width: em(1300)) {
@@ -58,7 +62,10 @@
          max-width: 1050px;
 
          @media (min-width:$laptop) {
-            .conference-hall & {
+
+            .conference-hall &,
+            .sauna-detail &,
+            .sauna & {
                font-size: 106px;
                line-height: 128px;
             }
@@ -115,6 +122,10 @@
       &__button {
          color: #fff;
 
+         @media (min-width:$mobileSmall) {
+            max-width: 252px;
+         }
+
          &.hidden {
             display: none;
          }
@@ -131,6 +142,14 @@
 
          @media (max-width:$mobile) {
             margin-top: rem(25);
+         }
+
+         .sauna-detail &,
+         .conference-hall &,
+         .restaurant & {
+            @media (min-width:$mobileSmall) {
+               width: 252px;
+            }
          }
 
          .restaurant & {

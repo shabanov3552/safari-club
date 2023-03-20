@@ -11,9 +11,11 @@ body::after {
 	pointer-events: none;
 	z-index: 149;
 }
+
 .popup-show body::after {
 	opacity: 1;
 }
+
 .popup {
 	position: fixed;
 	top: 0;
@@ -24,17 +26,24 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+
+	@media (max-width:$mobile) {
+		padding: 0;
+	}
 }
+
 .popup_show {
 	z-index: 150;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
 }
+
 .popup_show .popup__content {
 	visibility: visible;
 	transform: scale(1);
 }
+
 .popup__wrapper {
 	display: flex;
 	flex-direction: column;
@@ -46,16 +55,136 @@ body::after {
 	justify-content: center;
 	align-items: center;
 }
+
 .popup__content {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
 	background-color: #eee;
-	padding: 20px;
+	padding: 15px 50px 60px;
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: 553px;
+
+	@media (max-width:$mobile) {
+		padding: 20px;
+	}
+
 	.lock & {
 		visibility: visible;
 	}
+}
+
+
+.video-popup {
+	.popup__content {
+		max-width: 100%;
+	}
+}
+
+.popup {
+	// .popup__wrapper
+
+	&__wrapper {}
+
+	// .popup__content
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .popup__close
+
+	&__close {
+		align-self: flex-end;
+		margin-bottom: rem(30);
+		margin-right: rem(-35);
+		width: 35px;
+		height: 35px;
+		background: url(../img/svg/close-icon.svg);
+		outline: none;
+
+		@media (max-width:$mobile) {
+			margin-right: rem(0);
+		}
+	}
+
+	// .popup__title
+
+	&__title {
+		font-family: 'Cormorant Garamond';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 50px;
+		line-height: 61px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #3A230B;
+		margin-bottom: rem(40);
+
+		@media (max-width:$mobile) {
+			font-size: 36px;
+			line-height: 40px;
+			margin-bottom: rem(25);
+		}
+	}
+
+	// .popup__form
+
+	&__form {}
+
+	// .popup__text
+
+	&__text {
+		text-align: center;
+		font-size: 21px;
+		line-height: 28px;
+	}
+
+	// .popup__video
+
+	&__video {
+		width: 100%;
+		height: calc(100vh - 200px);
+
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.form {
+
+	// .form__line
+
+	&__line {}
+
+	// .form__line-name
+
+	&__line-name {}
+
+	// .form__label
+
+	&__label {}
+
+	// .form__input
+
+	&__input {}
+
+	// .form__clear-svg
+
+	&__clear-svg {}
+
+	// .form__button
+
+	&__button {}
+
+	// .form__consent
+
+	&__consent {}
+
+	// .form__consent-link
+
+	&__consent-link {}
 }

@@ -1,7 +1,6 @@
 .contacts {
    @media (min-width:$mobile) {
       background: url(../img/ornament-bg-left.png) top left repeat-y;
-
    }
 
    // .contacts__wrapper
@@ -147,23 +146,6 @@
 
       @media (max-width:$mobile) {
          height: 248px;
-      }
-
-      @media (min-width:$tablet) {
-         .ymaps-2-1-79-image-with-content {
-            position: relative;
-            background: #000;
-
-            &::before {
-               content: '';
-               position: absolute;
-               top: 0;
-               left: 0;
-               width: 1.5px;
-               height: 100px;
-               border: 1.5px dashed #000000;
-            }
-         }
       }
    }
 
