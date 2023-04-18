@@ -3609,11 +3609,19 @@
             let target = e.target;
             if (document.querySelector(".promotion")) promotionOpen(target);
             if (target.closest(".reserv-btn")) {
-                if (document.querySelector(".header").classList.contains("_header-scroll")) {
-                    const wrapper = document.querySelector(".wrapper");
-                    const reservFormHeight = document.querySelector(".reserv").clientHeight;
-                    wrapper.classList.add("show-reserv");
-                    wrapper.style.paddingTop = `${reservFormHeight}px`;
+                const reservFormHeight = document.querySelector(".reserv").clientHeight;
+                const wrapper = document.querySelector(".wrapper");
+                if (!wrapper.classList.contains("show-reserv")) {
+                    if (document.querySelector(".header").classList.contains("_header-scroll") && window.matchMedia("(max-width: 1001.98px)").matches) wrapper.classList.add("show-reserv"); else if (window.matchMedia("(max-width: 1001.98px)").matches) {
+                        const wrapper = document.querySelector(".wrapper");
+                        wrapper.classList.add("show-reserv");
+                    } else if (document.querySelector(".header").classList.contains("_header-scroll")) {
+                        wrapper.classList.add("show-reserv");
+                        if (wrapper.querySelector(".page.main-page, .page.rooms-main, .page.room-detail")) wrapper.style.paddingTop = `${reservFormHeight}px`;
+                    } else if (!wrapper.querySelector(".page.main-page, .page.rooms-main, .page.room-detail")) wrapper.classList.add("show-reserv");
+                } else {
+                    wrapper.classList.remove("show-reserv");
+                    wrapper.style.paddingTop = 0;
                 }
                 e.preventDefault();
             }
@@ -3675,6 +3683,7 @@
             let preview = new YouTubeVideoPreview(video.dataset.popupYoutube, video);
             preview.getVideoData();
         }));
+        if ("en" === document.documentElement.getAttribute("lang")) document.querySelector(".wrapper").classList.add("lang-en");
         function isWebp() {
             function testWebP(callback) {
                 let webP = new Image;
@@ -11665,32 +11674,34 @@ PERFORMANCE OF THIS SOFTWARE.
                 });
             }).install(), x;
         }));
-        Parsley.addMessages("ru", {
-            defaultMessage: "Некорректное значение.",
-            type: {
-                email: "Введите адрес электронной почты.",
-                url: "Введите URL адрес.",
-                number: "Введите число.",
-                integer: "Введите целое число.",
-                digits: "Введите только цифры.",
-                alphanum: "Введите буквенно-цифровое значение."
-            },
-            notblank: "Это поле должно быть заполнено.",
-            required: "Обязательное поле",
-            pattern: "Это значение некорректно.",
-            min: "Это значение должно быть не менее чем %s.",
-            max: "Это значение должно быть не более чем %s.",
-            range: "Это значение должно быть от %s до %s.",
-            minlength: "Это значение должно содержать не менее %s символов.",
-            maxlength: "Это значение должно содержать не более %s символов.",
-            length: "Это значение должно содержать от %s до %s символов.",
-            mincheck: "Выберите не менее %s значений.",
-            maxcheck: "Выберите не более %s значений.",
-            check: "Выберите от %s до %s значений.",
-            equalto: "Это значение должно совпадать."
-        });
-        Parsley.setLocale("ru");
-        Parsley.addMessages("ru", {
+        if ("ru" === document.documentElement.getAttribute("lang")) {
+            Parsley.addMessages("ru", {
+                defaultMessage: "Некорректное значение.",
+                type: {
+                    email: "Введите адрес электронной почты.",
+                    url: "Введите URL адрес.",
+                    number: "Введите число.",
+                    integer: "Введите целое число.",
+                    digits: "Введите только цифры.",
+                    alphanum: "Введите буквенно-цифровое значение."
+                },
+                notblank: "Это поле должно быть заполнено.",
+                required: "Обязательное поле",
+                pattern: "Это значение некорректно.",
+                min: "Это значение должно быть не менее чем %s.",
+                max: "Это значение должно быть не более чем %s.",
+                range: "Это значение должно быть от %s до %s.",
+                minlength: "Это значение должно содержать не менее %s символов.",
+                maxlength: "Это значение должно содержать не более %s символов.",
+                length: "Это значение должно содержать от %s до %s символов.",
+                mincheck: "Выберите не менее %s значений.",
+                maxcheck: "Выберите не более %s значений.",
+                check: "Выберите от %s до %s значений.",
+                equalto: "Это значение должно совпадать."
+            });
+            Parsley.setLocale("ru");
+        }
+        if ("ru" === document.documentElement.getAttribute("lang")) Parsley.addMessages("ru", {
             dateiso: "Это значение должно быть корректной датой (ГГГГ-ММ-ДД).",
             minwords: "Это значение должно содержать не менее %s слов.",
             maxwords: "Это значение должно содержать не более %s слов.",

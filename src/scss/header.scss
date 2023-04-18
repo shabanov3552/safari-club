@@ -112,7 +112,7 @@
 			background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 100%);
 
 			@media (max-width: $tablet) {
-				background: #3a230b;
+				background: #42403E;
 			}
 		}
 	}
@@ -465,6 +465,10 @@
 
 		&_right {
 			right: -70px;
+
+			.lang-en & {
+				right: -85px;
+			}
 		}
 
 		.black & {
@@ -514,6 +518,7 @@
 		@media (max-width: $laptop) {
 			font-size: 12px;
 			line-height: 12px;
+			text-align: left;
 		}
 
 		@media (max-width: em(360)) {

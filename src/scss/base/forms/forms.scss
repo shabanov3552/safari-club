@@ -88,6 +88,10 @@
 		font-size: 12px;
 		line-height: 18px;
 		color: rgba(0, 0, 0, 0.5);
+
+		.black & {
+			color: rgba(255, 255, 255, 0.5);
+		}
 	}
 
 	// .form__consent-link
@@ -150,4 +154,4 @@
 
 // <CALENDAR>
 // Снипет (HTML):
-// @import "datepicker";
+@import "datepicker";

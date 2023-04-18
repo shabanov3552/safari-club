@@ -14,13 +14,15 @@
    &__content {
       display: grid;
       grid-template-columns: 59% 1fr;
-      background: #f0edeb url(../img/ornament-bg-left.png) left no-repeat;
-      background-blend-mode: multiply;
+      // background-blend-mode: multiply;
       padding: rem(85) 0;
+
+      @media (min-width:em(1201.98)) {
+         background: #42403E url(../img/ornament-gray-left.png) left no-repeat;
+      }
 
       .rooms-main & {
          padding: rem(45) 0;
-
       }
 
       @media (max-width: $pc) {
@@ -30,7 +32,7 @@
       @media (max-width: em(1201.98)) {
          grid-template-columns: 1fr;
          grid-template-rows: auto 1fr;
-         background: #f0edeb;
+         background: #42403E;
          padding: 0;
       }
    }
@@ -112,6 +114,10 @@
          height: 32px;
          transform: rotate(45deg) translate(23px, 0px);
          background: #f0edeb;
+
+         @media (max-width:$mobile) {
+            display: none;
+         }
       }
 
       @media (max-width: $pc) {
@@ -132,7 +138,7 @@
       }
 
       @media (max-width: $mobileSmall) {
-         grid-template-rows: 240px 1fr;
+         grid-template-rows: 400px 1fr;
       }
    }
 
@@ -208,7 +214,7 @@
 
    &__info {
       @media (max-width: $mobile) {
-         background: #3a230b;
+         // background: #3a230b;
          padding: rem(40);
          padding-top: rem(14);
          display: flex;
@@ -273,6 +279,7 @@
    // .rooms__reserv-btn
 
    &__reserv-btn {
+      height: 56px;
       color: #fff;
 
       @media (max-width: $mobile) {
@@ -286,10 +293,6 @@
    &__more-btn {
       flex: 1 1 auto;
       justify-content: flex-end;
-
-      @media (max-width: $mobile) {
-         font-size: 0;
-      }
    }
 
    // .rooms__navigation
@@ -303,32 +306,39 @@
 
    &__name {
       cursor: pointer;
-      background: #f0edeb;
-      border-bottom: 1px solid #d8d8d8;
+      background: #42403E;
+      border-bottom: 1px solid #5B5B5B;
       padding: rem(36) rem(40) rem(36) rem(80);
       font-family: "Cormorant Garamond";
       font-style: normal;
       font-weight: 700;
       font-size: 23px;
       line-height: 28px;
-      color: #000000;
+      color: #fff;
 
       &:last-child {
-         border-bottom: none;
+         // border-bottom: none;
       }
 
       &_active {
          position: relative;
          padding: rem(28) rem(40) rem(28) rem(72);
-         border: 8px solid #fff;
-         border-image-source: linear-gradient(to right, #fff 55%, transparent 100%);
+         border: 8px solid #42403E;
+         border-image-source: linear-gradient(90deg, #42403E 0%, #42403E 100%);
          border-image-slice: 1;
          border-right: 0px;
-         background: linear-gradient(90deg, #f2cb99 0%, #f0edeb 100%), #ffffff;
+         background: linear-gradient(90deg, #65625F 0%, #42403E 100%), #FFFFFF;
 
-         &:last-child {
-            border: 8px solid #fff;
+         &::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: -8px;
+            width: 108%;
+            border-bottom: 1px solid #5B5B5B;
          }
+
+         &:not(:last-child) {}
 
          @media (min-width: em(1201.98)) {
             &::before {
@@ -340,7 +350,7 @@
                height: 35px;
                background: #ce8d3b;
                transform: rotate(45deg) translate(-27px, 4px);
-               border: 8px solid #fff;
+               border: 8px solid #42403E;
             }
          }
       }

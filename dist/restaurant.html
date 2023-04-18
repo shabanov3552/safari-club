@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 	<title>Ресторан</title>
@@ -8,8 +8,8 @@
 	<!-- <style>body{opacity: 0;}</style> -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@400;500;600&family=Montserrat:wght@400;600&display=swap&_v=20230320165723" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230320165723">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@400;500;600&family=Montserrat:wght@400;600&display=swap&_v=20230418154700" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230418154700">
 	<link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png">
@@ -93,7 +93,41 @@
 			</div>
 		</header>
 		<main class="page restaurant">
-
+			<div class="reserv">
+				<div class="reserv__container">
+					<form action="" class="reserv__form">
+						<div class="reserv__dates">
+							<div class="reserv__caption">Даты проживания:</div>
+							<input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+							<span>-</span>
+							<input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+						</div>
+						<div class="reserv__quantity">
+							<div class="reserv__caption">Количество гостей:</div>
+							<div data-quantity class="quantity">
+								<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+								<div class="quantity__input">
+									<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+								</div>
+								<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+							</div>
+						</div>
+						<div class="reserv__promotion">
+							<div class="promotion">
+								<div class="promotion__dd-link">Есть промокод</div>
+								<div class="promotion__dd" hidden>
+									<div class="promotion__dd-inner">
+										<label for="" class="promotion__label">Промокод</label>
+										<input autocomplete="off" type="text" name="form[]" class="promotion__input input">
+										<button type="button" class="promotion__button btn-gold">Подтвердить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="reserv__btn btn-gold">Забронировать</button>
+					</form>
+				</div>
+			</div>
 			<div class="first-block">
 				<div class="first-block__image-ibg"><picture><source srcset="img/pictures/restaurant/main-img.webp" type="image/webp"><img src="img/pictures/restaurant/main-img.jpg" alt=""></picture></div>
 				<div class="first-block__fb-inner">
@@ -403,7 +437,7 @@
 				</div>
 			</div>
 
-			<div class="page-form-reserv">
+			<div id="blockReserv" class="page-form-reserv">
 				<div class="page-form-reserv__wrapper">
 					<div class="page-form-reserv__left">
 						<div class="page-form-reserv__title">Забронировать</div>
@@ -478,7 +512,7 @@
 				</div>
 			</div>
 
-			<div id="blockReserv" class="events-block">
+			<div class="events-block">
 				<div class="events-block__title title-cormorant">Банкетные мероприятия</div>
 				<div class="events-block__row">
 					<div class="events-block__left">
@@ -521,7 +555,7 @@
 				<!-- На главной выводятся вообще все спецпредложения, а на внутренних страницах выводятся только спецпредложения, релевантные странице. Коммент от Глеба -->
 				<div class="special-offers__header">
 					<div class="special-offers__title">Специальные предложения</div>
-					<div class="special-offers__top-image"><picture><source srcset="img/pictures/special-offers/header-image_1.webp" type="image/webp"><img src="img/pictures/special-offers/header-image_1.jpg" alt=""></picture></div>
+					<div class="special-offers__top-image"><picture><source srcset="img/pictures/special-offers/header-image_3.webp" type="image/webp"><img src="img/pictures/special-offers/header-image_3.jpg" alt=""></picture></div>
 				</div>
 				<!-- Оболочка слайдера -->
 				<div class="special-offers__slider swiper">
@@ -729,8 +763,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230320165723" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20230320165723"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230418154700" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230418154700"></script>
 </body>
 
 </html>

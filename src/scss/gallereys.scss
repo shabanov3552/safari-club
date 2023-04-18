@@ -200,10 +200,12 @@
    // .video-gallery__grid
 
    &__grid {
+      max-width: 1160px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       column-gap: 130px;
       row-gap: 60px;
+      margin: 0 auto;
       margin-bottom: rem(50);
 
       @media (max-width:$mobile) {

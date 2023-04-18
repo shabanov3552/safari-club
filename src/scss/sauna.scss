@@ -325,6 +325,10 @@
       background: #F0EDEB;
       padding-top: rem(40);
       padding-bottom: rem(30);
+
+      .black & {
+         background: #42403E;
+      }
    }
 
    // .play-room__header
@@ -332,6 +336,10 @@
    &__header {
       padding: rem(70) 0;
       position: relative;
+
+      .black & {
+         color: #fff;
+      }
 
       @media (min-width:$mobile) {
          &::after {
@@ -344,6 +352,11 @@
             top: 0;
             left: 0;
             z-index: -1;
+
+            .black & {
+               background: #42403E url(../img/ornament-sauna-right.png) right no-repeat;
+               background-blend-mode: normal;
+            }
          }
       }
 
@@ -372,6 +385,10 @@
    &__title {
       font-size: 40px;
       line-height: 48px;
+
+      .black & {
+         color: #fff;
+      }
 
       @media (max-width:$mobile) {
          margin-bottom: rem(20);

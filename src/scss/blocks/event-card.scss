@@ -46,6 +46,10 @@
       font-size: 20px;
       line-height: 24px;
       color: #CE8D3B;
+
+      &.empty {
+         display: none;
+      }
    }
 
    // .event-card__date

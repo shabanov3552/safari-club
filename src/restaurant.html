@@ -3,7 +3,7 @@
 "modifierClass": "black"
 })
 <main class="page restaurant">
-
+   @@include('html/_reserv.htm',{})
    @@include('html/_first-block.htm',{
    "src": "img/pictures/restaurant/main-img.jpg",
    "title": "Ресторан в Сибирском Сафари Клубе",
@@ -167,7 +167,7 @@
       </div>
    </div>
 
-   <div class="page-form-reserv">
+   <div id="blockReserv" class="page-form-reserv">
       <div class="page-form-reserv__wrapper">
          <div class="page-form-reserv__left">
             <div class="page-form-reserv__title">Забронировать</div>
@@ -242,7 +242,7 @@
       </div>
    </div>
 
-   <div id="blockReserv" class="events-block">
+   <div class="events-block">
       <div class="events-block__title title-cormorant">Банкетные мероприятия</div>
       <div class="events-block__row">
          <div class="events-block__left">

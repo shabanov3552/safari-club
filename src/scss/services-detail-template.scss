@@ -221,6 +221,14 @@
       line-height: 26px;
       flex: 0 1 50%;
 
+      td {
+         padding: rem(10);
+
+         &:last-child {
+            white-space: nowrap;
+         }
+      }
+
       p {
          &:not(:last-child) {
             margin-bottom: rem(15);

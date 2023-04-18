@@ -349,6 +349,10 @@
 
       background: url(../img/ornament-bg-left.png) left no-repeat;
 
+      .black & {
+         background: url(../img/ornament-white-left.png) left no-repeat;
+      }
+
       .contacts & {
          background: #fff;
       }
@@ -388,6 +392,10 @@
          flex-wrap: wrap;
          row-gap: 40px;
       }
+
+      @media (max-width:$mobile) {
+         gap: 0;
+      }
    }
 
    // .how-to-get__col
@@ -396,7 +404,6 @@
       flex: 0 1 25%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       text-align: center;
       padding: rem(30) rem(20);
@@ -427,6 +434,15 @@
 
    &__icon {
       margin-bottom: rem(56);
+      height: 83px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+         width: 100%;
+         object-fit: contain;
+      }
 
       @media (max-width:$mobile) {
          margin-bottom: rem(20);
@@ -574,6 +590,16 @@
    background-blend-mode: multiply;
    margin-bottom: rem(80);
 
+   .black & {
+      background: #42403E url(../img/ornament-gray-left.png) left no-repeat;
+      background-blend-mode: normal;
+      color: #fff;
+   }
+
+   .conference-hall & {
+      background: #42403E;
+   }
+
    .contacts & {
       margin-bottom: rem(0);
    }
@@ -584,7 +610,6 @@
 
    @media (max-width:$mobile) {
       padding: rem(50) 0;
-
    }
 
    // .page-form-reserv__wrapper
@@ -640,6 +665,10 @@
       text-transform: uppercase;
       color: #3A230B;
       margin-bottom: rem(30);
+
+      .black & {
+         color: #fff;
+      }
 
       @media (max-width:$laptop) {
          font-size: 40px;
@@ -719,6 +748,51 @@
       line-height: 26px;
       text-align: center;
       margin-bottom: rem(45);
+   }
+
+}
+
+.cons-polit {
+   .page__container {
+      padding-top: rem(50);
+      padding-bottom: rem(50);
+   }
+
+   font-size: 18px;
+   line-height: 24px;
+
+   @media (max-width:$mobile) {
+      font-size: 15px;
+      line-height: 20px;
+   }
+
+   h2 {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: rem(20);
+
+      @media (max-width:$mobileSmall) {
+         font-size: 25px;
+      }
+   }
+
+   h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 20px 0 10px 0;
+   }
+
+   ul {
+      padding-left: rem(25);
+
+      li {
+         list-style-type: disc;
+      }
+   }
+
+   & .page__container>p {
+      margin-bottom: rem(10);
    }
 
 }

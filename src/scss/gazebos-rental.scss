@@ -1,5 +1,26 @@
 .gazebos-catalog {
    margin-top: rem(76);
+   position: relative;
+
+   // .gazebos-catalog__top-img
+
+   &__top-img {
+      width: 310px;
+      height: 412px;
+      position: absolute;
+      top: -466px;
+      z-index: 5;
+      @include adaptiveValue("right", 188, 0, 0, 1920, 1400);
+
+      img {
+         width: 100%;
+      }
+
+      @media (max-width: em(1100)) {
+         display: none;
+      }
+   }
+
    // .gazebos-catalog__top
 
    &__top {
@@ -197,13 +218,14 @@
       padding: 0 rem(20);
       padding-top: rem(50);
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      grid-template-columns: repeat(6, 1fr);
       column-gap: 20px;
       row-gap: 30px;
       max-width: 1480px;
       margin: 0 auto rem(40);
 
       @media (max-width:$pc) {
+         grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
          max-width: 1100px;
       }
 
@@ -214,6 +236,37 @@
       @media (max-width:$mobileSmall) {
          padding: 0;
          padding-top: rem(50);
+      }
+
+      .gazebo-card {
+         @media (min-width:$pc) {
+
+            &:nth-child(1),
+            &:nth-child(4),
+            &:nth-child(7) {
+               grid-column: 1/3;
+            }
+
+            &:nth-child(2),
+            &:nth-child(5),
+            &:nth-child(8) {
+               grid-column: 3/5;
+            }
+
+            &:nth-child(3),
+            &:nth-child(6),
+            &:nth-child(9) {
+               grid-column: 5/7;
+            }
+
+            &:nth-child(10) {
+               grid-column: 2/4;
+            }
+
+            &:nth-child(11) {
+               grid-column: 4/6;
+            }
+         }
       }
    }
 
@@ -238,11 +291,12 @@
 }
 
 .gazebo-card {
-   background: #F0EDEB;
+   background: #42403E;
    border-radius: 15px;
    position: relative;
    display: flex;
    flex-direction: column;
+   color: #fff;
 
    &::before {
       content: '';
@@ -252,7 +306,7 @@
       width: 33px;
       height: 33px;
       transform: translate(-50%, 0px) rotate(-45deg);
-      background: #F0EDEB;
+      background: #42403E;
       border: 6px solid #fff;
    }
 
@@ -313,7 +367,7 @@
    &__title {
       font-family: 'Cormorant Garamond';
       text-transform: uppercase;
-      color: #3A230B;
+      color: #fff;
       margin-right: rem(36);
       display: flex;
       height: 70px;
@@ -345,7 +399,9 @@
       }
 
       @media (max-width:$tablet) {
-         display: block;
+         flex-direction: row;
+         align-items: baseline;
+         gap: 10px;
       }
    }
 
@@ -506,6 +562,13 @@
 
       display: flex;
       align-items: center;
+
+      .input {
+         background: rgba(255, 255, 255, 0.203035);
+         border: 1px solid rgba(0, 0, 0, 0.230742);
+         color: #fff;
+         padding-right: rem(14);
+      }
    }
 
    // .gazebo-card__timepicker
@@ -529,7 +592,7 @@
    &__hours-fragment {
       font-size: 18px;
       line-height: 52px;
-      color: #000000;
+      color: #fff;
       border-radius: 10px;
       cursor: pointer;
       display: flex;
@@ -544,8 +607,8 @@
 
       // .gazebo-card__hours-fragment_in-selected-range
 
-      &_in-selected-range,
-      &_hovered {
+      &.in-selected-range,
+      &.hovered {
          background: #fff;
 
          &::after {
@@ -564,7 +627,7 @@
 
       // .gazebo-card__hours-fragment_selected
 
-      &_selected {
+      &.selected {
          background: #CE8D3B;
          border-radius: 10px;
          color: #fff;
@@ -572,11 +635,11 @@
 
       // .gazebo-card__hours-fragment_hovered
 
-      &_hovered {}
+      &.hovered {}
 
       // .gazebo-card__hours-fragment_last-in-row
 
-      &_last-in-row {
+      &.last-in-row {
          &::after {
             display: none;
          }
@@ -584,7 +647,7 @@
 
       // .gazebo-card__hours-fragment_last-selected
 
-      &_last-selected {
+      &.last-selected {
          &::after {
             display: none;
          }
@@ -592,11 +655,11 @@
 
       // .gazebo-card__hours-fragment_brr
 
-      &_brr {}
+      &.brr {}
 
       // .gazebo-card__hours-fragment_last-hovered
 
-      &_last-hovered {}
+      &.last-hovered {}
    }
 
    // .gazebo-card__time-fragment
@@ -622,13 +685,16 @@
    // .gazebos-rental__footer
 
    &__footer {
-      background-color: #F0EDEB;
-      background-blend-mode: multiply;
+      background: #42403E;
       padding: rem(100) 0;
       margin-bottom: rem(130);
+      color: #fff;
 
       @media (min-width:$mobile) {
-         background: url(../img/ornament-bg-left.png) left repeat-y, url(../img/ornament-bg-right.png) right repeat-y;
+         background: #42403E;
+         background-image: url(../img/ornament-white-left-small.png), url(../img/ornament-white-right-small.png);
+         background-position: left, right;
+         background-repeat: repeat-y, repeat-y;
       }
 
       @media (max-width:$tablet) {
@@ -691,7 +757,7 @@
       line-height: 61px;
       text-transform: uppercase;
       margin-bottom: rem(20);
-      color: #3A230B;
+      color: #fff;
 
       @media (max-width:$mobile) {
          font-size: 40px;
@@ -781,6 +847,11 @@
    // .gazebos-rental__rules-col
 
    &__rules-col {
+      @media (min-width:$laptop) {
+         display: flex;
+         flex-direction: column;
+      }
+
       &:first-child {
          flex: 0 1 35%;
 
@@ -794,6 +865,10 @@
       }
 
       .rules {
+         @media (min-width:$laptop) {
+            min-height: 95px;
+         }
+
          padding: 0;
          // .rules__row
 
@@ -822,6 +897,10 @@
       line-height: 28px;
       margin-bottom: rem(60);
 
+      @media (min-width:$laptop) {
+         flex: 1 1 auto;
+      }
+
       @media (max-width:$laptop) {
          margin-bottom: rem(40);
       }
@@ -847,22 +926,31 @@
       @media (max-width:$mobile) {
          margin-bottom: rem(50);
       }
+
+      .gallery {
+
+         // .gallery_no-slider
+
+         &_no-slider {
+            .gallery__row {
+               grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+               grid-template-rows: auto;
+
+               & * {
+                  grid-column: auto;
+               }
+            }
+
+            .gallery__image {}
+         }
+
+         // .gallery__row
+
+         &__row {}
+
+         // .gallery__image
+
+         &__image {}
+      }
    }
-}
-
-
-
-.gallery {
-
-   // .gallery_no-slider
-
-   &_no-slider {}
-
-   // .gallery__row
-
-   &__row {}
-
-   // .gallery__image
-
-   &__image {}
 }

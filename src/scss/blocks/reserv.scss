@@ -1,3 +1,12 @@
+.show-reserv {
+
+   .main-page .reserv,
+   .room-detail .reserv,
+   .rooms-main .reserv {
+      position: fixed;
+   }
+}
+
 .reserv {
    background: #e8e0da;
    padding: rem(12) 0;
@@ -5,9 +14,19 @@
    top: 0;
    position: relative;
    z-index: 5;
+   position: fixed;
+   top: -150%;
+   width: 100%;
+   z-index: 7;
 
-   @media (max-width: $mobileSmall) {
-      position: relative;
+
+   @media (min-width:$tablet) {
+
+      .main-page &,
+      .rooms-main &,
+      .room-detail & {
+         position: relative;
+      }
    }
 
    .show-reserv & {
@@ -25,7 +44,7 @@
       background: rgba(0, 0, 0, 0.7);
 
       @media (max-width: $tablet) {
-         background: #3a230b;
+         background: #42403E;
       }
    }
 

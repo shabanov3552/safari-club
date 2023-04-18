@@ -4,10 +4,13 @@
    // .room-detail__price-block
 
    &__price-block {
-      background: #F0EDEB;
+      // background: #F0EDEB;
+      background: #42403E;
+      color: #fff;
       margin-bottom: rem(50);
 
       .conference-hall & {
+         color: #000;
          background: none;
          margin: 0;
          position: relative;
@@ -80,14 +83,22 @@
       line-height: 48px;
       text-align: right;
       text-transform: uppercase;
-      color: #3A230B;
+      // color: #3A230B;
+      color: #fff;
       grid-column: 1/2;
 
       @media (max-width:$laptop) {
          text-align: left;
       }
 
+      @media (max-width:$mobileSmall) {
+         font-size: 30px;
+         line-height: 34px;
+      }
+
       .conference-hall & {
+         color: #3A230B;
+
          font-weight: 600;
          max-width: 428px;
          padding-right: rem(170);
@@ -170,6 +181,12 @@
 
       @media (max-width:$tablet) {
          margin-bottom: rem(50);
+      }
+
+      @media (max-width:$mobileSmall) {
+         font-size: 24px;
+         line-height: 28px;
+         margin-bottom: rem(15);
       }
    }
 
@@ -307,19 +324,19 @@
    }
 
    .rooms__content {
-      @media (min-width:em(1201.98)) {
+      // @media (min-width:em(1201.98)) {
 
-         position: relative;
+      //    position: relative;
 
-         &::before {
-            content: '';
-            bottom: 0;
-            left: 0;
-            width: 50%;
-            height: 200px;
-            background-color: #F0EDEB;
-            position: absolute;
-         }
-      }
+      //    &::before {
+      //       content: '';
+      //       bottom: 0;
+      //       left: 0;
+      //       width: 50%;
+      //       height: 200px;
+      //       background-color: #42403E;
+      //       position: absolute;
+      //    }
+      // }
    }
 }

@@ -5,6 +5,24 @@
    padding-top: rem(90);
    position: relative;
 
+   &::after {
+      content: '';
+      left: 8.5%;
+      right: 8.5%;
+      position: absolute;
+      top: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.236531);
+   }
+
+   .black & {
+      margin-top: rem(0);
+      background: #42403E;
+      color: #fff;
+   }
+
+   @media (min-width:$laptop) {}
+
    // &::after {
    //    content: "";
    //    border-top: 1px solid rgba(0, 0, 0, 0.39);
@@ -169,12 +187,14 @@
 }
 
 .pay {
+   margin-top: rem(50);
    display: flex;
    flex-direction: column;
    align-items: flex-end;
 
    @media (max-width: $mobile) {
       align-items: center;
+      margin-top: rem(0);
    }
 
    // .pay__top
@@ -216,7 +236,13 @@
    &__item {
       font-size: 14px;
       line-height: 21px;
-      color: #000;
+
+      @media (min-width:$laptop) {
+         .black & {
+            color: #fff;
+         }
+      }
+
       cursor: pointer;
 
       &:hover {
@@ -230,7 +256,7 @@
       }
 
       &:last-child {
-         color: #ce8d3b;
+         color: #CE8D3B;
          display: flex;
          align-items: center;
          transition: all 0.3s ease 0s;

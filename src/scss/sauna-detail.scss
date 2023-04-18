@@ -4,8 +4,7 @@
 
    &__wrapper {
       @media (min-width:$mobile) {
-         background: url(../img/ornament-bg-right.png) right repeat-y;
-
+         background: url(../img/ornament-sauna-right-detail.png) right repeat-y;
       }
    }
 
@@ -281,14 +280,14 @@
    // .sauna-detail__gallery
 
    &__gallery {
-      margin-bottom: rem(100);
+      padding-bottom: rem(100);
 
       @media (max-width:$pc) {
-         margin-bottom: rem(75);
+         padding-bottom: rem(75);
       }
 
       @media (max-width:$tablet) {
-         margin-bottom: rem(40);
+         padding-bottom: rem(40);
       }
 
       .gallery {

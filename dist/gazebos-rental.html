@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 	<title>Аренда беседок</title>
@@ -8,8 +8,8 @@
 	<!-- <style>body{opacity: 0;}</style> -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@400;500;600&family=Montserrat:wght@400;600&display=swap&_v=20230320165723" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230320165723">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@400;500;600&family=Montserrat:wght@400;600&display=swap&_v=20230418154700" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230418154700">
 	<link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png">
@@ -93,7 +93,41 @@
 			</div>
 		</header>
 		<main class="page gazebos-rental">
-
+			<div class="reserv">
+				<div class="reserv__container">
+					<form action="" class="reserv__form">
+						<div class="reserv__dates">
+							<div class="reserv__caption">Даты проживания:</div>
+							<input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+							<span>-</span>
+							<input autocomplete="off" type="date" name="form[]" class="reserv__input input">
+						</div>
+						<div class="reserv__quantity">
+							<div class="reserv__caption">Количество гостей:</div>
+							<div data-quantity class="quantity">
+								<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+								<div class="quantity__input">
+									<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+								</div>
+								<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+							</div>
+						</div>
+						<div class="reserv__promotion">
+							<div class="promotion">
+								<div class="promotion__dd-link">Есть промокод</div>
+								<div class="promotion__dd" hidden>
+									<div class="promotion__dd-inner">
+										<label for="" class="promotion__label">Промокод</label>
+										<input autocomplete="off" type="text" name="form[]" class="promotion__input input">
+										<button type="button" class="promotion__button btn-gold">Подтвердить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="reserv__btn btn-gold">Забронировать</button>
+					</form>
+				</div>
+			</div>
 			<div class="first-block">
 				<div class="first-block__image-ibg"><picture><source srcset="img/pictures/gazebos/first-block.webp" type="image/webp"><img src="img/pictures/gazebos/first-block.jpg" alt=""></picture></div>
 				<div class="first-block__fb-inner">
@@ -129,6 +163,7 @@
 			</div>
 
 			<div class="gazebos-catalog">
+				<div class="gazebos-catalog__top-img"><picture><source srcset="img/pictures/gazebos/top-img.webp" type="image/webp"><img src="img/pictures/gazebos/top-img.webp" alt=""></picture></div>
 				<div class="gazebos-catalog__top">
 					<div class="gazebos-catalog__map"><picture><source srcset="img/pictures/gazebos/map.webp" type="image/webp"><img src="img/pictures/gazebos/map.png" alt=""></picture></div>
 					<div class="gazebos-catalog__anchor-list">
@@ -180,9 +215,31 @@
 							<div class="gazebo-card__date">
 								<label class="gazebo-card__label">
 									<span>Дата:</span>
-									<input type="date" class="input">
+									<input type="date" class="input" data-datepicker>
 								</label>
 							</div>
+							<!-- <div class="gazebo-card__timepicker">
+         <div class="gazebo-card__hours">
+            <div class="gazebo-card__hours-fragment selected in-selected-range brl hovered">
+               <div class="gazebo-card__time-fragment"><span>11</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment selected last-selected in-selected-range brr hovered last-hovered last-in-row">
+               <div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
+            </div>
+         </div>
+      </div> -->
 							<div class="gazebo-card__timepicker">
 								<div class="gazebo-card__hours">
 									<div class="gazebo-card__hours-fragment">
@@ -200,8 +257,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -219,60 +275,34 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>16</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment__brl 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_last-selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_brr 
-            gazebo-card__hours-fragment_hovered 
-            gazebo-card__hours-fragment_last-hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>30</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -281,8 +311,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>22</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>23</span>:<span>00</span></div>
 									</div>
 								</div>
@@ -319,9 +348,31 @@
 							<div class="gazebo-card__date">
 								<label class="gazebo-card__label">
 									<span>Дата:</span>
-									<input type="date" class="input">
+									<input type="date" class="input" data-datepicker>
 								</label>
 							</div>
+							<!-- <div class="gazebo-card__timepicker">
+         <div class="gazebo-card__hours">
+            <div class="gazebo-card__hours-fragment selected in-selected-range brl hovered">
+               <div class="gazebo-card__time-fragment"><span>11</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment selected last-selected in-selected-range brr hovered last-hovered last-in-row">
+               <div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
+            </div>
+         </div>
+      </div> -->
 							<div class="gazebo-card__timepicker">
 								<div class="gazebo-card__hours">
 									<div class="gazebo-card__hours-fragment">
@@ -339,8 +390,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -358,60 +408,34 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>16</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment__brl 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_last-selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_brr 
-            gazebo-card__hours-fragment_hovered 
-            gazebo-card__hours-fragment_last-hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>30</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -420,8 +444,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>22</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>23</span>:<span>00</span></div>
 									</div>
 								</div>
@@ -458,9 +481,31 @@
 							<div class="gazebo-card__date">
 								<label class="gazebo-card__label">
 									<span>Дата:</span>
-									<input type="date" class="input">
+									<input type="date" class="input" data-datepicker>
 								</label>
 							</div>
+							<!-- <div class="gazebo-card__timepicker">
+         <div class="gazebo-card__hours">
+            <div class="gazebo-card__hours-fragment selected in-selected-range brl hovered">
+               <div class="gazebo-card__time-fragment"><span>11</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment selected last-selected in-selected-range brr hovered last-hovered last-in-row">
+               <div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
+            </div>
+         </div>
+      </div> -->
 							<div class="gazebo-card__timepicker">
 								<div class="gazebo-card__hours">
 									<div class="gazebo-card__hours-fragment">
@@ -478,8 +523,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -497,60 +541,34 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>16</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment__brl 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_last-selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_brr 
-            gazebo-card__hours-fragment_hovered 
-            gazebo-card__hours-fragment_last-hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>30</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -559,8 +577,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>22</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>23</span>:<span>00</span></div>
 									</div>
 								</div>
@@ -597,9 +614,31 @@
 							<div class="gazebo-card__date">
 								<label class="gazebo-card__label">
 									<span>Дата:</span>
-									<input type="date" class="input">
+									<input type="date" class="input" data-datepicker>
 								</label>
 							</div>
+							<!-- <div class="gazebo-card__timepicker">
+         <div class="gazebo-card__hours">
+            <div class="gazebo-card__hours-fragment selected in-selected-range brl hovered">
+               <div class="gazebo-card__time-fragment"><span>11</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment selected last-selected in-selected-range brr hovered last-hovered last-in-row">
+               <div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
+            </div>
+         </div>
+      </div> -->
 							<div class="gazebo-card__timepicker">
 								<div class="gazebo-card__hours">
 									<div class="gazebo-card__hours-fragment">
@@ -617,8 +656,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -636,60 +674,34 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>16</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment__brl 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_last-selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_brr 
-            gazebo-card__hours-fragment_hovered 
-            gazebo-card__hours-fragment_last-hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>30</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -698,8 +710,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>22</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>23</span>:<span>00</span></div>
 									</div>
 								</div>
@@ -736,9 +747,31 @@
 							<div class="gazebo-card__date">
 								<label class="gazebo-card__label">
 									<span>Дата:</span>
-									<input type="date" class="input">
+									<input type="date" class="input" data-datepicker>
 								</label>
 							</div>
+							<!-- <div class="gazebo-card__timepicker">
+         <div class="gazebo-card__hours">
+            <div class="gazebo-card__hours-fragment selected in-selected-range brl hovered">
+               <div class="gazebo-card__time-fragment"><span>11</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment selected last-selected in-selected-range brr hovered last-hovered last-in-row">
+               <div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
+            </div>
+         </div>
+      </div> -->
 							<div class="gazebo-card__timepicker">
 								<div class="gazebo-card__hours">
 									<div class="gazebo-card__hours-fragment">
@@ -756,8 +789,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -775,60 +807,34 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>16</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment__brl 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_last-selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_brr 
-            gazebo-card__hours-fragment_hovered 
-            gazebo-card__hours-fragment_last-hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>30</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -837,8 +843,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>22</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>23</span>:<span>00</span></div>
 									</div>
 								</div>
@@ -875,9 +880,31 @@
 							<div class="gazebo-card__date">
 								<label class="gazebo-card__label">
 									<span>Дата:</span>
-									<input type="date" class="input">
+									<input type="date" class="input" data-datepicker>
 								</label>
 							</div>
+							<!-- <div class="gazebo-card__timepicker">
+         <div class="gazebo-card__hours">
+            <div class="gazebo-card__hours-fragment selected in-selected-range brl hovered">
+               <div class="gazebo-card__time-fragment"><span>11</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment selected last-selected in-selected-range brr hovered last-hovered last-in-row">
+               <div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
+            </div>
+         </div>
+      </div> -->
 							<div class="gazebo-card__timepicker">
 								<div class="gazebo-card__hours">
 									<div class="gazebo-card__hours-fragment">
@@ -895,8 +922,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -914,60 +940,34 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>16</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment__brl 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_last-selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_brr 
-            gazebo-card__hours-fragment_hovered 
-            gazebo-card__hours-fragment_last-hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>30</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -976,8 +976,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>22</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>23</span>:<span>00</span></div>
 									</div>
 								</div>
@@ -1014,9 +1013,31 @@
 							<div class="gazebo-card__date">
 								<label class="gazebo-card__label">
 									<span>Дата:</span>
-									<input type="date" class="input">
+									<input type="date" class="input" data-datepicker>
 								</label>
 							</div>
+							<!-- <div class="gazebo-card__timepicker">
+         <div class="gazebo-card__hours">
+            <div class="gazebo-card__hours-fragment selected in-selected-range brl hovered">
+               <div class="gazebo-card__time-fragment"><span>11</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment selected last-selected in-selected-range brr hovered last-hovered last-in-row">
+               <div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
+            </div>
+         </div>
+      </div> -->
 							<div class="gazebo-card__timepicker">
 								<div class="gazebo-card__hours">
 									<div class="gazebo-card__hours-fragment">
@@ -1034,8 +1055,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -1053,60 +1073,34 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>16</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment__brl 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_last-selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_brr 
-            gazebo-card__hours-fragment_hovered 
-            gazebo-card__hours-fragment_last-hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>30</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -1115,8 +1109,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>22</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>23</span>:<span>00</span></div>
 									</div>
 								</div>
@@ -1153,9 +1146,31 @@
 							<div class="gazebo-card__date">
 								<label class="gazebo-card__label">
 									<span>Дата:</span>
-									<input type="date" class="input">
+									<input type="date" class="input" data-datepicker>
 								</label>
 							</div>
+							<!-- <div class="gazebo-card__timepicker">
+         <div class="gazebo-card__hours">
+            <div class="gazebo-card__hours-fragment selected in-selected-range brl hovered">
+               <div class="gazebo-card__time-fragment"><span>11</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment selected last-selected in-selected-range brr hovered last-hovered last-in-row">
+               <div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
+            </div>
+         </div>
+      </div> -->
 							<div class="gazebo-card__timepicker">
 								<div class="gazebo-card__hours">
 									<div class="gazebo-card__hours-fragment">
@@ -1173,8 +1188,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -1192,60 +1206,34 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>16</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment__brl 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_last-selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_brr 
-            gazebo-card__hours-fragment_hovered 
-            gazebo-card__hours-fragment_last-hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>30</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -1254,8 +1242,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>22</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>23</span>:<span>00</span></div>
 									</div>
 								</div>
@@ -1292,9 +1279,31 @@
 							<div class="gazebo-card__date">
 								<label class="gazebo-card__label">
 									<span>Дата:</span>
-									<input type="date" class="input">
+									<input type="date" class="input" data-datepicker>
 								</label>
 							</div>
+							<!-- <div class="gazebo-card__timepicker">
+         <div class="gazebo-card__hours">
+            <div class="gazebo-card__hours-fragment selected in-selected-range brl hovered">
+               <div class="gazebo-card__time-fragment"><span>11</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment selected last-selected in-selected-range brr hovered last-hovered last-in-row">
+               <div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
+            </div>
+         </div>
+      </div> -->
 							<div class="gazebo-card__timepicker">
 								<div class="gazebo-card__hours">
 									<div class="gazebo-card__hours-fragment">
@@ -1312,8 +1321,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -1331,60 +1339,34 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>16</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment__brl 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_last-selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_brr 
-            gazebo-card__hours-fragment_hovered 
-            gazebo-card__hours-fragment_last-hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>30</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -1393,8 +1375,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>22</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>23</span>:<span>00</span></div>
 									</div>
 								</div>
@@ -1431,9 +1412,31 @@
 							<div class="gazebo-card__date">
 								<label class="gazebo-card__label">
 									<span>Дата:</span>
-									<input type="date" class="input">
+									<input type="date" class="input" data-datepicker>
 								</label>
 							</div>
+							<!-- <div class="gazebo-card__timepicker">
+         <div class="gazebo-card__hours">
+            <div class="gazebo-card__hours-fragment selected in-selected-range brl hovered">
+               <div class="gazebo-card__time-fragment"><span>11</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment selected last-selected in-selected-range brr hovered last-hovered last-in-row">
+               <div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
+            </div>
+         </div>
+      </div> -->
 							<div class="gazebo-card__timepicker">
 								<div class="gazebo-card__hours">
 									<div class="gazebo-card__hours-fragment">
@@ -1451,8 +1454,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -1470,60 +1472,34 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>16</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment__brl 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_last-selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_brr 
-            gazebo-card__hours-fragment_hovered 
-            gazebo-card__hours-fragment_last-hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>30</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -1532,8 +1508,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>22</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>23</span>:<span>00</span></div>
 									</div>
 								</div>
@@ -1570,9 +1545,31 @@
 							<div class="gazebo-card__date">
 								<label class="gazebo-card__label">
 									<span>Дата:</span>
-									<input type="date" class="input">
+									<input type="date" class="input" data-datepicker>
 								</label>
 							</div>
+							<!-- <div class="gazebo-card__timepicker">
+         <div class="gazebo-card__hours">
+            <div class="gazebo-card__hours-fragment selected in-selected-range brl hovered">
+               <div class="gazebo-card__time-fragment"><span>11</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>12</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>00</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment in-selected-range hovered">
+               <div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
+            </div>
+            <div class="gazebo-card__hours-fragment selected last-selected in-selected-range brr hovered last-hovered last-in-row">
+               <div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
+            </div>
+         </div>
+      </div> -->
 							<div class="gazebo-card__timepicker">
 								<div class="gazebo-card__hours">
 									<div class="gazebo-card__hours-fragment">
@@ -1590,8 +1587,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>13</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>14</span>:<span>00</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -1609,60 +1605,34 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>16</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment__brl 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>17</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>18</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>19</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>20</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>00</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_selected 
-            gazebo-card__hours-fragment_last-selected 
-            gazebo-card__hours-fragment_in-selected-range 
-            gazebo-card__hours-fragment_brr 
-            gazebo-card__hours-fragment_hovered 
-            gazebo-card__hours-fragment_last-hovered">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>21</span>:<span>30</span></div>
 									</div>
 									<div class="gazebo-card__hours-fragment">
@@ -1671,8 +1641,7 @@
 									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>22</span>:<span>30</span></div>
 									</div>
-									<div class="gazebo-card__hours-fragment
-            gazebo-card__hours-fragment_last-in-row">
+									<div class="gazebo-card__hours-fragment">
 										<div class="gazebo-card__time-fragment"><span>23</span>:<span>00</span></div>
 									</div>
 								</div>
@@ -1794,7 +1763,7 @@
 				<!-- На главной выводятся вообще все спецпредложения, а на внутренних страницах выводятся только спецпредложения, релевантные странице. Коммент от Глеба -->
 				<div class="special-offers__header">
 					<div class="special-offers__title">Специальные предложения</div>
-					<div class="special-offers__top-image"><picture><source srcset="img/pictures/special-offers/header-image_1.webp" type="image/webp"><img src="img/pictures/special-offers/header-image_1.jpg" alt=""></picture></div>
+					<div class="special-offers__top-image"><picture><source srcset="img/pictures/special-offers/header-image_3.webp" type="image/webp"><img src="img/pictures/special-offers/header-image_3.jpg" alt=""></picture></div>
 				</div>
 				<!-- Оболочка слайдера -->
 				<div class="special-offers__slider swiper">
@@ -2002,8 +1971,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230320165723" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20230320165723"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230418154700" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230418154700"></script>
 </body>
 
 </html>
