@@ -131,7 +131,44 @@ body::after {
 
 	// .popup__form
 
-	&__form {}
+	&__form {
+		.form {
+
+			// .form__line
+
+			&__line {}
+
+			// .form__line-name
+
+			&__line-name {}
+
+			// .form__label
+
+			&__label {}
+
+			// .form__input
+
+			&__input {}
+
+			// .form__clear-svg
+
+			&__clear-svg {}
+
+			// .form__button
+
+			&__button {}
+
+			// .form__consent
+
+			&__consent {
+				color: rgba(0, 0, 0, 0.63);
+			}
+
+			// .form__consent-link
+
+			&__consent-link {}
+		}
+	}
 
 	// .popup__text
 
@@ -152,39 +189,4 @@ body::after {
 			height: 100%;
 		}
 	}
-}
-
-.form {
-
-	// .form__line
-
-	&__line {}
-
-	// .form__line-name
-
-	&__line-name {}
-
-	// .form__label
-
-	&__label {}
-
-	// .form__input
-
-	&__input {}
-
-	// .form__clear-svg
-
-	&__clear-svg {}
-
-	// .form__button
-
-	&__button {}
-
-	// .form__consent
-
-	&__consent {}
-
-	// .form__consent-link
-
-	&__consent-link {}
 }

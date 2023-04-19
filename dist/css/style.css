@@ -989,6 +989,10 @@ body::after {
   margin-bottom: 2.5rem;
 }
 
+.popup__form .form__consent {
+  color: rgba(0, 0, 0, 0.63);
+}
+
 .popup__text {
   text-align: center;
   font-size: 21px;
