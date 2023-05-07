@@ -130,11 +130,11 @@
    // .sauna-detail__col
 
    &__col {
-      &:first-child {
-         .sauna-detail__title {
-            max-width: 220px;
-         }
-      }
+      // &:first-child {
+      //    .sauna-detail__title {
+      //       max-width: 220px;
+      //    }
+      // }
 
       // .sauna-detail__col_last
 
@@ -169,6 +169,7 @@
       text-transform: uppercase;
       margin-bottom: rem(20);
       color: #3A230B;
+      // max-width: 220px;
    }
 
    // .sauna-detail__main-price

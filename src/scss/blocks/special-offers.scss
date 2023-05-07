@@ -69,11 +69,11 @@
 
       @media (max-width: $pc) {
          padding: rem(90) rem(100) rem(60) rem(30);
+         padding: rem(50);
       }
 
       @media (max-width: $laptop) {
          padding: rem(50);
-         // background: transparent;
          margin-bottom: rem(50);
       }
 
@@ -105,6 +105,12 @@
       justify-content: space-between;
       position: relative;
       padding: rem(64) 0;
+
+      @media (max-width:$pc) {
+         padding: rem(20) 0 rem(64);
+
+
+      }
 
       @media (max-width: $laptop) {
          display: grid;
@@ -140,6 +146,14 @@
 
    &__left-photo {
       display: none;
+
+      @media (max-width:$pc) {
+         max-width: 250px;
+
+         img {
+            width: 100%;
+         }
+      }
 
       @media (min-width: $laptop) {
          display: block;
@@ -177,7 +191,9 @@
       background: #63605D;
       color: #fff;
 
-      @media (min-width:$laptop) {}
+      @media (max-width:$pc) {
+         padding: rem(15);
+      }
 
       @media (max-width: $laptop) {
          max-width: 100%;
@@ -203,6 +219,10 @@
 
       @media (min-width:$laptop) {}
 
+      @media (max-width:$pc) {
+         margin-bottom: rem(20);
+      }
+
       @media (max-width: $mobile) {
          font-size: 27px;
          line-height: 32px;
@@ -217,6 +237,10 @@
       font-size: 21px;
       margin-bottom: rem(50);
       line-height: 28px;
+
+      @media (max-width:$pc) {
+         margin-bottom: rem(20);
+      }
 
       @media (max-width: $mobile) {
          font-size: 18px;

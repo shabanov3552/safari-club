@@ -64,7 +64,7 @@
                <div class="form__line">
                   <div class="form__line-name">Номинал сертификата *</div>
                   <label class="form__label">
-                     <input required type="text" name="" class="form__input input">
+                     <input required type="text" name="" data-parsley-integer-of="1000" class="form__input input">
                      <svg class="form__clear-svg">
                         <use xlink:href="img/icons/icons.svg#svg-input_clear"></use>
                      </svg>
@@ -93,5 +93,8 @@
          </div>
       </div>
    </div>
+
+
+
 </main>
 @@include('html/_footer.htm',{})

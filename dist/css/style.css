@@ -1542,6 +1542,10 @@ body::after {
   margin-bottom: 0.625rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .black ._header-scroll .header__top {
   background: #fff;
 }
@@ -3309,6 +3313,10 @@ body::after {
   display: none;
 }
 
+.review review-lab .widget__src {
+  display: none;
+}
+
 .partners {
   padding-top: 2.5rem;
 }
@@ -3442,6 +3450,12 @@ body::after {
 .room-detail__descr {
   font-size: 20px;
   line-height: 28px;
+}
+
+.room-detail__descr .rooms__reserv-btn {
+  font-size: 16px;
+  max-width: 275px !important;
+  margin-top: 1.25rem;
 }
 
 .room-detail__content-image {
@@ -4903,10 +4917,6 @@ body::after {
   -ms-grid-columns: (1fr)[2] 265px;
   grid-template-columns: repeat(2, 1fr) 265px;
   gap: 150px;
-}
-
-.sauna-detail__col:first-child .sauna-detail__title {
-  max-width: 220px;
 }
 
 .sauna-detail__col_last {
@@ -7978,6 +7988,31 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .special-offers__slider {
     padding: 5.625rem 6.25rem 3.75rem 1.875rem;
+    padding: 3.125rem;
+  }
+
+  .special-offers__slide {
+    padding: 1.25rem 0 4rem;
+  }
+
+  .special-offers__left-photo {
+    max-width: 250px;
+  }
+
+  .special-offers__left-photo img {
+    width: 100%;
+  }
+
+  .special-offers__info {
+    padding: 0.9375rem;
+  }
+
+  .special-offers__info-title {
+    margin-bottom: 1.25rem;
+  }
+
+  .special-offers__subtitle {
+    margin-bottom: 1.25rem;
   }
 
   .first-block__button {
@@ -8211,11 +8246,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .dropdown-menu__span {
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 47px;
-    padding: 0;
-    font-family: "Jost";
+    display: none;
   }
 
   .dropdown-menu__arrow {

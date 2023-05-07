@@ -196,6 +196,12 @@
       font-size: 20px;
       line-height: 28px;
 
+      .rooms__reserv-btn {
+         font-size: 16px;
+         max-width: 275px !important;
+         margin-top: rem(20);
+      }
+
       @media (max-width:$mobile) {
          font-size: 18px;
          line-height: 26px;
