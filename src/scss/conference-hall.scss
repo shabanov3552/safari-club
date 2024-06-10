@@ -122,6 +122,11 @@
       @media (max-width:$mobile) {
          margin-bottom: rem(30);
       }
+
+      @media (max-width:$mobileSmall) {
+         font-size: 30px;
+         line-height: 38px;
+      }
    }
 
    // .conference-hall__list

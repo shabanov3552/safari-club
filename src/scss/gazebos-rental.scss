@@ -763,6 +763,11 @@
          font-size: 40px;
          line-height: 48px;
       }
+
+      @media (max-width:$mobileSmall) {
+         font-size: 30px;
+         line-height: 38px;
+      }
    }
 
    // .gazebos-rental__footer-descr

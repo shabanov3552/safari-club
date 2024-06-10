@@ -10307,6 +10307,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-top: 3.125rem;
   }
 
+  .gazebos-rental__footer-title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
   .rest-menu__nav-item._tab-active .rest-menu__link {
     display: block;
   }
@@ -10327,6 +10332,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .footer-contacts__message {
     margin-bottom: 1.25rem;
+  }
+
+  .conference-hall__subtitle {
+    font-size: 30px;
+    line-height: 38px;
   }
 
   .conference-hall__list_grid .conference-hall__item {
